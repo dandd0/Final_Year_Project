@@ -23,11 +23,12 @@ from maze_env.envs.solve.ShortestPath import ShortestPath
 | Observation Shape         | (size, size, 3) / (1)                         |
 | Observation Values        | [0,1]                                         |
 
-The actions will be mapped as such:
-0: Up
-1: Down
-2: Right
-3: Left
+The basic actions will be mapped as such:
+0: No movement
+1: Up
+2: Down
+3: Right
+4: Left
 
 The observation space for the observer will be the map in 3 channels. 
 The first channel will represent the walls present in the maze, with 1 indicating the walls and 0 indicating an empty space.
@@ -85,20 +86,21 @@ class MazeEnv(AECEnv):
         ) # mapping of the agent names to a number
     
         self._action_to_direction = {
-            0: np.array([-1,0]), # up
-            1: np.array([1,0]), # down
-            2: np.array([0,1]), # right
-            3: np.array([0,-1]) # left
+            0: np.array([0,0]), # no movement
+            1: np.array([-1,0]), # up
+            2: np.array([1,0]), # down
+            3: np.array([0,1]), # right
+            4: np.array([0,-1]) # left
         }
 
         # check render mode is valid
         assert render_mode is None or render_mode in self.metadata["render_modes"]
 
         # define the space parameters for observation and action
-        # only 4 possible primary actions for the 2 agents
-        # observer can only tell (primary action-wise) to move up, down, right, left
-        # explorer can only move up, down, right, left
-        self.action_spaces = {agent: Discrete(4) for agent in self.agents}
+        # only 5 possible primary actions for the 2 agents
+        # observer can only tell (primary action-wise) to move up, down, right, left (no 'no movement' allowed)
+        # explorer can only move up, down, right, left (no 'no movement' allowed)
+        self.action_spaces = {agent: Discrete(5) for agent in self.agents}
 
         self.observation_spaces = {
             # observer & listener
@@ -112,7 +114,7 @@ class MazeEnv(AECEnv):
         self.rewards = {agent: 0 for agent in self.agents}
         self.terminations = {agent: False for agent in self.agents}
         self.truncations = {agent: False for agent in self.agents}
-        self.infos = {agent: {"action_mask": Box(low=0, high=1, shape=(4,), dtype=bool)} for agent in self.agents}
+        self.infos = {agent: {"action_mask": Box(low=0, high=1, shape=(5,), dtype=bool)} for agent in self.agents}
 
         # set up the iterating agent selector
         self.agent_selection = None
@@ -155,37 +157,37 @@ class MazeEnv(AECEnv):
         # check if agent is at an edge
         if agent_loc_r == 0:
             # can only move down
-            legal_moves = [1]
+            legal_moves = [2]
         elif agent_loc_r == self.grid.shape[0]-1:
             # can only move up
-            legal_moves = [0]
+            legal_moves = [1]
         elif agent_loc_c == 0:
             # can only move right
-            legal_moves = [2]
+            legal_moves = [3]
         elif agent_loc_c == self.grid.shape[1]-1:
             # can only move left
-            legal_moves = [3]
+            legal_moves = [4]
         # everything else
         else:
             # check if can move up (or its exit)
             if (self.grid[agent_loc_r-1, agent_loc_c] == 0) or ((agent_loc_r-1, agent_loc_c) == self.exit):
-                legal_moves += [0]
+                legal_moves += [1]
             # down
             if (self.grid[agent_loc_r+1, agent_loc_c] == 0) or ((agent_loc_r+1, agent_loc_c) == self.exit):
-                legal_moves += [1]
+                legal_moves += [2]
             # right
             if (self.grid[agent_loc_r, agent_loc_c+1] == 0) or ((agent_loc_r, agent_loc_c+1) == self.exit):
-                legal_moves += [2]
+                legal_moves += [3]
             # left
             if (self.grid[agent_loc_r, agent_loc_c-1] == 0) or ((agent_loc_r, agent_loc_c-1) == self.exit):
-                legal_moves += [3]
+                legal_moves += [4]
         
         return legal_moves
     
     def _get_action_mask(self, agent):
          # because they technically 'share' the same action space (u,d,l,r), action masking is the same
         legal_moves = self._legal_moves() if agent == self.agent_selection else []
-        action_mask = np.zeros(4, "int8")
+        action_mask = np.zeros(5, "int8")
         for i in legal_moves:
             action_mask[i] = 1
         
@@ -238,15 +240,16 @@ class MazeEnv(AECEnv):
         maze.grid = np.ones((self.true_size, self.true_size))
         maze.grid[1:-1, 1:-1] = np.zeros((self.true_size-2, self.true_size-2))
         maze.generate_entrances() # the entrances are at the edges (opposite sides)
-
+        
         # since this is trivial, there is no need for a solver (just use manhattan dist)
 
         self.maze = maze # the maze object itself
         self.grid = maze.grid # the grid representation of the maze
         self.agent_loc = maze.start # the agent's starting location is the entrance
         self.exit = maze.end # the exit location
-        self.maxlen = 2.5*((self.true_size-2)**2) # max exploration length before truncation (2.5* the total number of free grids in the maze)
+        self.maxlen = 5*((self.true_size-2)**2) # max exploration length before truncation (2.5* the total number of free grids in the maze)
         self.minlen = np.sum(np.abs(np.array(self.agent_loc) - np.array(self.exit))) # manhattan dist for min length
+        self.solution = None # no solution
         self.start = maze.start
         # the above 2 has 0 index because there can be multiple solutions of equal minimum length, but we only need one so whatever
 
@@ -255,22 +258,20 @@ class MazeEnv(AECEnv):
         # the seeds were chosen through generating and human selection based on difficulty.
         # the seeds are ordered from level of difficulty (based on subjective criteria, and within difficulty ordered by length)
         # each difficult has 8 mazes.
-        maze_seeds = [2,10,23,24,26,13,17,30,22,4,18,3,8,38,48,0,32,11,1,25,35,27,28,29,33,43]
+        maze_seeds = [2,23,10,24,26,13,17,30,22,4,18,3,8,38,48,0,32,11,1,25,35,27,28,29,33,43]
 
         if random:
             # randomly select on the given seeds
             maze_seed = np.random.choice(maze_seeds[:n_mazes])
         else:
+            # else, select the specified maze
             maze_seed = maze_seeds[n_mazes]
 
         self._generate_maze(maze_seed)
 
     def reset(self, seed=None, options=None):
         # set up the maze
-        if seed:
-            # if a seed value exists, choose the specified seed maze
-            self.select_maze(seed, random=False)
-        elif isinstance(options, dict):
+        if isinstance(options, dict):
             if options.get('maze_type'):
                 if options['maze_type'] == "trivial":
                     self._generate_maze_trivial(seed)
@@ -279,6 +280,9 @@ class MazeEnv(AECEnv):
             elif options.get('n_mazes'):
                 assert options['n_mazes'] > 0, "NUMBER OF MAZES SET TO LESS THAN 1"
                 self.select_maze(options['n_mazes'])
+            elif options.get('maze_select'):
+                # chooose specified maze
+                self.select_maze(options['maze_select'], random=False)    
             else:
                 self.select_maze(1)
         else:
@@ -303,6 +307,11 @@ class MazeEnv(AECEnv):
         self.truncations = {agent: False for agent in self.agents}
         self.infos = {agent: {"action_mask":self._get_action_mask(agent)} for agent in self.agents}
 
+        self.message = 0 # no movement
+
+        # reset seed
+        np.random.seed()
+
     # make this modular in case i want to change the rewards function
     def _get_rewards(self):
         # check if agent is at exit
@@ -316,8 +325,8 @@ class MazeEnv(AECEnv):
             self.rewards = {agent: -1 for agent in self.agents}
 
     def _get_rewards2(self, action):
-        # the explorer only needs to follow directions. the reward will be good if the agent 
-        # has the same action as the observer
+        # the explorer only needs to follow directions. the reward will be good if the agent has the same action as the observer
+        # the observer has the same reward scheme as _get_rewards()S
         agents = self.agents
 
         # if the action of the explorer corresponds correctly to the observer (but not at exit)
@@ -359,11 +368,32 @@ class MazeEnv(AECEnv):
             self.rewards[self.agents[0]] = -1 # standard move
 
         # explorer
-        # if action of observer corresponds to message
+        # if action of observer corresponds to message, give 0, otherwise punish
         if self.message == action:
-            self.rewards[self.agents[1]] = 1
+            self.rewards[self.agents[1]] = 0
         else:
             self.rewards[self.agents[1]] = -1
+
+    def _get_rewards4(self, action):
+        # same as rewards3, but with scaled rewards 
+        # worst rewards will be -1
+        # best reward will closer to 1
+        self.rewards = {agent: 0 for agent in self.agents}
+
+        # observer
+        if self.agent_loc == self.exit:
+            self.rewards[self.agents[0]] = 1 # if reached exit
+        elif self.agent_loc in self.prev_locs:
+            self.rewards[self.agents[0]] = -2/(self.maxlen*2) # double penalty for repeated space
+        else:
+            self.rewards[self.agents[0]] = -1/(self.maxlen*2) # standard move
+
+        # explorer
+        # if action of observer corresponds to message, give 0, otherwise punish
+        if self.message == action:
+            self.rewards[self.agents[1]] = 0
+        else:
+            self.rewards[self.agents[1]] = -1/(self.maxlen)
     
     def _check_termination(self):
         # when its at exit, end the game
@@ -406,7 +436,7 @@ class MazeEnv(AECEnv):
 
             # set the rewards of both agents to be the same
             self.agent_loc = new_loc_tup
-            self._get_rewards3(action)
+            self._get_rewards4(action)
 
             # check if agent has reached the exit or not
             self._check_termination()
@@ -416,6 +446,9 @@ class MazeEnv(AECEnv):
 
             # store previous locations
             self.prev_locs.append(new_loc_tup)
+
+            # reset message
+            self.message = 0 # no movement
 
 
         # switch selection to next agent
@@ -482,13 +515,15 @@ class MazeEnv(AECEnv):
             )
 
             # draw optimal solution
-            for y, x in self.solution:
-                pygame.draw.circle(
-                    canvas,
-                    (163, 73, 164),
-                    ((x + 0.5) * pix_square_size, (y + 0.5) * pix_square_size),
-                    pix_square_size / 9,
-                )
+            # check if its trivial maze type
+            if self.solution:
+                for y, x in self.solution:
+                    pygame.draw.circle(
+                        canvas,
+                        (163, 73, 164),
+                        ((x + 0.5) * pix_square_size, (y + 0.5) * pix_square_size),
+                        pix_square_size / 9,
+                    )
 
             # draw agent
             pygame.draw.circle(
@@ -498,8 +533,23 @@ class MazeEnv(AECEnv):
                 pix_square_size / 3,
             )
 
+            # draw message
+            direction = self._action_to_direction[self.message]
+            new_loc = self.agent_loc + direction
+            pygame.draw.circle(
+                canvas,
+                (255, 0, 0),
+                ((new_loc[1] + 0.5) * pix_square_size, (new_loc[0] + 0.5) * pix_square_size),
+                pix_square_size / 6,
+            )
+
             # num of moves so far
             font.render_to(canvas, (10, 514), "Number of Moves: " + str(self.num_moves), (0,0,0))
+
+            # rewards so far
+            font.render_to(canvas, (210, 514), "Obs Rew: " + str(np.round(self._cumulative_rewards['observer'], 3)), (0,0,0))
+            font.render_to(canvas, (360, 514), "Exp Rew: " + str(np.round(self._cumulative_rewards['explorer'], 3)), (0,0,0))
+
 
             # update the game window
             if self.render_mode == "human":

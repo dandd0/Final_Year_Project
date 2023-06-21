@@ -1,0 +1,1 @@
+{"train": {"episode": 1, "obs_reward": -0.9421487603305665, "length": 606.0, "exploration rate": 0.8760132832226086}, "_timestamp": 1687277591.267563, "_runtime": 47.59844422340393, "_step": 20528, "test": {"obs_reward": -0.9966942148760195, "length": 606.0, "obs_reward_std": 0.0}, "_wandb": {"runtime": 67}}

@@ -1,0 +1,811 @@
+f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\maze_env\envs\mazelib.py:32: DeprecationWarning: Seeding based on hashing is deprecated
+since Python 3.9 and will be removed in a subsequent version. The only
+supported seed types are: None, int, float, str, bytes, and bytearray.
+  random.seed(seed)
+{"CNN": "type", "F": "module", "MazeEnv_v0": "module", "Net": "type", "PettingZooEnv": "ABCMeta", "PettingZooEnv_new": "ABCMeta", "SummaryWriter": "type", "action_shape": "int", "agent_observer": "DQNPolicy", "agents": "list", "batch_size": "int", "buffer_size": "int", "env": "PettingZooEnv_new", "env_human": "DummyVectorEnv", "ep_per_collect": "int", "epoch": "int", "epochs": "int", "eps_decay": "float", "eps_min": "float", "eps_prev": "float64", "eps_test": "float", "eps_train": "float", "gamma": "float", "gym": "module", "high_eps_run": "bool", "human_collector": "Collector", "interleave_training": "function", "log_data": "dict", "lr": "float", "maze_width": "int", "mazes": "int", "n_mazes": "int", "n_step": "int", "net_obs": "CNN", "nn": "module", "np": "module", "obs_train": "bool", "optim_obs": "Adam", "passed_before": "bool", "passed_mazes": "bool", "policy": "DQNPolicy", "preprocess_maze_env": "function", "result": "dict", "run": "Run", "seed": "int", "set_eps": "function", "state_shape": "tuple", "step_per_collect": "int", "step_per_epoch": "int", "steps_n": "int", "steps_total": "int", "supersuit": "module", "target_update_freq": "int", "test_collector": "Collector", "test_envs": "DummyVectorEnv", "test_mazes": "list", "test_num": "int", "test_result": "dict", "threshold_rew": "float", "torch": "module", "total_mazes": "int", "train_collector": "Collector", "train_envs": "DummyVectorEnv", "train_num": "int", "ts": "module", "wandb": "module"}
+{"shape": "", "count": 1, "type": "dict"}
+{"shape": "", "count": 9, "type": "dict"}
+Current number of mazes: 1
+Evaluation Reward at Epoch 1. Obs: -0.996
+Test Mazes results: [0]
+Evaluation Reward at Epoch 2. Obs: -0.998
+Test Mazes results: [0]
+Evaluation Reward at Epoch 3. Obs: -0.996
+Test Mazes results: [0]
+Evaluation Reward at Epoch 4. Obs: -0.988
+Test Mazes results: [0]
+Evaluation Reward at Epoch 5. Obs: -0.988
+Test Mazes results: [0]
+Evaluation Reward at Epoch 6. Obs: -0.988
+Test Mazes results: [0]
+Evaluation Reward at Epoch 7. Obs: 0.986
+Test Mazes results: [1]
+Passed once
+Evaluation Reward at Epoch 8. Obs: -0.989
+Test Mazes results: [0]
+Evaluation Reward at Epoch 9. Obs: -0.996
+Test Mazes results: [0]
+Evaluation Reward at Epoch 10. Obs: -0.995
+Test Mazes results: [0]
+Evaluation Reward at Epoch 11. Obs: 0.986
+Test Mazes results: [1]
+Passed once
+Evaluation Reward at Epoch 12. Obs: -0.994
+Test Mazes results: [0]
+Evaluation Reward at Epoch 13. Obs: -0.998
+Test Mazes results: [0]
+Evaluation Reward at Epoch 14. Obs: -0.998
+Test Mazes results: [0]
+Evaluation Reward at Epoch 15. Obs: -0.998
+Test Mazes results: [0]
+Evaluation Reward at Epoch 16. Obs: -0.998
+Test Mazes results: [0]
+Evaluation Reward at Epoch 17. Obs: -0.998
+Test Mazes results: [0]
+Evaluation Reward at Epoch 18. Obs: -0.993
+Test Mazes results: [0]
+Evaluation Reward at Epoch 19. Obs: 0.986
+Test Mazes results: [1]
+Passed once
+Evaluation Reward at Epoch 20. Obs: 0.986
+Test Mazes results: [1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 2.
+Solved all mazes on epoch 20.
+Current number of mazes: 2
+Evaluation Reward at Epoch 1. Obs: -0.988
+Test Mazes results: [0]
+Evaluation Reward at Epoch 2. Obs: 0.984
+Test Mazes results: [1, 1]
+Passed once
+Evaluation Reward at Epoch 3. Obs: 0.984
+Test Mazes results: [1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 3.
+Solved all mazes on epoch 3.
+Current number of mazes: 3
+Evaluation Reward at Epoch 1. Obs: -1.0
+Test Mazes results: [1, 1, 0]
+Evaluation Reward at Epoch 2. Obs: -1.0
+Test Mazes results: [1, 1, 0]
+Evaluation Reward at Epoch 3. Obs: -0.999
+Test Mazes results: [1, 1, 0]
+Evaluation Reward at Epoch 4. Obs: -0.993
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 5. Obs: -0.993
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 6. Obs: -0.998
+Test Mazes results: [1, 1, 0]
+Evaluation Reward at Epoch 7. Obs: -0.998
+Test Mazes results: [1, 1, 0]
+Evaluation Reward at Epoch 8. Obs: -0.994
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 9. Obs: -0.994
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 10. Obs: -0.994
+Test Mazes results: [1, 1, 0]
+Evaluation Reward at Epoch 11. Obs: -0.999
+Test Mazes results: [1, 1, 0]
+Evaluation Reward at Epoch 12. Obs: -0.998
+Test Mazes results: [1, 1, 0]
+Evaluation Reward at Epoch 13. Obs: -0.998
+Test Mazes results: [0]
+Evaluation Reward at Epoch 14. Obs: -0.994
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 15. Obs: 0.991
+Test Mazes results: [1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 16. Obs: 0.991
+Test Mazes results: [1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 4.
+Solved all mazes on epoch 16.
+Current number of mazes: 4
+Evaluation Reward at Epoch 1. Obs: -1.0
+Test Mazes results: [1, 1, 0]
+Evaluation Reward at Epoch 2. Obs: -1.0
+Test Mazes results: [1, 1, 0]
+Evaluation Reward at Epoch 3. Obs: 0.989
+Test Mazes results: [1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 4. Obs: 0.989
+Test Mazes results: [1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 5.
+Solved all mazes on epoch 4.
+Current number of mazes: 5
+Evaluation Reward at Epoch 1. Obs: 0.988
+Test Mazes results: [1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 2. Obs: 0.988
+Test Mazes results: [1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 6.
+Solved all mazes on epoch 2.
+Current number of mazes: 6
+Evaluation Reward at Epoch 1. Obs: -0.999
+Test Mazes results: [1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 2. Obs: -0.998
+Test Mazes results: [1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 3. Obs: -0.994
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 4. Obs: -0.999
+Test Mazes results: [0]
+Evaluation Reward at Epoch 5. Obs: -1.0
+Test Mazes results: [1, 1, 0]
+Evaluation Reward at Epoch 6. Obs: -0.997
+Test Mazes results: [0]
+Evaluation Reward at Epoch 7. Obs: -0.998
+Test Mazes results: [0]
+Evaluation Reward at Epoch 8. Obs: -0.993
+Test Mazes results: [1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 9. Obs: -0.995
+Test Mazes results: [1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 10. Obs: 0.986
+Test Mazes results: [1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 11. Obs: 0.986
+Test Mazes results: [1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 7.
+Solved all mazes on epoch 11.
+Current number of mazes: 7
+Evaluation Reward at Epoch 1. Obs: -0.998
+Test Mazes results: [1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 2. Obs: -0.993
+Test Mazes results: [1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 3. Obs: -0.997
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 4. Obs: -1.0
+Test Mazes results: [0]
+Evaluation Reward at Epoch 5. Obs: -0.997
+Test Mazes results: [0]
+Evaluation Reward at Epoch 6. Obs: 0.989
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 7. Obs: 0.989
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 8.
+Solved all mazes on epoch 7.
+Current number of mazes: 8
+Evaluation Reward at Epoch 1. Obs: 0.988
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 2. Obs: 0.988
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 9.
+Solved all mazes on epoch 2.
+Current number of mazes: 9
+Evaluation Reward at Epoch 1. Obs: -1.0
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 2. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 3. Obs: -0.998
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 4. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 5. Obs: -0.999
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 6. Obs: -0.998
+Test Mazes results: [0]
+Evaluation Reward at Epoch 7. Obs: 0.989
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 8. Obs: 0.989
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 10.
+Solved all mazes on epoch 8.
+Current number of mazes: 10
+Evaluation Reward at Epoch 1. Obs: -0.99
+Test Mazes results: [1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 2. Obs: 0.988
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 3. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 4. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 5. Obs: 0.988
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 6. Obs: 0.988
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 11.
+Solved all mazes on epoch 6.
+Current number of mazes: 11
+Evaluation Reward at Epoch 1. Obs: 0.989
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 2. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 3. Obs: 0.991
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 4. Obs: -0.999
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 5. Obs: -0.998
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 6. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 7. Obs: 0.991
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 8. Obs: 0.991
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 12.
+Solved all mazes on epoch 8.
+Current number of mazes: 12
+Evaluation Reward at Epoch 1. Obs: -0.99
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 2. Obs: -1.0
+Test Mazes results: [1, 1, 0]
+Evaluation Reward at Epoch 3. Obs: -1.0
+Test Mazes results: [0]
+Evaluation Reward at Epoch 4. Obs: 0.989
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 5. Obs: -0.997
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 6. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 7. Obs: 0.986
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 8. Obs: 0.986
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 13.
+Solved all mazes on epoch 8.
+Current number of mazes: 13
+Evaluation Reward at Epoch 1. Obs: 0.986
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 2. Obs: -0.994
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 3. Obs: -0.996
+Test Mazes results: [1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 4. Obs: -0.991
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 5. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 6. Obs: 0.986
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 7. Obs: 0.986
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 14.
+Solved all mazes on epoch 7.
+Current number of mazes: 14
+Evaluation Reward at Epoch 1. Obs: -0.996
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 2. Obs: -0.999
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 3. Obs: 0.986
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 4. Obs: 0.986
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 15.
+Solved all mazes on epoch 4.
+Current number of mazes: 15
+Evaluation Reward at Epoch 1. Obs: -0.999
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 2. Obs: -0.997
+Test Mazes results: [0]
+Evaluation Reward at Epoch 3. Obs: -0.998
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 4. Obs: -1.0
+Test Mazes results: [0]
+Evaluation Reward at Epoch 5. Obs: -0.996
+Test Mazes results: [1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 6. Obs: -0.992
+Test Mazes results: [1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 7. Obs: 0.989
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 8. Obs: -0.998
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 9. Obs: -0.997
+Test Mazes results: [0]
+Evaluation Reward at Epoch 10. Obs: -0.999
+Test Mazes results: [1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 11. Obs: -0.998
+Test Mazes results: [0]
+Evaluation Reward at Epoch 12. Obs: -0.997
+Test Mazes results: [0]
+Evaluation Reward at Epoch 13. Obs: 0.989
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 14. Obs: 0.989
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 16.
+Solved all mazes on epoch 14.
+Current number of mazes: 16
+Evaluation Reward at Epoch 1. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 2. Obs: -0.999
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 3. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 4. Obs: -0.995
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 5. Obs: -0.998
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 6. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 7. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 17.
+Solved all mazes on epoch 7.
+Current number of mazes: 17
+Evaluation Reward at Epoch 1. Obs: -0.997
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 2. Obs: 0.991
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 3. Obs: -0.993
+Test Mazes results: [1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 4. Obs: 0.991
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 5. Obs: -0.992
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 6. Obs: 0.991
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 7. Obs: -0.992
+Test Mazes results: [1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 8. Obs: 0.991
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 9. Obs: 0.991
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 18.
+Solved all mazes on epoch 9.
+Current number of mazes: 18
+Evaluation Reward at Epoch 1. Obs: 0.991
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 2. Obs: -0.999
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 3. Obs: -0.993
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 4. Obs: -0.999
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 5. Obs: 0.991
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 6. Obs: -0.994
+Test Mazes results: [1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 7. Obs: 0.991
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 8. Obs: 0.991
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 19.
+Solved all mazes on epoch 8.
+Current number of mazes: 19
+Evaluation Reward at Epoch 1. Obs: -0.993
+Test Mazes results: [1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 2. Obs: -0.997
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 3. Obs: 0.983
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 4. Obs: 0.983
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 20.
+Solved all mazes on epoch 4.
+Current number of mazes: 20
+Evaluation Reward at Epoch 1. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 2. Obs: -0.998
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 3. Obs: -0.999
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 4. Obs: -1.0
+Test Mazes results: [1, 1, 0]
+Evaluation Reward at Epoch 5. Obs: -0.999
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 6. Obs: -0.998
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 7. Obs: -0.996
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 8. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 9. Obs: -0.99
+Test Mazes results: [1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 10. Obs: -0.998
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 11. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 12. Obs: -0.999
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 13. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 14. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 21.
+Solved all mazes on epoch 14.
+Current number of mazes: 21
+Evaluation Reward at Epoch 1. Obs: -0.999
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 2. Obs: -0.998
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 3. Obs: -0.995
+Test Mazes results: [0]
+Evaluation Reward at Epoch 4. Obs: -0.993
+Test Mazes results: [1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 5. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 6. Obs: -0.999
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 7. Obs: -0.993
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 8. Obs: 0.986
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 9. Obs: -0.994
+Test Mazes results: [1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 10. Obs: 0.986
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 11. Obs: 0.986
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 22.
+Solved all mazes on epoch 11.
+Current number of mazes: 22
+Evaluation Reward at Epoch 1. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 2. Obs: 0.988
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 3. Obs: -0.99
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 4. Obs: -1.0
+Test Mazes results: [1, 1, 0]
+Evaluation Reward at Epoch 5. Obs: 0.988
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 6. Obs: 0.988
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 23.
+Solved all mazes on epoch 6.
+Current number of mazes: 23
+Evaluation Reward at Epoch 1. Obs: -0.998
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 2. Obs: -0.999
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 3. Obs: -0.996
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 4. Obs: 0.989
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 5. Obs: 0.989
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 24.
+Solved all mazes on epoch 5.
+Current number of mazes: 24
+Evaluation Reward at Epoch 1. Obs: -0.998
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 2. Obs: 0.991
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 3. Obs: -0.995
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 4. Obs: -0.998
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 5. Obs: -1.0
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 6. Obs: -0.99
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 7. Obs: -1.0
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 8. Obs: -1.0
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 9. Obs: 0.991
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 10. Obs: 0.991
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 25.
+Solved all mazes on epoch 10.
+Current number of mazes: 25
+Evaluation Reward at Epoch 1. Obs: -0.999
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 2. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 3. Obs: -0.998
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 4. Obs: -1.0
+Test Mazes results: [1, 1, 0]
+Evaluation Reward at Epoch 5. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 6. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 7. Obs: 0.986
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 8. Obs: 0.986
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 26.
+Solved all mazes on epoch 8.
+Current number of mazes: 26
+Evaluation Reward at Epoch 1. Obs: 0.989
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 2. Obs: 0.989
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 27.
+Solved all mazes on epoch 2.
+Current number of mazes: 27
+Evaluation Reward at Epoch 1. Obs: -0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 2. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 3. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 4. Obs: -1.0
+Test Mazes results: [1, 1, 0]
+Evaluation Reward at Epoch 5. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 6. Obs: -0.996
+Test Mazes results: [1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 7. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 8. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 9. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 10. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 28.
+Solved all mazes on epoch 10.
+Current number of mazes: 28
+Evaluation Reward at Epoch 1. Obs: 0.986
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 2. Obs: -1.0
+Test Mazes results: [1, 1, 0]
+Evaluation Reward at Epoch 3. Obs: 0.986
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 4. Obs: 0.986
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 29.
+Solved all mazes on epoch 4.
+Current number of mazes: 29
+Evaluation Reward at Epoch 1. Obs: -0.995
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 2. Obs: -1.0
+Test Mazes results: [1, 1, 1, 0]
+Evaluation Reward at Epoch 3. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 4. Obs: -0.999
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 5. Obs: -0.999
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 6. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 7. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 8. Obs: -0.988
+Test Mazes results: [1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 9. Obs: -0.997
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 10. Obs: -0.999
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 11. Obs: -0.999
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 12. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 13. Obs: -0.999
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 14. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 15. Obs: -0.994
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 16. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 17. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 18. Obs: -0.996
+Test Mazes results: [1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 19. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 20. Obs: -0.992
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 21. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 22. Obs: -0.989
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 23. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 24. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 25. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 26. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 30.
+Solved all mazes on epoch 26.
+Current number of mazes: 30
+Evaluation Reward at Epoch 1. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 2. Obs: -0.999
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 3. Obs: -0.999
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 4. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 5. Obs: -1.0
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 6. Obs: -0.997
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 7. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 8. Obs: -0.996
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 9. Obs: -0.987
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 10. Obs: 0.988
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 11. Obs: 0.988
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 31.
+Solved all mazes on epoch 11.
+Current number of mazes: 31
+Evaluation Reward at Epoch 1. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 2. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 3. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 4. Obs: -0.998
+Test Mazes results: [1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 5. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 6. Obs: -0.993
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 7. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 8. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 32.
+Solved all mazes on epoch 8.
+Current number of mazes: 32
+Evaluation Reward at Epoch 1. Obs: -0.993
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 2. Obs: -0.993
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 3. Obs: -0.998
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 4. Obs: 0.986
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 5. Obs: -0.999
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 6. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 7. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 8. Obs: -1.0
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 9. Obs: 0.986
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 10. Obs: 0.986
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 33.
+Solved all mazes on epoch 10.
+Current number of mazes: 33
+Evaluation Reward at Epoch 1. Obs: -0.985
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 2. Obs: -0.993
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 3. Obs: -0.999
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 4. Obs: 0.988
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 5. Obs: -0.999
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 6. Obs: -0.998
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 7. Obs: -0.999
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 8. Obs: 0.991
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 9. Obs: 0.991
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 34.
+Solved all mazes on epoch 9.
+Current number of mazes: 34
+Evaluation Reward at Epoch 1. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 2. Obs: -0.998
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 3. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 4. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 5. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 6. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 35.
+Solved all mazes on epoch 6.
+Current number of mazes: 35
+Evaluation Reward at Epoch 1. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 2. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 3. Obs: -0.991
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 4. Obs: -0.999
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 5. Obs: -0.998
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 6. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 7. Obs: -0.998
+Test Mazes results: [0]
+Evaluation Reward at Epoch 8. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 9. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 10. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 11. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 12. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 13. Obs: -0.999
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 14. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 15. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 36.
+Solved all mazes on epoch 15.
+Current number of mazes: 36
+Evaluation Reward at Epoch 1. Obs: -1.0
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 2. Obs: -0.996
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 3. Obs: -0.995
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 4. Obs: -0.999
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 5. Obs: -0.989
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 6. Obs: -0.992
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+Evaluation Reward at Epoch 7. Obs: -0.999
+Test Mazes results: [1, 0]
+Evaluation Reward at Epoch 8. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Passed once
+Evaluation Reward at Epoch 9. Obs: 0.984
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 37.
+Solved all mazes on epoch 9.
+Finished Training.
+{"CNN": "type", "F": "module", "MazeEnv_v0": "module", "Net": "type", "PettingZooEnv": "ABCMeta", "PettingZooEnv_new": "ABCMeta", "SummaryWriter": "type", "action_shape": "int", "agent_observer": "DQNPolicy", "agents": "list", "batch_size": "int", "buffer_size": "int", "env": "PettingZooEnv_new", "env_human": "DummyVectorEnv", "ep_per_collect": "int", "epoch": "int", "epochs": "int", "eps_decay": "float", "eps_min": "float", "eps_prev": "float64", "eps_test": "float", "eps_train": "float64", "gamma": "float", "gym": "module", "high_eps_run": "bool", "human_collector": "Collector", "interleave_training": "function", "log_data": "dict", "lr": "float", "maze_width": "int", "mazes": "int", "n_mazes": "int", "n_step": "int", "net_obs": "CNN", "nn": "module", "np": "module", "obs_train": "bool", "optim_obs": "Adam", "passed_before": "bool", "passed_mazes": "bool", "policy": "DQNPolicy", "preprocess_maze_env": "function", "result": "dict", "run": "Run", "seed": "int", "set_eps": "function", "state_shape": "tuple", "step_per_collect": "int", "step_per_epoch": "int", "steps_n": "int", "steps_total": "int", "supersuit": "module", "target_update_freq": "int", "test_collector": "Collector", "test_envs": "DummyVectorEnv", "test_mazes": "list", "test_num": "int", "test_result": "dict", "threshold_rew": "float", "torch": "module", "total_mazes": "int", "train_collector": "Collector", "train_envs": "DummyVectorEnv", "train_num": "int", "ts": "module", "wandb": "module"}

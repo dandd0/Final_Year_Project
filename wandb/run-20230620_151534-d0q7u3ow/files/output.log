@@ -1,0 +1,25 @@
+f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\maze_env\envs\mazelib.py:32: DeprecationWarning: Seeding based on hashing is deprecated
+since Python 3.9 and will be removed in a subsequent version. The only
+supported seed types are: None, int, float, str, bytes, and bytearray.
+  random.seed(seed)
+f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\maze_env\envs\mazelib.py:32: DeprecationWarning: Seeding based on hashing is deprecated
+since Python 3.9 and will be removed in a subsequent version. The only
+supported seed types are: None, int, float, str, bytes, and bytearray.
+  random.seed(seed)
+f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\maze_env\envs\mazelib.py:32: DeprecationWarning: Seeding based on hashing is deprecated
+since Python 3.9 and will be removed in a subsequent version. The only
+supported seed types are: None, int, float, str, bytes, and bytearray.
+  random.seed(seed)
+f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\maze_env\envs\mazelib.py:32: DeprecationWarning: Seeding based on hashing is deprecated
+since Python 3.9 and will be removed in a subsequent version. The only
+supported seed types are: None, int, float, str, bytes, and bytearray.
+  random.seed(seed)
+f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\maze_env\envs\maze.py:570: UserWarning: [33mWARN: You are calling render method without specifying any render mode.
+  if self.render_mode is None:
+f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\maze_env\envs\mazelib.py:32: DeprecationWarning: Seeding based on hashing is deprecated
+since Python 3.9 and will be removed in a subsequent version. The only
+supported seed types are: None, int, float, str, bytes, and bytearray.
+  random.seed(seed)
+f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\maze_env\envs\mazelib.py:32: DeprecationWarning: Seeding based on hashing is deprecated
+since Python 3.9 and will be removed in a subsequent version. The only
+supported seed types are: None, int, float, str, bytes, and bytearray.

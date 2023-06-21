@@ -1,0 +1,38 @@
+f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\maze_env\envs\mazelib.py:32: DeprecationWarning: Seeding based on hashing is deprecated
+since Python 3.9 and will be removed in a subsequent version. The only
+supported seed types are: None, int, float, str, bytes, and bytearray.
+  random.seed(seed)
+f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\maze_env\envs\mazelib.py:32: DeprecationWarning: Seeding based on hashing is deprecated
+since Python 3.9 and will be removed in a subsequent version. The only
+supported seed types are: None, int, float, str, bytes, and bytearray.
+  random.seed(seed)
+f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\maze_env\envs\mazelib.py:32: DeprecationWarning: Seeding based on hashing is deprecated
+since Python 3.9 and will be removed in a subsequent version. The only
+supported seed types are: None, int, float, str, bytes, and bytearray.
+  random.seed(seed)
+Evaluation Reward at Epoch 1. Obs: 0.98
+Test Mazes results: []
+Agents solved the current maze and all previous mazes. Current number of mazes: 1.
+Solved all mazes on epoch 1.
+Evaluation Reward at Epoch 1. Obs: -0.991
+Test Mazes results: [0]
+Evaluation Reward at Epoch 2. Obs: -1.0
+Test Mazes results: [0]
+Evaluation Reward at Epoch 3. Obs: -1.0
+Test Mazes results: [0]
+Evaluation Reward at Epoch 4. Obs: -1.0
+Test Mazes results: [0]
+Evaluation Reward at Epoch 5. Obs: -1.0
+Test Mazes results: [0]
+Evaluation Reward at Epoch 6. Obs: -1.0
+Test Mazes results: [0]
+Evaluation Reward at Epoch 7. Obs: -1.0
+Test Mazes results: [0]
+Evaluation Reward at Epoch 8. Obs: -1.0
+Test Mazes results: [0]
+Evaluation Reward at Epoch 9. Obs: -1.0
+Test Mazes results: [0]
+Evaluation Reward at Epoch 10. Obs: -1.0
+Test Mazes results: [0]
+Evaluation Reward at Epoch 11. Obs: -0.98
+Test Mazes results: [0]

@@ -1,0 +1,106 @@
+{"F": "module", "MazeEnv_v0": "module", "Net": "type", "PettingZooEnv": "ABCMeta", "PettingZooEnv_new": "ABCMeta", "SummaryWriter": "type", "batch_size": "int", "buffer_size": "int", "epochs": "int", "eps_decay": "float", "eps_min": "float", "eps_test": "float", "eps_train": "float", "gamma": "float", "gym": "module", "high_eps_run": "bool", "logger": "WandbLogger", "lr": "float", "maze_width": "int", "n_step": "int", "nn": "module", "np": "module", "step_per_collect": "int", "step_per_epoch": "int", "supersuit": "module", "target_update_freq": "int", "test_num": "int", "torch": "module", "train_num": "int", "ts": "module", "wandb": "module", "writer": "SummaryWriter"}
+{"F": "module", "MazeEnv_v0": "module", "Net": "type", "PettingZooEnv": "ABCMeta", "PettingZooEnv_new": "ABCMeta", "SummaryWriter": "type", "batch_size": "int", "buffer_size": "int", "epochs": "int", "eps_decay": "float", "eps_min": "float", "eps_test": "float", "eps_train": "float", "gamma": "float", "gym": "module", "high_eps_run": "bool", "logger": "WandbLogger", "lr": "float", "maze_width": "int", "n_step": "int", "nn": "module", "np": "module", "step_per_collect": "int", "step_per_epoch": "int", "supersuit": "module", "target_update_freq": "int", "test_num": "int", "torch": "module", "train_num": "int", "ts": "module", "wandb": "module", "writer": "SummaryWriter"}
+{"F": "module", "MazeEnv_v0": "module", "Net": "type", "PettingZooEnv": "ABCMeta", "PettingZooEnv_new": "ABCMeta", "SummaryWriter": "type", "batch_size": "int", "buffer_size": "int", "epochs": "int", "eps_decay": "float", "eps_min": "float", "eps_test": "float", "eps_train": "float", "gamma": "float", "gym": "module", "high_eps_run": "bool", "logger": "WandbLogger", "lr": "float", "maze_width": "int", "n_step": "int", "nn": "module", "np": "module", "step_per_collect": "int", "step_per_epoch": "int", "supersuit": "module", "target_update_freq": "int", "test_num": "int", "torch": "module", "train_num": "int", "ts": "module", "wandb": "module", "writer": "SummaryWriter"}
+{"F": "module", "MazeEnv_v0": "module", "Net": "type", "PettingZooEnv": "ABCMeta", "PettingZooEnv_new": "ABCMeta", "SummaryWriter": "type", "batch_size": "int", "buffer_size": "int", "epoch": "int", "epochs": "int", "eps_decay": "float", "eps_min": "float", "eps_test": "float", "eps_train": "float", "gamma": "float", "gym": "module", "high_eps_run": "bool", "logger": "WandbLogger", "lr": "float", "maze_width": "int", "mazes": "int", "n_mazes": "int", "n_step": "int", "nn": "module", "np": "module", "obs_train": "bool", "passed_mazes": "bool", "step_per_collect": "int", "step_per_epoch": "int", "steps_n": "int", "steps_total": "int", "supersuit": "module", "target_update_freq": "int", "test_mazes": "list", "test_num": "int", "torch": "module", "total_mazes": "int", "train_num": "int", "ts": "module", "wandb": "module", "writer": "SummaryWriter"}
+wandb: WARNING Calling wandb.login() after wandb.init() has no effect.
+f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\maze_env\envs\mazelib.py:32: DeprecationWarning: Seeding based on hashing is deprecated
+since Python 3.9 and will be removed in a subsequent version. The only
+supported seed types are: None, int, float, str, bytes, and bytearray.
+  random.seed(seed)
+f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\maze_env\envs\mazelib.py:32: DeprecationWarning: Seeding based on hashing is deprecated
+since Python 3.9 and will be removed in a subsequent version. The only
+supported seed types are: None, int, float, str, bytes, and bytearray.
+  random.seed(seed)
+f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\maze_env\envs\mazelib.py:32: DeprecationWarning: Seeding based on hashing is deprecated
+since Python 3.9 and will be removed in a subsequent version. The only
+supported seed types are: None, int, float, str, bytes, and bytearray.
+  random.seed(seed)
+Evaluation Reward at Epoch 1. Obs: -211.8, Exp -107.8
+Test Mazes results: [0, 0, 0]
+Evaluation Reward at Epoch 2. Obs: -250.6, Exp 2.8
+Evaluation Reward at Epoch 3. Obs: -308.6, Exp 3.2
+Evaluation Reward at Epoch 4. Obs: -281.4, Exp 3.6
+Evaluation Reward at Epoch 5. Obs: -328.0, Exp 2.8
+Evaluation Reward at Epoch 6. Obs: -316.6, Exp 158.4
+Evaluation Reward at Epoch 7. Obs: -338.0, Exp 169.0
+Evaluation Reward at Epoch 8. Obs: -224.0, Exp 115.2
+Evaluation Reward at Epoch 9. Obs: -285.0, Exp 143.2
+Evaluation Reward at Epoch 10. Obs: -327.2, Exp 3.4
+Evaluation Reward at Epoch 11. Obs: -254.4, Exp 129.4
+Test Mazes results: [0, 0, 0]
+Evaluation Reward at Epoch 12. Obs: -274.6, Exp 140.2
+Evaluation Reward at Epoch 13. Obs: -264.5, Exp 134.8
+Evaluation Reward at Epoch 14. Obs: -273.4, Exp 138.4
+Evaluation Reward at Epoch 15. Obs: -239.8, Exp 122.0
+Evaluation Reward at Epoch 16. Obs: -300.0, Exp 3.4
+Evaluation Reward at Epoch 17. Obs: -281.2, Exp 4.0
+Evaluation Reward at Epoch 18. Obs: -308.2, Exp 156.8
+Evaluation Reward at Epoch 19. Obs: -259.2, Exp 131.0
+Evaluation Reward at Epoch 20. Obs: -286.0, Exp 145.8
+Evaluation Reward at Epoch 21. Obs: -311.6, Exp 4.2
+Test Mazes results: [0, 0, 0]
+Evaluation Reward at Epoch 22. Obs: -266.6, Exp 135.8
+Evaluation Reward at Epoch 23. Obs: -279.2, Exp 141.4
+Evaluation Reward at Epoch 24. Obs: -304.3, Exp 4.6
+Evaluation Reward at Epoch 25. Obs: -353.0, Exp 3.4
+Evaluation Reward at Epoch 26. Obs: -337.4, Exp 169.2
+Evaluation Reward at Epoch 27. Obs: -250.4, Exp 127.8
+Evaluation Reward at Epoch 28. Obs: -327.7, Exp 164.4
+Evaluation Reward at Epoch 29. Obs: -332.2, Exp 3.2
+Evaluation Reward at Epoch 30. Obs: -242.6, Exp 5.2
+Evaluation Reward at Epoch 31. Obs: -299.0, Exp 151.0
+Test Mazes results: [0, 0, 0]
+Evaluation Reward at Epoch 32. Obs: -282.4, Exp 145.0
+Evaluation Reward at Epoch 33. Obs: -327.0, Exp 164.0
+Evaluation Reward at Epoch 34. Obs: -186.2, Exp 5.4
+Evaluation Reward at Epoch 35. Obs: -260.6, Exp 133.2
+Evaluation Reward at Epoch 36. Obs: -238.2, Exp 3.8
+Evaluation Reward at Epoch 37. Obs: -294.0, Exp 148.4
+Evaluation Reward at Epoch 38. Obs: -288.2, Exp 2.6
+Evaluation Reward at Epoch 39. Obs: -290.3, Exp 145.8
+Evaluation Reward at Epoch 40. Obs: -290.4, Exp 4.2
+Evaluation Reward at Epoch 41. Obs: -303.4, Exp 150.4
+Test Mazes results: [0, 0, 0]
+Evaluation Reward at Epoch 42. Obs: -344.8, Exp 4.6
+Evaluation Reward at Epoch 43. Obs: -266.0, Exp 135.0
+Evaluation Reward at Epoch 44. Obs: -270.2, Exp 137.2
+Evaluation Reward at Epoch 45. Obs: -268.2, Exp 137.0
+Evaluation Reward at Epoch 46. Obs: -309.4, Exp 155.2
+Evaluation Reward at Epoch 47. Obs: -264.6, Exp 4.6
+Evaluation Reward at Epoch 48. Obs: -293.7, Exp 148.6
+Evaluation Reward at Epoch 49. Obs: -289.0, Exp 4.8
+Evaluation Reward at Epoch 50. Obs: -256.6, Exp 3.8
+Evaluation Reward at Epoch 51. Obs: -311.4, Exp 154.0
+Test Mazes results: [0, 0, 0]
+Evaluation Reward at Epoch 52. Obs: -330.1, Exp 165.6
+Evaluation Reward at Epoch 53. Obs: -276.9, Exp 140.6
+Evaluation Reward at Epoch 54. Obs: -298.0, Exp 3.4
+Evaluation Reward at Epoch 55. Obs: -295.8, Exp 149.4
+Evaluation Reward at Epoch 56. Obs: -283.2, Exp 5.2
+Evaluation Reward at Epoch 57. Obs: -272.0, Exp 139.0
+Evaluation Reward at Epoch 58. Obs: -352.4, Exp 1.8
+Evaluation Reward at Epoch 59. Obs: -352.6, Exp 173.4
+Evaluation Reward at Epoch 60. Obs: -352.4, Exp 171.6
+Evaluation Reward at Epoch 61. Obs: -352.6, Exp 173.0
+Test Mazes results: [0, 0, 0]
+Evaluation Reward at Epoch 62. Obs: -352.7, Exp 3.6
+Evaluation Reward at Epoch 63. Obs: -352.8, Exp 174.2
+Evaluation Reward at Epoch 64. Obs: -352.5, Exp 1.0
+Evaluation Reward at Epoch 65. Obs: -352.8, Exp 174.0
+Evaluation Reward at Epoch 66. Obs: -352.5, Exp 2.8
+Evaluation Reward at Epoch 67. Obs: -352.6, Exp 2.8
+Evaluation Reward at Epoch 68. Obs: -352.4, Exp 173.2
+Evaluation Reward at Epoch 69. Obs: -352.4, Exp 1.8
+Evaluation Reward at Epoch 70. Obs: -352.5, Exp 3.2
+Evaluation Reward at Epoch 71. Obs: -352.6, Exp 1.8
+Test Mazes results: [0, 0, 0]
+Evaluation Reward at Epoch 72. Obs: -352.7, Exp 174.2
+{"CNN": "type", "F": "module", "MazeEnv_v0": "module", "Net": "type", "PettingZooEnv": "ABCMeta", "PettingZooEnv_new": "ABCMeta", "SummaryWriter": "type", "action_shape": "int64", "agent_explorer": "DQNPolicy", "agent_observer": "DQNPolicy", "agent_policies": "list", "agents": "list", "batch_size": "int", "buffer_size": "int", "env": "PettingZooEnv_new", "env_human": "DummyVectorEnv", "epoch": "int", "epochs": "int", "eps_decay": "float", "eps_min": "float", "eps_prev": "float64", "eps_test": "float", "eps_train": "float64", "gamma": "float", "gym": "module", "high_eps_run": "bool", "human_collector": "Collector", "interleave_training": "function", "log_data": "dict", "logger": "WandbLogger", "lr": "float", "maze": "int", "maze_width": "int", "mazes": "int", "n_mazes": "int", "n_step": "int", "net_exp": "Net", "net_obs": "CNN", "nn": "module", "np": "module", "obs_train": "bool", "optim_exp": "Adam", "optim_obs": "Adam", "passed_mazes": "bool", "policy": "MultiAgentPolicyManager", "preprocess_maze_env": "function", "result": "dict", "seed": "int", "state_shape": "tuple", "step_per_collect": "int", "step_per_epoch": "int", "steps_n": "int", "steps_total": "int", "supersuit": "module", "target_update_freq": "int", "test_collector": "Collector", "test_envs": "DummyVectorEnv", "test_mazes": "list", "test_num": "int", "test_result": "dict", "torch": "module", "total_mazes": "int", "train_collector": "Collector", "train_envs": "DummyVectorEnv", "train_num": "int", "ts": "module", "wandb": "module", "writer": "SummaryWriter"}
+f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\maze_env\envs\mazelib.py:32: DeprecationWarning: Seeding based on hashing is deprecated
+since Python 3.9 and will be removed in a subsequent version. The only
+supported seed types are: None, int, float, str, bytes, and bytearray.
+  random.seed(seed)
+{"CNN": "type", "F": "module", "MazeEnv_v0": "module", "Net": "type", "PettingZooEnv": "ABCMeta", "PettingZooEnv_new": "ABCMeta", "SummaryWriter": "type", "action_shape": "int64", "agent_explorer": "DQNPolicy", "agent_observer": "DQNPolicy", "agent_policies": "list", "agents": "list", "batch_size": "int", "buffer_size": "int", "env": "PettingZooEnv_new", "env_human": "DummyVectorEnv", "epoch": "int", "epochs": "int", "eps_decay": "float", "eps_min": "float", "eps_prev": "float64", "eps_test": "float", "eps_train": "float64", "gamma": "float", "gradient_n": "int", "gym": "module", "high_eps_run": "bool", "human_collector": "Collector", "interleave_training": "function", "log_data": "dict", "logger": "WandbLogger", "lr": "float", "maze": "int", "maze_width": "int", "mazes": "int", "n_mazes": "int", "n_step": "int", "net_exp": "Net", "net_obs": "CNN", "nn": "module", "np": "module", "obs_train": "bool", "optim_exp": "Adam", "optim_obs": "Adam", "passed_mazes": "bool", "policy": "MultiAgentPolicyManager", "preprocess_maze_env": "function", "result": "dict", "seed": "int", "state_shape": "tuple", "step_per_collect": "int", "step_per_epoch": "int", "steps_n": "int", "steps_total": "int", "supersuit": "module", "target_update_freq": "int", "test_collector": "Collector", "test_envs": "DummyVectorEnv", "test_mazes": "list", "test_num": "int", "test_result": "dict", "torch": "module", "total_mazes": "int", "train_collector": "Collector", "train_envs": "DummyVectorEnv", "train_num": "int", "ts": "module", "wandb": "module", "writer": "SummaryWriter"}
+wandb: WARNING Calling wandb.login() after wandb.init() has no effect.
+Evaluation Reward at Epoch 1. Obs: -352.5, Exp: 6.2
+Test Mazes results: [0, 0, 0]

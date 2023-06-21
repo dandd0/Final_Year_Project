@@ -1,0 +1,9 @@
+Evaluation Reward at Epoch 1. Obs: -0.983, Exp: -0.6
+Test Mazes results: [1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 3.
+Solved all mazes on epoch 1.
+Evaluation Reward at Epoch 1. Obs: -1.0, Exp: 0.0
+Test Mazes results: [1, 1, 1, 1]
+Agents solved the current maze and all previous mazes. Current number of mazes: 4.
+Solved all mazes on epoch 1.
+wandb: WARNING Calling wandb.login() after wandb.init() has no effect.

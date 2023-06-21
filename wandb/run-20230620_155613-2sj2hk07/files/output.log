@@ -1,0 +1,22 @@
+
+Evaluation Reward at Epoch 1. Obs: -0.998
+Evaluation Reward at Epoch 2. Obs: 0.986
+Evaluation Reward at Epoch 3. Obs: -0.989
+Evaluation Reward at Epoch 4. Obs: -0.989
+Evaluation Reward at Epoch 5. Obs: 0.986
+Evaluation Reward at Epoch 6. Obs: -0.995
+Evaluation Reward at Epoch 7. Obs: 0.986
+Evaluation Reward at Epoch 8. Obs: 0.986
+Evaluation Reward at Epoch 9. Obs: -0.996
+Evaluation Reward at Epoch 10. Obs: -0.995
+Evaluation Reward at Epoch 11. Obs: -0.996
+Evaluation Reward at Epoch 12. Obs: 0.986
+Evaluation Reward at Epoch 13. Obs: -0.996
+Evaluation Reward at Epoch 14. Obs: -0.997
+Failed to find a solution within suitable time. Stopping training.
+Finished Training.
+Failed to find a solution within suitable time. Stopping training.
+Finished Training.
+wandb: WARNING Calling wandb.login() after wandb.init() has no effect.
+c:\Users\Dickson Lim\anaconda3\lib\site-packages\wandb\sdk\lib\ipython.py:70: DeprecationWarning: Importing display from IPython.core.display is deprecated since IPython 7.14, please import from IPython display
+  from IPython.core.display import HTML, display  # type: ignore

@@ -1,0 +1,49 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.9.13",
+    "heartbeatAt": "2023-06-20T14:43:15.734700",
+    "startedAt": "2023-06-20T14:43:15.157668",
+    "docker": null,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "<python with no main file>",
+    "git": {
+        "remote": "https://github.com/dandd0/Final_Year_Project.git",
+        "commit": "6d01129172504a4045d80631405ae60bcd949fd5"
+    },
+    "email": null,
+    "root": "F:/Desktop/University/Exeter/ECMM451 Final Year Project/Final_Year_Project",
+    "host": "DESKTOP-APN3PCF",
+    "username": "Dickson Lim",
+    "executable": "c:\\Users\\Dickson Lim\\anaconda3\\python.exe",
+    "cpu_count": 10,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 3700.0,
+        "min": 0.0,
+        "max": 3700.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3700.0,
+            "min": 0.0,
+            "max": 3700.0
+        }
+    ],
+    "disk": {
+        "total": 930.899845123291,
+        "used": 518.9022750854492
+    },
+    "gpu": "NVIDIA GeForce GTX 1080",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce GTX 1080",
+            "memory_total": 8589934592
+        }
+    ],
+    "memory": {
+        "total": 15.792831420898438
+    }
+}

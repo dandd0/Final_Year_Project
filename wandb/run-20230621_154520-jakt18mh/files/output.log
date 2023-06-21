@@ -1,0 +1,817 @@
+f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\maze_env\envs\mazelib.py:32: DeprecationWarning: Seeding based on hashing is deprecated
+since Python 3.9 and will be removed in a subsequent version. The only
+supported seed types are: None, int, float, str, bytes, and bytearray.
+  random.seed(seed)
+Current number of mazes: 1
+f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\maze_env\envs\mazelib.py:32: DeprecationWarning: Seeding based on hashing is deprecated
+since Python 3.9 and will be removed in a subsequent version. The only
+supported seed types are: None, int, float, str, bytes, and bytearray.
+  random.seed(seed)
+f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\maze_env\envs\mazelib.py:32: DeprecationWarning: Seeding based on hashing is deprecated
+since Python 3.9 and will be removed in a subsequent version. The only
+supported seed types are: None, int, float, str, bytes, and bytearray.
+  random.seed(seed)
+Evaluation Reward at Epoch 1. Obs: -1.001, Maze: 1
+Test Mazes results: [0], Failed at Maze: 1
+Evaluation Reward at Epoch 2. Obs: -0.999, Maze: 1
+Test Mazes results: [0], Failed at Maze: 1
+Evaluation Reward at Epoch 3. Obs: 0.99, Maze: 1
+Test Mazes results: [1], Failed at Maze: 1
+Passed once
+Evaluation Reward at Epoch 4. Obs: 0.99, Maze: 1
+Test Mazes results: [1], Failed at Maze: 1
+Agents solved the current maze and all previous mazes. Current number of mazes: 1.
+Solved all mazes on epoch 4.
+Current number of mazes: 2
+Evaluation Reward at Epoch 1. Obs: -1.0, Maze: 2
+Test Mazes results: [1, 0], Failed at Maze: 2
+Evaluation Reward at Epoch 2. Obs: -1.0, Maze: 2
+Test Mazes results: [1, 0], Failed at Maze: 2
+Evaluation Reward at Epoch 3. Obs: -1.001, Maze: 2
+Test Mazes results: [1, 0], Failed at Maze: 2
+Evaluation Reward at Epoch 4. Obs: -1.001, Maze: 2
+Test Mazes results: [1, 0], Failed at Maze: 2
+Evaluation Reward at Epoch 5. Obs: 0.987, Maze: 2
+Test Mazes results: [1, 1], Failed at Maze: 2
+Passed once
+Evaluation Reward at Epoch 6. Obs: 0.987, Maze: 2
+Test Mazes results: [1, 1], Failed at Maze: 2
+Agents solved the current maze and all previous mazes. Current number of mazes: 2.
+Solved all mazes on epoch 6.
+Current number of mazes: 3
+Evaluation Reward at Epoch 1. Obs: -0.996, Maze: 3
+Test Mazes results: [1, 1, 0], Failed at Maze: 3
+Evaluation Reward at Epoch 2. Obs: -0.996, Maze: 3
+Test Mazes results: [1, 1, 0], Failed at Maze: 3
+Evaluation Reward at Epoch 3. Obs: -0.999, Maze: 3
+Test Mazes results: [1, 1, 0], Failed at Maze: 3
+Evaluation Reward at Epoch 4. Obs: 0.99, Maze: 3
+Test Mazes results: [1, 1, 1], Failed at Maze: 3
+Passed once
+Evaluation Reward at Epoch 5. Obs: 0.99, Maze: 3
+Test Mazes results: [1, 1, 1], Failed at Maze: 3
+Agents solved the current maze and all previous mazes. Current number of mazes: 3.
+Solved all mazes on epoch 5.
+Current number of mazes: 4
+Evaluation Reward at Epoch 1. Obs: -0.999, Maze: 4
+Test Mazes results: [1, 1, 1, 0], Failed at Maze: 4
+Evaluation Reward at Epoch 2. Obs: 0.987, Maze: 4
+Test Mazes results: [1, 1, 1, 1], Failed at Maze: 4
+Passed once
+Evaluation Reward at Epoch 3. Obs: 0.987, Maze: 4
+Test Mazes results: [1, 1, 1, 1], Failed at Maze: 4
+Agents solved the current maze and all previous mazes. Current number of mazes: 4.
+Solved all mazes on epoch 3.
+Current number of mazes: 5
+Evaluation Reward at Epoch 1. Obs: -1.001, Maze: 5
+Test Mazes results: [1, 1, 1, 1, 0], Failed at Maze: 5
+Evaluation Reward at Epoch 2. Obs: 0.987, Maze: 5
+Test Mazes results: [1, 1, 1, 1, 1], Failed at Maze: 5
+Passed once
+Evaluation Reward at Epoch 3. Obs: 0.987, Maze: 5
+Test Mazes results: [1, 1, 1, 1, 1], Failed at Maze: 5
+Agents solved the current maze and all previous mazes. Current number of mazes: 5.
+Solved all mazes on epoch 3.
+Current number of mazes: 6
+Evaluation Reward at Epoch 1. Obs: 0.985, Maze: 6
+Test Mazes results: [1, 1, 1, 1, 1, 1], Failed at Maze: 6
+Passed once
+Evaluation Reward at Epoch 2. Obs: 0.985, Maze: 6
+Test Mazes results: [1, 1, 1, 1, 1, 1], Failed at Maze: 6
+Agents solved the current maze and all previous mazes. Current number of mazes: 6.
+Solved all mazes on epoch 2.
+Current number of mazes: 7
+Evaluation Reward at Epoch 1. Obs: -0.996, Maze: 7
+Test Mazes results: [1, 1, 1, 1, 1, 1, 0], Failed at Maze: 7
+Evaluation Reward at Epoch 2. Obs: -1.001, Maze: 7
+Test Mazes results: [1, 1, 1, 1, 1, 1, 0], Failed at Maze: 7
+Evaluation Reward at Epoch 3. Obs: -1.0, Maze: 7
+Test Mazes results: [1, 1, 1, 1, 1, 1, 0], Failed at Maze: 7
+Evaluation Reward at Epoch 4. Obs: -1.001, Maze: 7
+Test Mazes results: [1, 1, 1, 1, 1, 1, 0], Failed at Maze: 7
+Evaluation Reward at Epoch 5. Obs: 0.982, Maze: 7
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1], Failed at Maze: 7
+Passed once
+Evaluation Reward at Epoch 6. Obs: 0.982, Maze: 7
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1], Failed at Maze: 7
+Agents solved the current maze and all previous mazes. Current number of mazes: 7.
+Solved all mazes on epoch 6.
+Current number of mazes: 8
+Evaluation Reward at Epoch 1. Obs: -1.001, Maze: 8
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 8
+Evaluation Reward at Epoch 2. Obs: -1.0, Maze: 8
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 8
+Evaluation Reward at Epoch 3. Obs: -0.999, Maze: 8
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 8
+Evaluation Reward at Epoch 4. Obs: -1.0, Maze: 8
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 8
+Evaluation Reward at Epoch 5. Obs: 0.982, Maze: 8
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 8
+Passed once
+Evaluation Reward at Epoch 6. Obs: 0.982, Maze: 8
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 8
+Agents solved the current maze and all previous mazes. Current number of mazes: 8.
+Solved all mazes on epoch 6.
+Current number of mazes: 9
+Evaluation Reward at Epoch 1. Obs: -0.997, Maze: 4
+Test Mazes results: [1, 1, 1, 0], Failed at Maze: 4
+Evaluation Reward at Epoch 2. Obs: -1.0, Maze: 9
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 9
+Evaluation Reward at Epoch 3. Obs: -1.0, Maze: 9
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 9
+Evaluation Reward at Epoch 4. Obs: 0.979, Maze: 9
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 9
+Passed once
+Evaluation Reward at Epoch 5. Obs: 0.979, Maze: 9
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 9
+Agents solved the current maze and all previous mazes. Current number of mazes: 9.
+Solved all mazes on epoch 5.
+Current number of mazes: 10
+Evaluation Reward at Epoch 1. Obs: -0.999, Maze: 9
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 9
+Evaluation Reward at Epoch 2. Obs: -1.001, Maze: 10
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 10
+Evaluation Reward at Epoch 3. Obs: -1.001, Maze: 10
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 10
+Evaluation Reward at Epoch 4. Obs: -1.001, Maze: 10
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 10
+Evaluation Reward at Epoch 5. Obs: 0.982, Maze: 10
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 10
+Passed once
+Evaluation Reward at Epoch 6. Obs: 0.982, Maze: 10
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 10
+Agents solved the current maze and all previous mazes. Current number of mazes: 10.
+Solved all mazes on epoch 6.
+Current number of mazes: 11
+Evaluation Reward at Epoch 1. Obs: -0.996, Maze: 11
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 11
+Evaluation Reward at Epoch 2. Obs: -0.994, Maze: 11
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 11
+Evaluation Reward at Epoch 3. Obs: -1.0, Maze: 11
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 11
+Evaluation Reward at Epoch 4. Obs: -1.0, Maze: 11
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 11
+Evaluation Reward at Epoch 5. Obs: -1.001, Maze: 11
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 11
+Evaluation Reward at Epoch 6. Obs: -0.996, Maze: 11
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 11
+Evaluation Reward at Epoch 7. Obs: -1.001, Maze: 11
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 11
+Evaluation Reward at Epoch 8. Obs: 0.976, Maze: 11
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 11
+Passed once
+Evaluation Reward at Epoch 9. Obs: 0.976, Maze: 11
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 11
+Agents solved the current maze and all previous mazes. Current number of mazes: 11.
+Solved all mazes on epoch 9.
+Current number of mazes: 12
+Evaluation Reward at Epoch 1. Obs: -0.997, Maze: 12
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 12
+Evaluation Reward at Epoch 2. Obs: -0.993, Maze: 12
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 12
+Evaluation Reward at Epoch 3. Obs: -0.996, Maze: 12
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 12
+Evaluation Reward at Epoch 4. Obs: -1.001, Maze: 12
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 12
+Evaluation Reward at Epoch 5. Obs: -0.992, Maze: 12
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 12
+Evaluation Reward at Epoch 6. Obs: -0.993, Maze: 12
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 12
+Evaluation Reward at Epoch 7. Obs: 0.976, Maze: 12
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 12
+Passed once
+Evaluation Reward at Epoch 8. Obs: 0.976, Maze: 12
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 12
+Agents solved the current maze and all previous mazes. Current number of mazes: 12.
+Solved all mazes on epoch 8.
+Current number of mazes: 13
+Evaluation Reward at Epoch 1. Obs: -1.0, Maze: 13
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 13
+Evaluation Reward at Epoch 2. Obs: -1.001, Maze: 13
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 13
+Evaluation Reward at Epoch 3. Obs: -1.001, Maze: 13
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 13
+Evaluation Reward at Epoch 4. Obs: -1.0, Maze: 13
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 13
+Evaluation Reward at Epoch 5. Obs: -1.001, Maze: 13
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 13
+Evaluation Reward at Epoch 6. Obs: -1.001, Maze: 13
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 13
+Evaluation Reward at Epoch 7. Obs: -1.001, Maze: 10
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 10
+Evaluation Reward at Epoch 8. Obs: 0.973, Maze: 13
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 13
+Passed once
+Evaluation Reward at Epoch 9. Obs: 0.973, Maze: 13
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 13
+Agents solved the current maze and all previous mazes. Current number of mazes: 13.
+Solved all mazes on epoch 9.
+Current number of mazes: 14
+Evaluation Reward at Epoch 1. Obs: -1.001, Maze: 9
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 9
+Evaluation Reward at Epoch 2. Obs: -1.001, Maze: 10
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 10
+Evaluation Reward at Epoch 3. Obs: -0.999, Maze: 14
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 14
+Evaluation Reward at Epoch 4. Obs: -1.0, Maze: 13
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 13
+Evaluation Reward at Epoch 5. Obs: -1.0, Maze: 14
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 14
+Evaluation Reward at Epoch 6. Obs: -0.997, Maze: 14
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 14
+Evaluation Reward at Epoch 7. Obs: -0.993, Maze: 14
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 14
+Evaluation Reward at Epoch 8. Obs: -0.997, Maze: 14
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 14
+Evaluation Reward at Epoch 9. Obs: -0.993, Maze: 14
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 14
+Evaluation Reward at Epoch 10. Obs: -0.987, Maze: 14
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 14
+Evaluation Reward at Epoch 11. Obs: 0.973, Maze: 14
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 14
+Passed once
+Evaluation Reward at Epoch 12. Obs: 0.973, Maze: 14
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 14
+Agents solved the current maze and all previous mazes. Current number of mazes: 14.
+Solved all mazes on epoch 12.
+Current number of mazes: 15
+Evaluation Reward at Epoch 1. Obs: -0.997, Maze: 15
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 15
+Evaluation Reward at Epoch 2. Obs: -0.997, Maze: 15
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 15
+Evaluation Reward at Epoch 3. Obs: -0.994, Maze: 15
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 15
+Evaluation Reward at Epoch 4. Obs: -0.983, Maze: 15
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 15
+Evaluation Reward at Epoch 5. Obs: -0.994, Maze: 15
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 15
+Evaluation Reward at Epoch 6. Obs: -0.996, Maze: 15
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 15
+Evaluation Reward at Epoch 7. Obs: -0.989, Maze: 15
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 15
+Evaluation Reward at Epoch 8. Obs: -0.993, Maze: 15
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 15
+Evaluation Reward at Epoch 9. Obs: -1.001, Maze: 15
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 15
+Evaluation Reward at Epoch 10. Obs: -1.001, Maze: 15
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 15
+Evaluation Reward at Epoch 11. Obs: -0.996, Maze: 15
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 15
+Evaluation Reward at Epoch 12. Obs: 0.973, Maze: 15
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 15
+Passed once
+Evaluation Reward at Epoch 13. Obs: 0.973, Maze: 15
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 15
+Agents solved the current maze and all previous mazes. Current number of mazes: 15.
+Solved all mazes on epoch 13.
+Current number of mazes: 16
+Evaluation Reward at Epoch 1. Obs: -1.001, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 2. Obs: -1.001, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 3. Obs: -1.001, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 4. Obs: -1.001, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 5. Obs: -1.001, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 6. Obs: -1.001, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 7. Obs: -0.993, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 8. Obs: -1.001, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 9. Obs: -1.001, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 10. Obs: -0.997, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 11. Obs: -1.001, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 12. Obs: -0.99, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 13. Obs: -0.994, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 14. Obs: -0.997, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 15. Obs: -1.001, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 16. Obs: -1.001, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 17. Obs: -1.001, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 18. Obs: -0.994, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 19. Obs: -0.99, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 20. Obs: -1.001, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 21. Obs: -1.001, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 22. Obs: -1.0, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 23. Obs: -1.001, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 24. Obs: -1.0, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 25. Obs: -1.0, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 26. Obs: -1.001, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 27. Obs: -0.99, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 28. Obs: -1.001, Maze: 10
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 10
+Evaluation Reward at Epoch 29. Obs: -1.0, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 30. Obs: -0.996, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 31. Obs: -1.0, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 32. Obs: 0.97, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 16
+Passed once
+Evaluation Reward at Epoch 33. Obs: 0.97, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 16
+Agents solved the current maze and all previous mazes. Current number of mazes: 16.
+Solved all mazes on epoch 33.
+Current number of mazes: 17
+Evaluation Reward at Epoch 1. Obs: -0.999, Maze: 17
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 17
+Evaluation Reward at Epoch 2. Obs: -0.994, Maze: 17
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 17
+Evaluation Reward at Epoch 3. Obs: -1.001, Maze: 10
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 10
+Evaluation Reward at Epoch 4. Obs: -1.001, Maze: 11
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 11
+Evaluation Reward at Epoch 5. Obs: -1.001, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 6. Obs: -1.0, Maze: 17
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 17
+Evaluation Reward at Epoch 7. Obs: 0.97, Maze: 17
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 17
+Passed once
+Evaluation Reward at Epoch 8. Obs: 0.97, Maze: 17
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 17
+Agents solved the current maze and all previous mazes. Current number of mazes: 17.
+Solved all mazes on epoch 8.
+Current number of mazes: 18
+Evaluation Reward at Epoch 1. Obs: -1.001, Maze: 18
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 18
+Evaluation Reward at Epoch 2. Obs: -0.999, Maze: 15
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 15
+Evaluation Reward at Epoch 3. Obs: -1.001, Maze: 5
+Test Mazes results: [1, 1, 1, 1, 0], Failed at Maze: 5
+Evaluation Reward at Epoch 4. Obs: -1.0, Maze: 18
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 18
+Evaluation Reward at Epoch 5. Obs: -0.999, Maze: 15
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 15
+Evaluation Reward at Epoch 6. Obs: -1.001, Maze: 18
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 18
+Evaluation Reward at Epoch 7. Obs: -1.001, Maze: 17
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 17
+Evaluation Reward at Epoch 8. Obs: -1.001, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 9. Obs: -1.001, Maze: 18
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 18
+Evaluation Reward at Epoch 10. Obs: -1.001, Maze: 18
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 18
+Evaluation Reward at Epoch 11. Obs: -1.001, Maze: 18
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 18
+Evaluation Reward at Epoch 12. Obs: -1.0, Maze: 18
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 18
+Evaluation Reward at Epoch 13. Obs: 0.968, Maze: 18
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 18
+Passed once
+Evaluation Reward at Epoch 14. Obs: 0.968, Maze: 18
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 18
+Agents solved the current maze and all previous mazes. Current number of mazes: 18.
+Solved all mazes on epoch 14.
+Current number of mazes: 19
+Evaluation Reward at Epoch 1. Obs: -1.001, Maze: 18
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 18
+Evaluation Reward at Epoch 2. Obs: -0.993, Maze: 18
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 18
+Evaluation Reward at Epoch 3. Obs: -0.994, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 4. Obs: -0.992, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 5. Obs: -1.001, Maze: 13
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 13
+Evaluation Reward at Epoch 6. Obs: -1.001, Maze: 17
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 17
+Evaluation Reward at Epoch 7. Obs: -1.0, Maze: 14
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 14
+Evaluation Reward at Epoch 8. Obs: -0.994, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 9. Obs: -1.0, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 10. Obs: -0.997, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 11. Obs: -0.993, Maze: 18
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 18
+Evaluation Reward at Epoch 12. Obs: -0.999, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 13. Obs: -0.992, Maze: 13
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 13
+Evaluation Reward at Epoch 14. Obs: -1.0, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 15. Obs: -1.0, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 16. Obs: -1.0, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 17. Obs: -1.0, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 18. Obs: -0.997, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 19. Obs: -1.0, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 20. Obs: -0.997, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 21. Obs: -0.993, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 22. Obs: -1.001, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 23. Obs: -0.993, Maze: 18
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 18
+Evaluation Reward at Epoch 24. Obs: -1.0, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 25. Obs: -0.997, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 26. Obs: -0.999, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 27. Obs: -1.0, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 28. Obs: -0.997, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 29. Obs: -1.001, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 30. Obs: -1.001, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 31. Obs: 0.965, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 19
+Passed once
+Evaluation Reward at Epoch 32. Obs: 0.965, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 19
+Agents solved the current maze and all previous mazes. Current number of mazes: 19.
+Solved all mazes on epoch 32.
+Current number of mazes: 20
+Evaluation Reward at Epoch 1. Obs: -0.994, Maze: 6
+Test Mazes results: [1, 1, 1, 1, 1, 0], Failed at Maze: 6
+Evaluation Reward at Epoch 2. Obs: -1.001, Maze: 10
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 10
+Evaluation Reward at Epoch 3. Obs: -0.999, Maze: 13
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 13
+Evaluation Reward at Epoch 4. Obs: -1.001, Maze: 12
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 12
+Evaluation Reward at Epoch 5. Obs: -1.001, Maze: 10
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 10
+Evaluation Reward at Epoch 6. Obs: -1.001, Maze: 10
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 10
+Evaluation Reward at Epoch 7. Obs: -0.996, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 8. Obs: -0.994, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 9. Obs: -1.001, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 10. Obs: -0.997, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 11. Obs: -0.996, Maze: 14
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 14
+Evaluation Reward at Epoch 12. Obs: -1.0, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 13. Obs: -1.001, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 14. Obs: -1.001, Maze: 17
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 17
+Evaluation Reward at Epoch 15. Obs: -0.994, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 16. Obs: -0.994, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 17. Obs: -0.997, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 18. Obs: -1.001, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 19. Obs: -1.001, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 20. Obs: -0.987, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 21. Obs: -1.001, Maze: 17
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 17
+Evaluation Reward at Epoch 22. Obs: -0.999, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 23. Obs: -0.997, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 24. Obs: -0.997, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 25. Obs: -0.996, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 26. Obs: -0.997, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 27. Obs: -0.999, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 28. Obs: 0.965, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 20
+Passed once
+Evaluation Reward at Epoch 29. Obs: -1.001, Maze: 18
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 18
+Evaluation Reward at Epoch 30. Obs: -0.993, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 31. Obs: -1.001, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 32. Obs: 0.965, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 20
+Passed once
+Evaluation Reward at Epoch 33. Obs: -0.987, Maze: 14
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 14
+Evaluation Reward at Epoch 34. Obs: 0.965, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 20
+Passed once
+Evaluation Reward at Epoch 35. Obs: 0.965, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], Failed at Maze: 20
+Agents solved the current maze and all previous mazes. Current number of mazes: 20.
+Solved all mazes on epoch 35.
+Current number of mazes: 21
+Evaluation Reward at Epoch 1. Obs: -1.001, Maze: 11
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 11
+Evaluation Reward at Epoch 2. Obs: -0.985, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 3. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 4. Obs: -0.999, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 5. Obs: -0.99, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 6. Obs: -0.996, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 7. Obs: -0.983, Maze: 11
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 11
+Evaluation Reward at Epoch 8. Obs: -0.999, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 9. Obs: -0.997, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 10. Obs: -0.994, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 11. Obs: -0.992, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 12. Obs: -1.0, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 13. Obs: -1.0, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 14. Obs: -0.999, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 15. Obs: -1.001, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 16. Obs: -0.986, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 17. Obs: -1.001, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 18. Obs: -0.999, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 19. Obs: -1.0, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 20. Obs: -1.001, Maze: 18
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 18
+Evaluation Reward at Epoch 21. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 22. Obs: -0.987, Maze: 13
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 13
+Evaluation Reward at Epoch 23. Obs: -0.993, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 24. Obs: -1.0, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 25. Obs: -1.0, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 26. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 27. Obs: -0.999, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 28. Obs: -0.994, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 29. Obs: -0.987, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 30. Obs: -0.994, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 31. Obs: -1.001, Maze: 18
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 18
+Evaluation Reward at Epoch 32. Obs: -1.001, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 33. Obs: -1.0, Maze: 16
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 16
+Evaluation Reward at Epoch 34. Obs: -1.001, Maze: 18
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 18
+Evaluation Reward at Epoch 35. Obs: -0.992, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 36. Obs: -0.999, Maze: 6
+Test Mazes results: [1, 1, 1, 1, 1, 0], Failed at Maze: 6
+Evaluation Reward at Epoch 37. Obs: -0.994, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 38. Obs: -0.999, Maze: 13
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 13
+Evaluation Reward at Epoch 39. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 40. Obs: -0.999, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 41. Obs: -0.993, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 42. Obs: -0.977, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 43. Obs: -0.987, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 44. Obs: -0.999, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 45. Obs: -1.001, Maze: 18
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 18
+Evaluation Reward at Epoch 46. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 47. Obs: -0.994, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 48. Obs: -0.999, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 49. Obs: -0.996, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 50. Obs: -0.994, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 51. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 52. Obs: -1.0, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 53. Obs: -1.001, Maze: 18
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 18
+Evaluation Reward at Epoch 54. Obs: -1.001, Maze: 17
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 17
+Evaluation Reward at Epoch 55. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 56. Obs: -1.0, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 57. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 58. Obs: -0.99, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 59. Obs: -0.999, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 60. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 61. Obs: -0.992, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 62. Obs: -0.977, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 63. Obs: -0.992, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 64. Obs: -1.0, Maze: 18
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 18
+Evaluation Reward at Epoch 65. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 66. Obs: -0.977, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 67. Obs: -0.996, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 68. Obs: -0.99, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 69. Obs: -0.99, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 70. Obs: -1.0, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 71. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 72. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 73. Obs: -0.977, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 74. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 75. Obs: -0.987, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 76. Obs: -0.994, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 77. Obs: -1.0, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 78. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 79. Obs: -0.977, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 80. Obs: -0.997, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 81. Obs: -0.993, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 82. Obs: -0.994, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 83. Obs: -0.996, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 84. Obs: -0.999, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 85. Obs: -0.999, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 86. Obs: -1.0, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 87. Obs: -0.994, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 88. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 89. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 90. Obs: -0.99, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 91. Obs: -1.001, Maze: 17
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 17
+Evaluation Reward at Epoch 92. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 93. Obs: -0.982, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 94. Obs: -0.977, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 95. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 96. Obs: -0.977, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 97. Obs: -0.99, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 98. Obs: -1.001, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 99. Obs: -0.994, Maze: 17
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 17
+Evaluation Reward at Epoch 100. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 101. Obs: -0.993, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 102. Obs: -0.983, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 103. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 104. Obs: -0.993, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 105. Obs: -0.994, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 106. Obs: -0.994, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 107. Obs: -0.999, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 108. Obs: -1.001, Maze: 10
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 10
+Evaluation Reward at Epoch 109. Obs: -0.983, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 110. Obs: -0.994, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 111. Obs: -0.985, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 112. Obs: -0.994, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 113. Obs: -0.999, Maze: 12
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 12
+Evaluation Reward at Epoch 114. Obs: -0.977, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 115. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 116. Obs: -1.0, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 117. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 118. Obs: -1.001, Maze: 10
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 10
+Evaluation Reward at Epoch 119. Obs: -1.001, Maze: 17
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 17
+Evaluation Reward at Epoch 120. Obs: -0.996, Maze: 19
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 19
+Evaluation Reward at Epoch 121. Obs: -0.999, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 122. Obs: -1.0, Maze: 18
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 18
+Evaluation Reward at Epoch 123. Obs: -0.99, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 124. Obs: -1.0, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 125. Obs: -0.983, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 126. Obs: -1.0, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 127. Obs: -0.994, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 128. Obs: -1.001, Maze: 11
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 11
+Evaluation Reward at Epoch 129. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 130. Obs: -1.001, Maze: 10
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 10
+Evaluation Reward at Epoch 131. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 132. Obs: -0.999, Maze: 17
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 17
+Evaluation Reward at Epoch 133. Obs: -0.98, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 134. Obs: -0.99, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 135. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 136. Obs: -0.993, Maze: 15
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 15
+Evaluation Reward at Epoch 137. Obs: -1.001, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 138. Obs: -0.989, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 139. Obs: -0.999, Maze: 20
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 20
+Evaluation Reward at Epoch 140. Obs: -0.994, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 141. Obs: -1.001, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21
+Evaluation Reward at Epoch 142. Obs: -0.992, Maze: 21
+Test Mazes results: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0], Failed at Maze: 21

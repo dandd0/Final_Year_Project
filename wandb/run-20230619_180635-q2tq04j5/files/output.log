@@ -1,0 +1,52 @@
+f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\maze_env\envs\mazelib.py:32: DeprecationWarning: Seeding based on hashing is deprecated
+since Python 3.9 and will be removed in a subsequent version. The only
+supported seed types are: None, int, float, str, bytes, and bytearray.
+  random.seed(seed)
+f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\maze_env\envs\mazelib.py:32: DeprecationWarning: Seeding based on hashing is deprecated
+since Python 3.9 and will be removed in a subsequent version. The only
+supported seed types are: None, int, float, str, bytes, and bytearray.
+  random.seed(seed)
+f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\maze_env\envs\mazelib.py:32: DeprecationWarning: Seeding based on hashing is deprecated
+since Python 3.9 and will be removed in a subsequent version. The only
+supported seed types are: None, int, float, str, bytes, and bytearray.
+  random.seed(seed)
+Evaluation Reward at Epoch 1. Obs: -35.08999999999996, Exp: -15.809999999999974
+Test Mazes results: [0, 0, 0]
+Evaluation Reward at Epoch 2. Obs: -35.13999999999995, Exp: -7.7499999999999885
+Evaluation Reward at Epoch 3. Obs: -35.04999999999997, Exp: -14.479999999999979
+Evaluation Reward at Epoch 4. Obs: -35.10999999999996, Exp: -8.109999999999989
+Evaluation Reward at Epoch 5. Obs: -35.139999999999965, Exp: -8.689999999999984
+Evaluation Reward at Epoch 6. Obs: -35.07999999999996, Exp: -15.629999999999976
+Evaluation Reward at Epoch 7. Obs: -35.02999999999996, Exp: -7.449999999999989
+Evaluation Reward at Epoch 8. Obs: -35.049999999999955, Exp: -5.869999999999992
+Evaluation Reward at Epoch 9. Obs: -35.16999999999996, Exp: -8.179999999999987
+Evaluation Reward at Epoch 10. Obs: -35.10999999999996, Exp: -8.139999999999988
+Evaluation Reward at Epoch 11. Obs: -35.12999999999996, Exp: -17.08999999999997
+Test Mazes results: [0, 0, 0]
+Evaluation Reward at Epoch 12. Obs: -35.139999999999965, Exp: -7.609999999999987
+Evaluation Reward at Epoch 13. Obs: -35.06999999999996, Exp: -8.679999999999987
+Evaluation Reward at Epoch 14. Obs: -35.01999999999996, Exp: -5.749999999999993
+Evaluation Reward at Epoch 15. Obs: -35.05999999999996, Exp: -8.669999999999984
+Evaluation Reward at Epoch 16. Obs: -35.02999999999996, Exp: -8.659999999999984
+Evaluation Reward at Epoch 17. Obs: -33.679999999999964, Exp: -8.349999999999985
+Evaluation Reward at Epoch 18. Obs: -35.10999999999996, Exp: -7.409999999999988
+Evaluation Reward at Epoch 19. Obs: -35.12999999999996, Exp: -8.679999999999984
+Evaluation Reward at Epoch 20. Obs: -35.07999999999996, Exp: -7.009999999999989
+Evaluation Reward at Epoch 21. Obs: -35.13999999999995, Exp: -15.669999999999977
+Test Mazes results: [0, 0, 0]
+Evaluation Reward at Epoch 22. Obs: -35.08999999999996, Exp: -8.679999999999986
+Evaluation Reward at Epoch 23. Obs: -34.929999999999964, Exp: -8.609999999999987
+Evaluation Reward at Epoch 24. Obs: -35.08999999999996, Exp: -8.639999999999985
+Evaluation Reward at Epoch 25. Obs: -35.01999999999996, Exp: -6.339999999999992
+Evaluation Reward at Epoch 26. Obs: -35.07999999999996, Exp: -8.689999999999985
+Evaluation Reward at Epoch 27. Obs: -35.10999999999996, Exp: -8.669999999999984
+Evaluation Reward at Epoch 28. Obs: -35.07999999999996, Exp: -8.649999999999984
+Evaluation Reward at Epoch 29. Obs: -35.049999999999955, Exp: -8.629999999999985
+Evaluation Reward at Epoch 30. Obs: -35.04999999999997, Exp: -8.609999999999985
+Evaluation Reward at Epoch 31. Obs: -35.10999999999996, Exp: -7.259999999999989
+Test Mazes results: [0, 0, 0]
+Evaluation Reward at Epoch 32. Obs: -35.05999999999996, Exp: -6.80999999999999
+Evaluation Reward at Epoch 33. Obs: -35.08999999999996, Exp: -8.689999999999985
+Evaluation Reward at Epoch 34. Obs: -35.06999999999996, Exp: -6.6099999999999905
+Evaluation Reward at Epoch 35. Obs: -35.109999999999964, Exp: -8.639999999999985
+Evaluation Reward at Epoch 36. Obs: -35.01999999999996, Exp: -6.139999999999992

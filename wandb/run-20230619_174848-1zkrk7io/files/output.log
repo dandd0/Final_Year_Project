@@ -1,0 +1,36 @@
+f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\maze_env\envs\mazelib.py:32: DeprecationWarning: Seeding based on hashing is deprecated
+since Python 3.9 and will be removed in a subsequent version. The only
+supported seed types are: None, int, float, str, bytes, and bytearray.
+  random.seed(seed)
+Evaluation Reward at Epoch 1. Obs: -351.8, Exp: -87.9
+Test Mazes results: [1, 0, 0]
+Evaluation Reward at Epoch 2. Obs: -351.3, Exp: -87.2
+Evaluation Reward at Epoch 3. Obs: -351.6, Exp: -88.3
+Evaluation Reward at Epoch 4. Obs: -351.4, Exp: -87.0
+Evaluation Reward at Epoch 5. Obs: -351.3, Exp: -86.5
+Evaluation Reward at Epoch 6. Obs: -351.6, Exp: -86.0
+Evaluation Reward at Epoch 7. Obs: -351.5, Exp: -85.9
+Evaluation Reward at Epoch 8. Obs: -351.4, Exp: -86.3
+Evaluation Reward at Epoch 9. Obs: -351.7, Exp: -1.5
+Evaluation Reward at Epoch 10. Obs: -351.8, Exp: -86.9
+Evaluation Reward at Epoch 11. Obs: -351.5, Exp: -86.3
+Test Mazes results: [1, 0, 0]
+Evaluation Reward at Epoch 12. Obs: -351.9, Exp: -86.9
+Evaluation Reward at Epoch 13. Obs: -351.6, Exp: -2.5
+Evaluation Reward at Epoch 14. Obs: -351.7, Exp: -2.3
+Evaluation Reward at Epoch 15. Obs: -351.8, Exp: -1.0
+Evaluation Reward at Epoch 16. Obs: -351.4, Exp: -1.3
+Evaluation Reward at Epoch 17. Obs: -351.8, Exp: -1.4
+Evaluation Reward at Epoch 18. Obs: -351.6, Exp: -2.7
+Evaluation Reward at Epoch 19. Obs: -351.9, Exp: -1.1
+Evaluation Reward at Epoch 20. Obs: -351.7, Exp: -86.5
+Evaluation Reward at Epoch 21. Obs: -351.5, Exp: -2.2
+Test Mazes results: [1, 0, 0]
+Evaluation Reward at Epoch 22. Obs: -351.6, Exp: -86.9
+Evaluation Reward at Epoch 23. Obs: -351.3, Exp: -2.0
+Evaluation Reward at Epoch 24. Obs: -351.4, Exp: -86.2
+Evaluation Reward at Epoch 25. Obs: -351.6, Exp: -89.0
+Evaluation Reward at Epoch 26. Obs: -351.7, Exp: -86.7
+{"CNN": "type", "F": "module", "MazeEnv_v0": "module", "Net": "type", "PettingZooEnv": "ABCMeta", "PettingZooEnv_new": "ABCMeta", "SummaryWriter": "type", "action_shape": "int", "agent_explorer": "DQNPolicy", "agent_observer": "DQNPolicy", "agent_policies": "list", "agents": "list", "batch_size": "int", "buffer_size": "int", "env": "PettingZooEnv_new", "env_human": "DummyVectorEnv", "ep_per_collect": "int", "epoch": "int", "epochs": "int", "eps_decay": "float", "eps_min": "float", "eps_prev": "float64", "eps_test": "float", "eps_train": "float64", "gamma": "float", "gradient_n": "int", "gym": "module", "high_eps_run": "bool", "human_collector": "Collector", "interleave_training": "function", "log_data": "dict", "lr": "float", "maze": "int", "maze_width": "int", "mazes": "int", "n_mazes": "int", "n_step": "int", "net_exp": "Net", "net_obs": "CNN", "nn": "module", "np": "module", "obs_train": "bool", "optim_exp": "Adam", "optim_obs": "Adam", "passed_mazes": "bool", "policy": "MultiAgentPolicyManager", "preprocess_maze_env": "function", "result": "dict", "run": "Run", "seed": "int", "state_shape": "tuple", "step_per_collect": "int", "step_per_epoch": "int", "steps_n": "int", "steps_total": "int", "supersuit": "module", "target_update_freq": "int", "test_collector": "Collector", "test_envs": "DummyVectorEnv", "test_mazes": "list", "test_num": "int", "test_result": "dict", "torch": "module", "total_mazes": "int", "train_collector": "Collector", "train_envs": "DummyVectorEnv", "train_num": "int", "ts": "module", "wandb": "module"}
+{"CNN": "type", "F": "module", "MazeEnv_v0": "module", "Net": "type", "PettingZooEnv": "ABCMeta", "PettingZooEnv_new": "ABCMeta", "SummaryWriter": "type", "action_shape": "int", "agent_explorer": "DQNPolicy", "agent_observer": "DQNPolicy", "agent_policies": "list", "agents": "list", "batch_size": "int", "buffer_size": "int", "env": "PettingZooEnv_new", "env_human": "DummyVectorEnv", "ep_per_collect": "int", "epoch": "int", "epochs": "int", "eps_decay": "float", "eps_min": "float", "eps_prev": "float64", "eps_test": "float", "eps_train": "float64", "gamma": "float", "gradient_n": "int", "gym": "module", "high_eps_run": "bool", "human_collector": "Collector", "interleave_training": "function", "log_data": "dict", "lr": "float", "maze": "int", "maze_width": "int", "mazes": "int", "n_mazes": "int", "n_step": "int", "net_exp": "Net", "net_obs": "CNN", "nn": "module", "np": "module", "obs_train": "bool", "optim_exp": "Adam", "optim_obs": "Adam", "passed_mazes": "bool", "policy": "MultiAgentPolicyManager", "preprocess_maze_env": "function", "result": "dict", "run": "Run", "seed": "int", "state_shape": "tuple", "step_per_collect": "int", "step_per_epoch": "int", "steps_n": "int", "steps_total": "int", "supersuit": "module", "target_update_freq": "int", "test_collector": "Collector", "test_envs": "DummyVectorEnv", "test_mazes": "list", "test_num": "int", "test_result": "dict", "torch": "module", "total_mazes": "int", "train_collector": "Collector", "train_envs": "DummyVectorEnv", "train_num": "int", "ts": "module", "wandb": "module"}
+{"CNN": "type", "F": "module", "MazeEnv_v0": "module", "Net": "type", "PettingZooEnv": "ABCMeta", "PettingZooEnv_new": "ABCMeta", "SummaryWriter": "type", "action_shape": "int", "agent_explorer": "DQNPolicy", "agent_observer": "DQNPolicy", "agent_policies": "list", "agents": "list", "batch_size": "int", "buffer_size": "int", "env": "PettingZooEnv_new", "env_human": "DummyVectorEnv", "ep_per_collect": "int", "epoch": "int", "epochs": "int", "eps_decay": "float", "eps_min": "float", "eps_prev": "float64", "eps_test": "float", "eps_train": "float64", "gamma": "float", "gradient_n": "int", "gym": "module", "high_eps_run": "bool", "human_collector": "Collector", "interleave_training": "function", "log_data": "dict", "lr": "float", "maze": "int", "maze_width": "int", "mazes": "int", "n_mazes": "int", "n_step": "int", "net_exp": "Net", "net_obs": "CNN", "nn": "module", "np": "module", "obs_train": "bool", "optim_exp": "Adam", "optim_obs": "Adam", "passed_mazes": "bool", "policy": "MultiAgentPolicyManager", "preprocess_maze_env": "function", "result": "dict", "run": "Run", "seed": "int", "state_shape": "tuple", "step_per_collect": "int", "step_per_epoch": "int", "steps_n": "int", "steps_total": "int", "supersuit": "module", "target_update_freq": "int", "test_collector": "Collector", "test_envs": "DummyVectorEnv", "test_mazes": "list", "test_num": "int", "test_result": "dict", "torch": "module", "total_mazes": "int", "train_collector": "Collector", "train_envs": "DummyVectorEnv", "train_num": "int", "ts": "module", "wandb": "module"}

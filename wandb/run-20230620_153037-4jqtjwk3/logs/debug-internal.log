@@ -1,0 +1,635 @@
+2023-06-20 15:30:38,009 INFO    StreamThr :17116 [internal.py:wandb_internal():86] W&B internal server running at pid: 17116, started at: 2023-06-20 15:30:38.008029
+2023-06-20 15:30:38,010 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status
+2023-06-20 15:30:38,015 INFO    WriterThread:17116 [datastore.py:open_for_write():85] open: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\run-4jqtjwk3.wandb
+2023-06-20 15:30:38,016 DEBUG   SenderThread:17116 [sender.py:send():369] send: header
+2023-06-20 15:30:38,051 DEBUG   SenderThread:17116 [sender.py:send():369] send: run
+2023-06-20 15:30:38,668 INFO    SenderThread:17116 [dir_watcher.py:__init__():211] watching files in: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files
+2023-06-20 15:30:38,668 INFO    SenderThread:17116 [sender.py:_start_run_threads():1100] run started: 4jqtjwk3 with start time 1687271438.006035
+2023-06-20 15:30:38,670 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:30:38,670 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:30:38,675 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: check_version
+2023-06-20 15:30:38,675 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: check_version
+2023-06-20 15:30:38,801 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: run_start
+2023-06-20 15:30:38,812 DEBUG   HandlerThread:17116 [system_info.py:__init__():31] System info init
+2023-06-20 15:30:38,812 DEBUG   HandlerThread:17116 [system_info.py:__init__():46] System info init done
+2023-06-20 15:30:38,813 INFO    HandlerThread:17116 [system_monitor.py:start():181] Starting system monitor
+2023-06-20 15:30:38,813 INFO    SystemMonitor:17116 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-06-20 15:30:38,813 INFO    HandlerThread:17116 [system_monitor.py:probe():201] Collecting system info
+2023-06-20 15:30:38,816 INFO    SystemMonitor:17116 [interfaces.py:start():190] Started cpu monitoring
+2023-06-20 15:30:38,817 INFO    SystemMonitor:17116 [interfaces.py:start():190] Started disk monitoring
+2023-06-20 15:30:38,817 INFO    SystemMonitor:17116 [interfaces.py:start():190] Started gpu monitoring
+2023-06-20 15:30:38,823 INFO    SystemMonitor:17116 [interfaces.py:start():190] Started memory monitoring
+2023-06-20 15:30:38,826 DEBUG   HandlerThread:17116 [system_info.py:probe():195] Probing system
+2023-06-20 15:30:38,832 INFO    SystemMonitor:17116 [interfaces.py:start():190] Started network monitoring
+2023-06-20 15:30:38,834 DEBUG   HandlerThread:17116 [system_info.py:_probe_git():180] Probing git
+2023-06-20 15:30:38,896 DEBUG   HandlerThread:17116 [system_info.py:_probe_git():188] Probing git done
+2023-06-20 15:30:38,896 DEBUG   HandlerThread:17116 [system_info.py:probe():240] Probing system done
+2023-06-20 15:30:38,896 DEBUG   HandlerThread:17116 [system_monitor.py:probe():210] {'os': 'Windows-10-10.0.19045-SP0', 'python': '3.9.13', 'heartbeatAt': '2023-06-20T14:30:38.832502', 'startedAt': '2023-06-20T14:30:37.982116', 'docker': None, 'cuda': None, 'args': None, 'state': 'running', 'program': '<python with no main file>', 'git': {'remote': 'https://github.com/dandd0/Final_Year_Project.git', 'commit': '6d01129172504a4045d80631405ae60bcd949fd5'}, 'email': None, 'root': 'F:/Desktop/University/Exeter/ECMM451 Final Year Project/Final_Year_Project', 'host': 'DESKTOP-APN3PCF', 'username': 'Dickson Lim', 'executable': 'c:\\Users\\Dickson Lim\\anaconda3\\python.exe', 'cpu_count': 10, 'cpu_count_logical': 16, 'cpu_freq': {'current': 3700.0, 'min': 0.0, 'max': 3700.0}, 'cpu_freq_per_core': [{'current': 3700.0, 'min': 0.0, 'max': 3700.0}], 'disk': {'total': 930.899845123291, 'used': 518.9019889831543}, 'gpu': 'NVIDIA GeForce GTX 1080', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce GTX 1080', 'memory_total': 8589934592}], 'memory': {'total': 15.792831420898438}}
+2023-06-20 15:30:38,896 INFO    HandlerThread:17116 [system_monitor.py:probe():211] Finished collecting system info
+2023-06-20 15:30:38,896 INFO    HandlerThread:17116 [system_monitor.py:probe():214] Publishing system info
+2023-06-20 15:30:38,897 DEBUG   HandlerThread:17116 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-06-20 15:30:38,905 DEBUG   HandlerThread:17116 [system_info.py:_save_pip():67] Saving pip packages done
+2023-06-20 15:30:38,906 DEBUG   HandlerThread:17116 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-06-20 15:30:39,681 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_created():272] file/dir created: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:30:39,681 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_created():272] file/dir created: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\requirements.txt
+2023-06-20 15:30:39,681 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_created():272] file/dir created: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\conda-environment.yaml
+2023-06-20 15:30:56,869 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\conda-environment.yaml
+2023-06-20 15:30:57,059 DEBUG   HandlerThread:17116 [system_info.py:_save_conda():86] Saving conda packages done
+2023-06-20 15:30:57,060 INFO    HandlerThread:17116 [system_monitor.py:probe():216] Finished publishing system info
+2023-06-20 15:30:57,060 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: keepalive
+2023-06-20 15:30:57,060 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:30:57,060 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: keepalive
+2023-06-20 15:30:57,060 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:30:57,060 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: keepalive
+2023-06-20 15:30:57,060 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:30:57,061 DEBUG   SenderThread:17116 [sender.py:send():369] send: files
+2023-06-20 15:30:57,061 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-metadata.json with policy now
+2023-06-20 15:30:57,071 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-20 15:30:57,071 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: stop_status
+2023-06-20 15:30:57,073 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: pause
+2023-06-20 15:30:57,073 INFO    HandlerThread:17116 [handler.py:handle_request_pause():728] stopping system metrics thread or process
+2023-06-20 15:30:57,073 INFO    HandlerThread:17116 [system_monitor.py:finish():190] Stopping system monitor
+2023-06-20 15:30:57,073 DEBUG   SystemMonitor:17116 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-06-20 15:30:57,073 INFO    HandlerThread:17116 [interfaces.py:finish():202] Joined cpu monitor
+2023-06-20 15:30:57,073 DEBUG   SystemMonitor:17116 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-06-20 15:30:57,073 INFO    HandlerThread:17116 [interfaces.py:finish():202] Joined disk monitor
+2023-06-20 15:30:57,074 DEBUG   SystemMonitor:17116 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-06-20 15:30:57,116 INFO    HandlerThread:17116 [interfaces.py:finish():202] Joined gpu monitor
+2023-06-20 15:30:57,116 INFO    HandlerThread:17116 [interfaces.py:finish():202] Joined memory monitor
+2023-06-20 15:30:57,116 INFO    HandlerThread:17116 [interfaces.py:finish():202] Joined network monitor
+2023-06-20 15:30:57,116 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: resume
+2023-06-20 15:30:57,116 INFO    HandlerThread:17116 [handler.py:handle_request_resume():719] starting system metrics thread or process
+2023-06-20 15:30:57,116 INFO    HandlerThread:17116 [system_monitor.py:start():181] Starting system monitor
+2023-06-20 15:30:57,117 INFO    SystemMonitor:17116 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-06-20 15:30:57,117 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: pause
+2023-06-20 15:30:57,117 INFO    HandlerThread:17116 [handler.py:handle_request_pause():728] stopping system metrics thread or process
+2023-06-20 15:30:57,119 INFO    HandlerThread:17116 [system_monitor.py:finish():190] Stopping system monitor
+2023-06-20 15:30:57,119 INFO    SystemMonitor:17116 [interfaces.py:start():190] Started cpu monitoring
+2023-06-20 15:30:57,119 INFO    HandlerThread:17116 [interfaces.py:finish():202] Joined cpu monitor
+2023-06-20 15:30:57,119 DEBUG   SystemMonitor:17116 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-06-20 15:30:57,119 DEBUG   SystemMonitor:17116 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-06-20 15:30:57,119 DEBUG   SystemMonitor:17116 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-06-20 15:30:57,128 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: resume
+2023-06-20 15:30:57,128 INFO    HandlerThread:17116 [handler.py:handle_request_resume():719] starting system metrics thread or process
+2023-06-20 15:30:57,128 INFO    HandlerThread:17116 [system_monitor.py:start():181] Starting system monitor
+2023-06-20 15:30:57,128 INFO    SystemMonitor:17116 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-06-20 15:30:57,131 INFO    SystemMonitor:17116 [interfaces.py:start():190] Started cpu monitoring
+2023-06-20 15:30:57,131 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: pause
+2023-06-20 15:30:57,132 INFO    HandlerThread:17116 [handler.py:handle_request_pause():728] stopping system metrics thread or process
+2023-06-20 15:30:57,132 INFO    HandlerThread:17116 [system_monitor.py:finish():190] Stopping system monitor
+2023-06-20 15:30:57,132 INFO    HandlerThread:17116 [interfaces.py:finish():202] Joined cpu monitor
+2023-06-20 15:30:57,132 WARNING HandlerThread:17116 [interfaces.py:finish():207] Failed to finish disk monitoring: cannot join thread before it is started
+2023-06-20 15:30:57,132 INFO    SystemMonitor:17116 [interfaces.py:start():190] Started disk monitoring
+2023-06-20 15:30:57,132 DEBUG   SystemMonitor:17116 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-06-20 15:30:57,133 DEBUG   SystemMonitor:17116 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-06-20 15:30:57,133 DEBUG   SystemMonitor:17116 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-06-20 15:30:57,158 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: resume
+2023-06-20 15:30:57,158 INFO    HandlerThread:17116 [handler.py:handle_request_resume():719] starting system metrics thread or process
+2023-06-20 15:30:57,158 INFO    HandlerThread:17116 [system_monitor.py:start():181] Starting system monitor
+2023-06-20 15:30:57,158 INFO    SystemMonitor:17116 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-06-20 15:30:57,161 INFO    SystemMonitor:17116 [interfaces.py:start():190] Started cpu monitoring
+2023-06-20 15:30:57,161 INFO    SystemMonitor:17116 [interfaces.py:start():190] Started disk monitoring
+2023-06-20 15:30:57,162 INFO    SystemMonitor:17116 [interfaces.py:start():190] Started gpu monitoring
+2023-06-20 15:30:57,166 INFO    SystemMonitor:17116 [interfaces.py:start():190] Started memory monitoring
+2023-06-20 15:30:57,171 INFO    SystemMonitor:17116 [interfaces.py:start():190] Started network monitoring
+2023-06-20 15:30:57,172 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: pause
+2023-06-20 15:30:57,172 INFO    HandlerThread:17116 [handler.py:handle_request_pause():728] stopping system metrics thread or process
+2023-06-20 15:30:57,172 INFO    HandlerThread:17116 [system_monitor.py:finish():190] Stopping system monitor
+2023-06-20 15:30:57,172 DEBUG   SystemMonitor:17116 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-06-20 15:30:57,172 INFO    HandlerThread:17116 [interfaces.py:finish():202] Joined cpu monitor
+2023-06-20 15:30:57,172 DEBUG   SystemMonitor:17116 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-06-20 15:30:57,172 INFO    HandlerThread:17116 [interfaces.py:finish():202] Joined disk monitor
+2023-06-20 15:30:57,172 DEBUG   SystemMonitor:17116 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-06-20 15:30:57,214 INFO    HandlerThread:17116 [interfaces.py:finish():202] Joined gpu monitor
+2023-06-20 15:30:57,215 INFO    HandlerThread:17116 [interfaces.py:finish():202] Joined memory monitor
+2023-06-20 15:30:57,215 INFO    HandlerThread:17116 [interfaces.py:finish():202] Joined network monitor
+2023-06-20 15:30:57,215 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: resume
+2023-06-20 15:30:57,215 INFO    HandlerThread:17116 [handler.py:handle_request_resume():719] starting system metrics thread or process
+2023-06-20 15:30:57,216 INFO    HandlerThread:17116 [system_monitor.py:start():181] Starting system monitor
+2023-06-20 15:30:57,218 INFO    SystemMonitor:17116 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-06-20 15:30:57,218 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: pause
+2023-06-20 15:30:57,218 INFO    HandlerThread:17116 [handler.py:handle_request_pause():728] stopping system metrics thread or process
+2023-06-20 15:30:57,218 INFO    HandlerThread:17116 [system_monitor.py:finish():190] Stopping system monitor
+2023-06-20 15:30:57,218 WARNING HandlerThread:17116 [interfaces.py:finish():207] Failed to finish cpu monitoring: cannot join thread before it is started
+2023-06-20 15:30:57,218 INFO    SystemMonitor:17116 [interfaces.py:start():190] Started cpu monitoring
+2023-06-20 15:30:57,218 DEBUG   SystemMonitor:17116 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-06-20 15:30:57,219 DEBUG   SystemMonitor:17116 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-06-20 15:30:57,219 DEBUG   SystemMonitor:17116 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-06-20 15:30:57,238 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: resume
+2023-06-20 15:30:57,238 INFO    HandlerThread:17116 [handler.py:handle_request_resume():719] starting system metrics thread or process
+2023-06-20 15:30:57,238 INFO    HandlerThread:17116 [system_monitor.py:start():181] Starting system monitor
+2023-06-20 15:30:57,239 INFO    SystemMonitor:17116 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-06-20 15:30:57,241 INFO    SystemMonitor:17116 [interfaces.py:start():190] Started cpu monitoring
+2023-06-20 15:30:57,242 INFO    SystemMonitor:17116 [interfaces.py:start():190] Started disk monitoring
+2023-06-20 15:30:57,242 INFO    SystemMonitor:17116 [interfaces.py:start():190] Started gpu monitoring
+2023-06-20 15:30:57,246 INFO    SystemMonitor:17116 [interfaces.py:start():190] Started memory monitoring
+2023-06-20 15:30:57,247 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: pause
+2023-06-20 15:30:57,252 INFO    HandlerThread:17116 [handler.py:handle_request_pause():728] stopping system metrics thread or process
+2023-06-20 15:30:57,252 INFO    HandlerThread:17116 [system_monitor.py:finish():190] Stopping system monitor
+2023-06-20 15:30:57,253 INFO    SystemMonitor:17116 [interfaces.py:start():190] Started network monitoring
+2023-06-20 15:30:57,253 DEBUG   SenderThread:17116 [sender.py:send():369] send: telemetry
+2023-06-20 15:30:57,253 DEBUG   SystemMonitor:17116 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-06-20 15:30:57,253 INFO    HandlerThread:17116 [interfaces.py:finish():202] Joined cpu monitor
+2023-06-20 15:30:57,254 DEBUG   SenderThread:17116 [sender.py:send():369] send: stats
+2023-06-20 15:30:57,254 DEBUG   SystemMonitor:17116 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-06-20 15:30:57,254 INFO    HandlerThread:17116 [interfaces.py:finish():202] Joined disk monitor
+2023-06-20 15:30:57,254 DEBUG   SenderThread:17116 [sender.py:send():369] send: stats
+2023-06-20 15:30:57,255 DEBUG   SystemMonitor:17116 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-06-20 15:30:57,255 DEBUG   SenderThread:17116 [sender.py:send():369] send: stats
+2023-06-20 15:30:57,257 DEBUG   SenderThread:17116 [sender.py:send():369] send: stats
+2023-06-20 15:30:57,257 DEBUG   SenderThread:17116 [sender.py:send():369] send: stats
+2023-06-20 15:30:57,298 INFO    HandlerThread:17116 [interfaces.py:finish():202] Joined gpu monitor
+2023-06-20 15:30:57,298 INFO    HandlerThread:17116 [interfaces.py:finish():202] Joined memory monitor
+2023-06-20 15:30:57,298 INFO    HandlerThread:17116 [interfaces.py:finish():202] Joined network monitor
+2023-06-20 15:30:57,299 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: resume
+2023-06-20 15:30:57,299 INFO    HandlerThread:17116 [handler.py:handle_request_resume():719] starting system metrics thread or process
+2023-06-20 15:30:57,299 DEBUG   SenderThread:17116 [sender.py:send():369] send: stats
+2023-06-20 15:30:57,299 INFO    HandlerThread:17116 [system_monitor.py:start():181] Starting system monitor
+2023-06-20 15:30:57,300 INFO    SystemMonitor:17116 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-06-20 15:30:57,303 INFO    SystemMonitor:17116 [interfaces.py:start():190] Started cpu monitoring
+2023-06-20 15:30:57,303 INFO    SystemMonitor:17116 [interfaces.py:start():190] Started disk monitoring
+2023-06-20 15:30:57,303 INFO    SystemMonitor:17116 [interfaces.py:start():190] Started gpu monitoring
+2023-06-20 15:30:57,309 INFO    SystemMonitor:17116 [interfaces.py:start():190] Started memory monitoring
+2023-06-20 15:30:57,315 INFO    SystemMonitor:17116 [interfaces.py:start():190] Started network monitoring
+2023-06-20 15:30:57,552 INFO    wandb-upload_0:17116 [upload_job.py:push():133] Uploaded file C:\Users\DICKSO~1\AppData\Local\Temp\tmpn1gi1jmewandb\8jb6vnjl-wandb-metadata.json
+2023-06-20 15:30:57,870 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_created():272] file/dir created: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-metadata.json
+2023-06-20 15:30:57,871 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_created():272] file/dir created: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:30:58,770 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:30:59,315 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:30:59,881 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:30:59,886 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:30:59,887 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:30:59,888 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:30:59,888 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:00,885 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:02,890 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:31:04,924 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:31:08,583 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:08,583 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:08,584 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:08,584 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:08,839 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:08,839 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:08,840 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:08,840 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:08,934 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:09,801 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:09,802 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:09,802 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:09,802 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:09,942 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:10,133 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:10,134 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:10,136 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:31:10,217 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:10,303 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:10,303 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:10,304 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:10,304 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:10,304 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:10,386 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:10,386 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:10,386 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:10,387 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:10,467 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:10,468 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:10,468 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:10,469 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:10,613 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:10,693 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:10,694 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:10,694 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:10,695 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:10,954 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:10,955 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\config.yaml
+2023-06-20 15:31:11,291 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:11,292 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:11,292 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:11,292 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:11,968 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:11,969 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:31:12,068 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-20 15:31:12,069 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: stop_status
+2023-06-20 15:31:12,946 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:12,948 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:12,949 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:12,950 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:12,979 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:13,556 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:13,556 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:13,556 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:13,557 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:13,868 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:13,869 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:13,869 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:13,869 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:13,994 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:13,994 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:31:14,356 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:14,357 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:14,357 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:14,358 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:14,841 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:14,841 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:14,841 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:14,842 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:15,006 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:15,013 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:15,014 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:15,014 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:15,015 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:15,358 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:15,359 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:15,359 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:15,359 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:31:15,360 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:16,020 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:16,020 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:31:17,279 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:17,280 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:17,280 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:17,281 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:17,465 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:17,466 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:17,467 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:17,467 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:17,923 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:17,924 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:17,924 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:17,925 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:18,026 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:18,274 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:18,274 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:18,274 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:18,275 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:19,040 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:19,218 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:19,219 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:19,219 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:19,220 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:19,748 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:19,749 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:19,749 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:19,750 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:20,051 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:20,052 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:31:20,432 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:20,433 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:20,433 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:20,433 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:31:20,434 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:21,065 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:22,075 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:31:22,113 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:22,114 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:22,114 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:22,114 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:22,314 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:22,315 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:22,315 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:22,315 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:22,395 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:22,396 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:22,396 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:22,397 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:22,593 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:22,594 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:22,594 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:22,594 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:23,082 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:23,127 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:23,128 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:23,128 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:23,128 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:23,183 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:23,184 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:23,184 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:23,184 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:24,096 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:24,096 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:31:24,855 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:24,856 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:24,856 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:24,856 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:25,101 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:25,396 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:25,397 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:25,397 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:25,397 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:25,623 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:25,624 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:25,624 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:25,624 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:31:25,624 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:25,876 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:25,877 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:25,877 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:25,877 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:25,917 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:25,917 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:25,918 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:25,918 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:25,957 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:25,958 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:25,958 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:25,958 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:26,114 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:26,115 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:31:27,066 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-20 15:31:27,066 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: stop_status
+2023-06-20 15:31:28,217 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:28,218 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:28,218 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:28,220 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:29,138 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:30,140 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:31:30,867 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:30,869 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:30,869 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:30,870 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:31:30,871 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:31,155 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:32,160 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:31:32,775 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:32,776 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:32,776 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:32,777 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:33,171 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:33,432 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:33,433 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:33,433 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:33,435 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:34,175 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:34,175 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:31:36,451 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:31:41,510 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:31:42,061 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-20 15:31:42,061 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: stop_status
+2023-06-20 15:31:42,925 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:42,926 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:42,926 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:42,926 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:43,273 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:44,220 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:44,222 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:44,222 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:44,223 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:44,285 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:46,310 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:31:46,742 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:46,744 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:46,744 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:46,744 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:31:46,745 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:46,997 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:46,997 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:46,997 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:46,998 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:47,323 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:48,139 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:48,140 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:48,140 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:48,141 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:48,351 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:48,351 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:31:49,377 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:49,378 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:49,378 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:49,379 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:50,379 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:50,379 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:31:51,995 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:51,996 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:51,997 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:51,997 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:31:51,998 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:52,414 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:52,914 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:52,915 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:52,915 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:52,915 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:53,436 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:54,437 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:31:54,572 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:54,572 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:54,572 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:54,573 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:55,450 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:56,463 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:31:57,073 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-20 15:31:57,073 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: stop_status
+2023-06-20 15:31:57,080 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:57,195 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:57,195 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:31:57,195 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:57,196 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:31:57,331 DEBUG   SystemMonitor:17116 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-06-20 15:31:57,332 DEBUG   SenderThread:17116 [sender.py:send():369] send: stats
+2023-06-20 15:31:57,473 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:31:58,490 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:31:59,766 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:31:59,767 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:31:59,767 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:31:59,768 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:00,023 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:00,023 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:00,024 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:00,024 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:00,497 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:32:01,420 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:01,421 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:01,421 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:01,422 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:01,519 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:32:02,198 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:02,198 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:02,198 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:02,198 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:32:02,199 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:02,352 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:02,528 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:32:02,529 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:32:02,579 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:02,580 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:02,580 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:02,580 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:02,632 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:02,633 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:02,633 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:02,634 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:02,680 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:02,681 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:02,681 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:02,682 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:02,738 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:02,739 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:02,739 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:02,740 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:02,780 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:02,781 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:02,781 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:02,782 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:03,533 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:32:04,547 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:32:04,998 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:04,999 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:04,999 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:04,999 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:05,562 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:32:06,475 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:06,476 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:06,476 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:06,476 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:06,569 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:32:06,569 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:32:07,484 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:32:07,615 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:07,616 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:07,616 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:07,617 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:08,585 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:32:08,585 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:32:12,090 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-20 15:32:12,090 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: stop_status
+2023-06-20 15:32:13,947 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:32:16,150 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:16,151 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:16,151 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:16,151 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:16,194 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:16,194 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:16,194 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:16,195 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:16,254 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:16,254 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:16,254 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:16,255 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:16,649 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:32:18,481 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:18,482 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:18,482 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:18,482 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:18,674 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:32:19,300 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:19,301 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:19,301 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:19,301 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:32:19,301 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:19,448 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:19,449 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:19,449 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:19,449 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:19,702 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:32:20,116 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:20,117 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:20,117 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:20,118 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:20,707 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:32:20,708 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:32:21,057 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:21,058 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:21,058 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:21,058 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:21,718 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:32:22,731 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:32:23,471 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:23,472 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:23,473 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:23,473 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:23,742 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:32:24,214 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:24,215 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:24,215 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:24,216 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:24,748 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:32:24,749 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:32:25,224 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:32:25,955 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:25,956 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:25,956 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:25,957 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:26,765 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:32:26,766 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:32:27,088 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-20 15:32:27,089 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: stop_status
+2023-06-20 15:32:27,336 DEBUG   SenderThread:17116 [sender.py:send():369] send: stats
+2023-06-20 15:32:28,247 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:28,248 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:28,248 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:28,249 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:28,792 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:32:30,203 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:30,203 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:30,204 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:30,204 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:30,309 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:30,310 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:30,310 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:30,310 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:32:30,310 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:30,349 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:30,350 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:30,350 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:30,351 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:30,786 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:30,787 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:30,787 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:30,788 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:30,805 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:32:30,805 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:32:32,819 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:32:33,431 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:33,432 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:33,432 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:33,433 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:33,833 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:32:34,113 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:34,113 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:34,113 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:34,114 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:34,845 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:32:34,846 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:32:35,981 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:36,017 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:36,024 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:36,024 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:32:36,024 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:36,405 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:36,406 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:36,406 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:36,406 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:36,867 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:32:36,868 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:32:38,576 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:38,576 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:38,577 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:38,577 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:38,877 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:32:39,318 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:39,319 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:39,319 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:39,319 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:39,878 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:32:40,879 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:32:41,232 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: partial_history
+2023-06-20 15:32:41,233 DEBUG   SenderThread:17116 [sender.py:send():369] send: history
+2023-06-20 15:32:41,233 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 15:32:41,234 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:32:41,234 INFO    SenderThread:17116 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 15:32:41,892 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\wandb-summary.json
+2023-06-20 15:32:42,095 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-20 15:32:42,096 DEBUG   SenderThread:17116 [sender.py:send_request():396] send_request: stop_status
+2023-06-20 15:32:42,898 INFO    Thread-31 :17116 [dir_watcher.py:_on_file_modified():289] file/dir modified: f:\Desktop\University\Exeter\ECMM451 Final Year Project\Final_Year_Project\wandb\run-20230620_153037-4jqtjwk3\files\output.log
+2023-06-20 15:32:46,264 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:32:51,319 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: status_report
+2023-06-20 15:32:51,588 DEBUG   HandlerThread:17116 [handler.py:handle_request():144] handle_request: pause
+2023-06-20 15:32:51,588 INFO    HandlerThread:17116 [handler.py:handle_request_pause():728] stopping system metrics thread or process
+2023-06-20 15:32:51,588 INFO    HandlerThread:17116 [system_monitor.py:finish():190] Stopping system monitor
+2023-06-20 15:32:51,588 DEBUG   SystemMonitor:17116 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-06-20 15:32:51,588 INFO    HandlerThread:17116 [interfaces.py:finish():202] Joined cpu monitor
+2023-06-20 15:32:51,591 DEBUG   SystemMonitor:17116 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-06-20 15:32:51,592 INFO    HandlerThread:17116 [interfaces.py:finish():202] Joined disk monitor
+2023-06-20 15:32:51,615 INFO    HandlerThread:17116 [interfaces.py:finish():202] Joined gpu monitor
+2023-06-20 15:32:51,615 INFO    HandlerThread:17116 [interfaces.py:finish():202] Joined memory monitor
+2023-06-20 15:32:51,615 INFO    HandlerThread:17116 [interfaces.py:finish():202] Joined network monitor
+2023-06-20 15:32:51,616 DEBUG   SenderThread:17116 [sender.py:send():369] send: stats
