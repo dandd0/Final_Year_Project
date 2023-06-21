@@ -258,8 +258,9 @@ class MazeEnv_single(AECEnv):
         if random:
             # randomly select on the given seeds
             # give the newest maze double weightings to make it more likely to appear during training
-            prob = np.repeat(1/(len(maze_seeds[:n_mazes])+1), len(maze_seeds[:n_mazes]))
+            prob = np.repeat(1/(len(maze_seeds[:n_mazes])), len(maze_seeds[:n_mazes]))
             prob[-1] *= 2 # double the prob of the newest maze, so its more likely to appear
+            prob /= np.sum(prob) # normalize it so sum of all values add to 1
             maze_seed = np.random.choice(maze_seeds[:n_mazes], p=prob)
         else:
             # else, select the specified maze
