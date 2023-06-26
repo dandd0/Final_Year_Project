@@ -2,28 +2,28 @@ Easy:
 - 2 (1)		len 8, 2 turns, no u turns, (r+d)
 - 23 (2)	len 10, 2 turns, no u turns, (d+l)
 - 10 (3)	len 8, 1 turn, no u turns, (l+d)
-- 24 (4)	len 10, 4 turns, 1 u turn, (u)
-- 26 (5)	len 10, 1 turn, no u turns, (r+u)
+- 24 (4)	len 10, 4 turns, 1 u turn, (u)		*
+- 26 (5)	len 10, 1 turn, no u turns, (r+u)	*
 - 13 (6)	len 12, 4 turns, no u turns, (u)
-- 17 (7)	len 14, 4 turns, 1 u turn, (u+l+d)
-- 30 (8)	len 14, 3 turns, no u turns, (r)
-- 22 (9)	len 16, 2 turns, no u turns, (l+d)
+- 17 (7)	len 14, 4 turns, 1 u turn, (u+l+d)	*
+- 30 (8)	len 14, 3 turns, no u turns, (r)	*
+- 22 (9)	len 16, 2 turns, no u turns, (l+d)	*
 
 Normal:
 - 4 (10)	len 14, 5 turns, 2 u turns, (u+l)
-- 18 (11)	len 18, 7 turns, 2 u turns, (l+u)
-- 3 (12)	len 18, 8 turns, 2 u turns, (u+r)
-- 8 (13)	len 20, 6 turns, 2 u turns, (u+r)
-- 38 (14)	len 20, 5 turns, 1 u turn, (u+l)
-- 48 (15)	len 20, 7 turns, 3 u turns, (d+l+r)
-- 0 (16)	len 22, 6 turns, 1 u turn, (d+r)
-- 32 (17)	len 22, 6 turns, 2 u turns, (d+l+r)
-- 11 (18)	len 24, 7 turns, 2 u turns, (u+r+d)
+- 18 (11)	len 18, 7 turns, 2 u turns, (l+u)	*
+- 3 (12)	len 18, 8 turns, 2 u turns, (u+r)	*
+- 8 (13)	len 20, 6 turns, 2 u turns, (u+r)	*
+- 38 (14)	len 20, 5 turns, 1 u turn, (u+l)	*
+- 48 (15)	len 20, 7 turns, 3 u turns, (d+l+r)	*
+- 0 (16)	len 22, 6 turns, 1 u turn, (d+r)	*
+- 32 (17)	len 22, 6 turns, 2 u turns, (d+l+r)	*
+- 11 (18)	len 24, 7 turns, 2 u turns, (u+r+d)	*
 
 Hard:	
-- 1 (19)	len 26, 7 turns, 3 u turns, (l+d+u+r)
-- 25 (20)	len 26, 8 turns, 2 u turns, (r+d+l)
-- 35 (21)	len 30, 9 turns, 3 u turns, (d+l+u)
+- 1 (19)	len 26, 7 turns, 3 u turns, (l+d+u+r)	*
+- 25 (20)	len 26, 8 turns, 2 u turns, (r+d+l)	*
+- 35 (21)	len 30, 9 turns, 3 u turns, (d+l+u)	*
 - 27 (22)	len 32, 10 turns, 2 u turns, (l+u+d+r)
 - 28 (23)	len 32, 8 turns, 2 u turns, (l+d+r)
 - 29 (24)	len 32, 10 turns, 3 u turns, (l+d)
