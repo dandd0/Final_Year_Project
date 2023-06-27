@@ -147,12 +147,12 @@ class MazeEnv_single(AECEnv):
     def action_space(self, agent):
         "Get the action space of the specified agent"
         return self.action_spaces[agent]
-    
+
     def _legal_moves(self):
         legal_moves = []
         agent_loc_r, agent_loc_c = self.agent_loc
 
-        # check if agent is at an edge
+        # check if agent is at an edge (e.g. starting at the end in trivial maze)
         if agent_loc_r == 0:
             # can only move down
             legal_moves = [2]
@@ -385,7 +385,26 @@ class MazeEnv_single(AECEnv):
         if self.num_moves > self.maxlen:
             self.truncations = {agent: True for agent in self.agents}
 
-    # action is 0-3 indicating u, d, r, l respectively
+    def take_actions(self, actions):
+        """
+        take a compound action in the form of a numpy array
+        assume the action being fed is a valid action
+        """
+        direction = np.array([0,0])
+        # take each action stated sequentially and add them
+        if isinstance(actions, np.ndarray):
+            for action in actions:
+                direction += self._action_to_direction[action]
+        else: # or if its just a scalar
+            direction += self._action_to_direction[actions]
+
+        # find new location
+        new_loc = self.agent_loc + direction
+        new_loc_tuple = tuple(new_loc)
+        self.agent_loc = new_loc_tuple
+        return new_loc_tuple
+
+    # action is 1-4 indicating u, d, r, l respectively
     def step(self, action):
         # catch bad actions
         if (self.terminations[self.agent_selection] or self.truncations[self.agent_selection]):
@@ -399,16 +418,14 @@ class MazeEnv_single(AECEnv):
         # when the agent is the observer
         if agent == self.agents[0]:
 
-            # NOTE THIS IS ONLY FOR SINGLE ACTIONS, IMPLEMENT ITERABLE ACTIONS LATER
-            direction = self._action_to_direction[action]
-            new_loc = self.agent_loc + direction
-            new_loc_tup = tuple(new_loc)
+            # take the actions (this should work for both single actions and compound actions)
+            new_loc_tup = self.take_actions(action)
             
             # one move (one move means one message. if its compound message, its still one move)
+            # this is so the agent will be more inclined to use compound actions as it will punish less
             self.num_moves += 1
 
             # set the rewards of both agents to be the same
-            self.agent_loc = new_loc_tup
             self._get_rewards4(action)
 
             # check if agent has reached the exit or not
@@ -422,7 +439,6 @@ class MazeEnv_single(AECEnv):
 
             # reset message
             self.message = 0 # no movement
-
 
         # switch selection to next agent
         self.agent_selection = self._agent_selector.next()
