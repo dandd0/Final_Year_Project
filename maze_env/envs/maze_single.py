@@ -59,7 +59,6 @@ def env_single(**kwargs):
     size: The size of the maze (WxH) (Default = 10) 
     """
     env = MazeEnv_single(**kwargs)
-    env = AssertOutOfBoundsWrapper(env) # make sure no invalid actions are given to the environment (0 to 3)
     env = OrderEnforcingWrapper(env) # make sure env.reset() is called before anything is done 
     # bad order enforcing shouldnt occur with the tianshou.env.PettingZooEnv wrapper but i'm adding it anyways for redundancy 
 
@@ -148,9 +147,14 @@ class MazeEnv_single(AECEnv):
         "Get the action space of the specified agent"
         return self.action_spaces[agent]
 
-    def _legal_moves(self):
+    def _legal_moves(self, curr_loc = None):
         legal_moves = []
-        agent_loc_r, agent_loc_c = self.agent_loc
+        if curr_loc:
+            # if location is given, use this
+            agent_loc_r, agent_loc_c = curr_loc
+        else:
+            # else use the previously saved agent location
+            agent_loc_r, agent_loc_c = self.agent_loc
 
         # check if agent is at an edge (e.g. starting at the end in trivial maze)
         if agent_loc_r == 0:
@@ -182,9 +186,9 @@ class MazeEnv_single(AECEnv):
         
         return legal_moves
     
-    def _get_action_mask(self, agent):
+    def _get_action_mask(self, agent, curr_loc=None):
          # because they technically 'share' the same action space (u,d,l,r), action masking is the same
-        legal_moves = self._legal_moves() if agent == self.agent_selection else []
+        legal_moves = self._legal_moves(curr_loc=curr_loc) if agent == self.agent_selection else []
         action_mask = np.zeros(5, "int8")
         for i in legal_moves:
             action_mask[i] = 1
@@ -385,41 +389,52 @@ class MazeEnv_single(AECEnv):
         if self.num_moves > self.maxlen:
             self.truncations = {agent: True for agent in self.agents}
 
-    def take_actions(self, actions):
+    def take_actions(self, actions, agent):
         """
         take a compound action in the form of a numpy array
         assume the action being fed is a valid action
         """
         direction = np.array([0,0])
+        curr_loc = self.agent_loc
+
         # take each action stated sequentially and add them
         if isinstance(actions, np.ndarray):
             for action in actions:
-                direction += self._action_to_direction[action]
-        else: # or if its just a scalar
-            direction += self._action_to_direction[actions]
+                # check the legality of moves
+                curr_loc = tuple(curr_loc + direction)
+                legal_moves = self._get_action_mask(agent, curr_loc)
+                assert legal_moves[action] == 1, "ILLEGAL MOVE"
 
-        # find new location
-        new_loc = self.agent_loc + direction
-        new_loc_tuple = tuple(new_loc)
-        self.agent_loc = new_loc_tuple
-        return new_loc_tuple
+                # get new direction
+                direction = self._action_to_direction[action]
+        else: # or if its just a scalar
+            legal_moves = self._get_action_mask(agent, curr_loc)
+            assert legal_moves[actions] == 1, "ILLEGAL MOVE"
+
+            direction = self._action_to_direction[actions]
+
+        # update new location
+        curr_loc = tuple(curr_loc + direction)
+        self.agent_loc = curr_loc
+        return curr_loc
 
     # action is 1-4 indicating u, d, r, l respectively
     def step(self, action):
+        # move it out of the list (because there are issues with sending just an array (it needs to be len 1 for the api to accept))
+        if isinstance(action, list):
+            action = action[0]
+
         # catch bad actions
         if (self.terminations[self.agent_selection] or self.truncations[self.agent_selection]):
             return self._was_dead_step(action)
 
         agent = self.agent_selection
-
-        legal_moves = self._get_action_mask(agent)
-        assert legal_moves[action] == 1, "ILLEGAL MOVE"
         
         # when the agent is the observer
         if agent == self.agents[0]:
 
             # take the actions (this should work for both single actions and compound actions)
-            new_loc_tup = self.take_actions(action)
+            new_loc_tup = self.take_actions(action, agent)
             
             # one move (one move means one message. if its compound message, its still one move)
             # this is so the agent will be more inclined to use compound actions as it will punish less

@@ -1,19 +1,21 @@
-from typing import Any, Optional, Union
+from typing import Any, Union
 import numpy as np
 from tianshou.data import Batch, to_numpy
 from tianshou.policy.modelfree.dqn import DQNPolicy
 
 class DQNPolicy_new(DQNPolicy):
     """
-    Create a slightly modified policy from the Tianshou DQN policy, where we modify the class to allow 'custom' compound actions that are
+    A slightly modified policy from the Tianshou DQN policy, where we modify the class to allow 'custom' compound actions that are
     only determined during runtime from the abstractions.
     """
 
-    def __init__(self, max_actions=5):
-        super().__init__()
+    def __init__(self, max_actions=5, *args, **kwargs):
+        super(DQNPolicy_new, self).__init__(*args, **kwargs)
 
-        assert max_actions >= 5, "Maximum actions must be at least 5"
-        self.max_action_num = max_actions # no movement, up, down, right, left for basic movement
+        if max_actions is None or max_actions < 5:
+            max_actions = 5
+            print("Minimum actions must be at least 5. Setting to 5")
+        self.max_action_num = max_actions # no movement, up, down,. right, left for basic movement
         self.allow_abstractions = False
 
         if max_actions > 5: # only if more than 5 (i.e. we allow extra action spaces for the model)
@@ -61,7 +63,7 @@ class DQNPolicy_new(DQNPolicy):
             print("Max actions reached. Cannot append any additional abstractions.")
         else:
             key = keys[0] # the first available key
-            self.abstractions[key] = abstraction
+            self.abstractions[key] = [abstraction] # the abstraction is saved as a list due to issues with the API and wrappers
             print("Appended abstraction to the agent")
             return key # return the key for the dreaming sequence so we can insert it into the buffer
     
@@ -97,21 +99,21 @@ class DQNPolicy_new(DQNPolicy):
         So we have to check it in the policy itself.
         This is kinda a half-assed way to do it, but whatever
         """
-        current_loc = np.where(batch.obs[1,:,:]==1)
-        obs = batch.obs[0,:,:]
+        current_loc = np.where(batch.obs.obs[0][1,:,:]==1)
+        obs = batch.obs.obs[0][0,:,:]
 
         # check the abstractions to see if they're valid
         for key in action_keys:
             wall = False
-            abstraction = self.abstractions[key]
+            abstraction = self.abstractions[key][0]
             current_loc1 = np.copy(current_loc).reshape(2)
 
             # iterate through the actions one-by-one to see if if its valid
             for action in abstraction:
                 direction = self._action_to_direction[action]
                 # find new location
-                new_loc = current_loc1 + direction
-                location = obs[tuple(new_loc)]
+                new_loc = tuple(current_loc1 + direction)
+                location = obs[new_loc]
                 if int(location) == 1: # wall
                     abstraction_mask[key-5] = False
                     wall = True
@@ -120,7 +122,7 @@ class DQNPolicy_new(DQNPolicy):
                     current_loc1 = new_loc # otherwise keep going
 
             if wall:
-                continue
+                continue # go to next occupied abstraction key without changing the action mask
             else:
                 # if no wall flag, the abstraction is valid.
                 abstraction_mask[key-5] = True
@@ -129,14 +131,14 @@ class DQNPolicy_new(DQNPolicy):
 
     def abstraction_action_mask(self, batch: Batch):
         # assume the mask is true/false boolean
-        abstraction_mask = np.full(self.max_action_num-5, False) # make an array with all false
+        abstraction_mask = np.full((self.max_action_num-5), False) # make an array with all false
         keys = self.used_action_keys() # get the used actions keys (i.e. they have abstractions)
 
         # check the legal moves of the abstractions
         abstraction_mask = self.check_legal_moves_abstractions(batch, keys, abstraction_mask)
 
         # modify the original mask
-        batch.obs.mask[0] = np.append(batch.obs.mask[0], abstraction_mask)
+        batch.obs.mask = np.array([np.concatenate([batch.obs.mask[0], abstraction_mask])])
         
     def forward(self, batch: Batch, state: Union[dict, Batch, np.ndarray] = None, model: str = "model", input: str = "obs", **kwargs: Any) -> Batch:
         """
@@ -147,7 +149,8 @@ class DQNPolicy_new(DQNPolicy):
         # update the batch with new masks
         if self.allow_abstractions:
             self.abstraction_action_mask(batch)
-
+        
+        print("after ----\n", batch)
 
         obs = batch[input]
         obs_next = obs.obs if hasattr(obs, "obs") else obs
