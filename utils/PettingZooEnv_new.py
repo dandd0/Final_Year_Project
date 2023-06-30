@@ -62,7 +62,7 @@ class PettingZooEnv_new(PettingZooEnv):
                     'obs': observation,
                 }
 
-        return observation_dict, {}
+        return observation_dict, {"maze_seed":info["maze_seed"], "nth_maze":info["nth_maze"]}
     
     def step(self, action: Any) -> Tuple[Dict, List[int], bool, bool, Dict]:
         self.env.step(action)
@@ -95,4 +95,4 @@ class PettingZooEnv_new(PettingZooEnv):
 
         for agent_id, reward in self.env.rewards.items():
             self.rewards[self.agent_idx[agent_id]] = reward
-        return obs, self.rewards, term, trunc, {}
+        return obs, self.rewards, term, trunc, {"maze_seed":info["maze_seed"], "nth_maze":info["nth_maze"]}

@@ -110,7 +110,7 @@ class MazeEnv_single(AECEnv):
         self.rewards = {agent: 0 for agent in self.agents}
         self.terminations = {agent: False for agent in self.agents}
         self.truncations = {agent: False for agent in self.agents}
-        self.infos = {agent: {"action_mask": Box(low=0, high=1, shape=(5,), dtype=bool)} for agent in self.agents}
+        self.infos = {agent: {"action_mask": Box(low=0, high=1, shape=(5,), dtype=bool), "maze_seed":None, "nth_maze":None} for agent in self.agents}
 
         # set up the iterating agent selector
         self.agent_selection = None
@@ -230,8 +230,9 @@ class MazeEnv_single(AECEnv):
         self.exit = maze.end # the exit location
         self.maxlen = 10*(2*(self.size**2) - 1) # max exploration length before truncation (2.5* the total number of free grids in the maze)
         self.minlen = len(maze.solutions[0]) + 1 # the best possible path length for the agent to take ( +1 to reach the exit)
-        self.solution = maze.solutions[0]
-        self.start = maze.start
+        self.solution = maze.solutions[0] # the solution list (for visualization)
+        self.start = maze.start # the starting position 
+        self.seed = seed # the seed of the map
         # the above 2 has 0 index because there can be multiple solutions of equal minimum length, but we only need one so whatever
 
     def _generate_maze_trivial(self, seed=None):
@@ -249,7 +250,8 @@ class MazeEnv_single(AECEnv):
         self.maxlen = 5*((self.true_size-2)**2) # max exploration length before truncation (2.5* the total number of free grids in the maze)
         self.minlen = np.sum(np.abs(np.array(self.agent_loc) - np.array(self.exit))) # manhattan dist for min length
         self.solution = None # no solution
-        self.start = maze.start
+        self.start = maze.start # the starting position 
+        self.seed = seed # the seed of the map
         # the above 2 has 0 index because there can be multiple solutions of equal minimum length, but we only need one so whatever
 
     def select_maze(self, n_mazes, random=True):
@@ -265,12 +267,14 @@ class MazeEnv_single(AECEnv):
             prob = np.repeat(1/(len(maze_seeds[:n_mazes])), len(maze_seeds[:n_mazes]))
             prob[-1] *= 2 # double the prob of the newest maze, so its more likely to appear
             prob /= np.sum(prob) # normalize it so sum of all values add to 1
-            maze_seed = np.random.choice(maze_seeds[:n_mazes], p=prob)
+            nth_maze = np.random.choice(np.arange(n_mazes), p=prob)
+            self.nth_maze = nth_maze+1
+            maze_seed = maze_seeds[nth_maze]
         else:
             # else, select the specified maze
             maze_seed = maze_seeds[n_mazes-1]
+            self.nth_maze = n_mazes
         
-        self.seed = maze_seed
         self._generate_maze(maze_seed)
     
     def select_maze_trivial(self, n_mazes, random=True):
@@ -280,7 +284,6 @@ class MazeEnv_single(AECEnv):
         else:
             maze_seed = n_mazes
 
-        self.seed = maze_seed
         self._generate_maze_trivial(maze_seed)
 
     def reset(self, seed=None, options=None):
@@ -333,7 +336,7 @@ class MazeEnv_single(AECEnv):
         self.rewards = {agent: 0 for agent in self.agents}
         self.terminations = {agent: False for agent in self.agents}
         self.truncations = {agent: False for agent in self.agents}
-        self.infos = {agent: {"action_mask":self._get_action_mask(agent)} for agent in self.agents}
+        self.infos = {agent: {"action_mask":self._get_action_mask(agent), "maze_seed":self.seed, "nth_maze":self.nth_maze} for agent in self.agents}
 
         self.message = 0 # no movement
 
@@ -403,13 +406,18 @@ class MazeEnv_single(AECEnv):
                 # check the legality of moves
                 curr_loc = tuple(curr_loc + direction)
                 legal_moves = self._get_action_mask(agent, curr_loc)
-                assert legal_moves[action] == 1, "ILLEGAL MOVE"
+                if legal_moves[action] == 0:
+                    print(f"Current action: {action}, action_mask: {legal_moves}")
+                    print(f"Current seed: {self.seed}")
+                    assert legal_moves[action] == 1, "ILLEGAL MOVE"
 
                 # get new direction
                 direction = self._action_to_direction[action]
         else: # or if its just a scalar
             legal_moves = self._get_action_mask(agent, curr_loc)
-            assert legal_moves[actions] == 1, "ILLEGAL MOVE"
+            if legal_moves[actions] == 0:
+                print(f"Current action: {actions}, action_mask: {legal_moves}")
+                assert legal_moves[actions] == 1, "ILLEGAL MOVE"
 
             direction = self._action_to_direction[actions]
 

@@ -55,7 +55,7 @@ class DQNPolicy_new(DQNPolicy):
             
     def add_abstraction(self, abstraction: np.ndarray) -> int:
         """
-        Add the specified abstraction to the first available key.
+        Add the specified abstraction to the first available key. Return the key ID.
         """
         keys = self.available_action_keys()
         if len(keys) < 1:
@@ -83,7 +83,7 @@ class DQNPolicy_new(DQNPolicy):
         if self.allow_abstractions and act[0] > 4:
             # if the number is for an abstraction and its allowed
             if self.abstractions.get(act[0]):
-                # if an abstraction exists
+                # if an abstraction exists, it will return a list of len 1
                 return self.abstractions[act[0]]
             else:
                 print("Bad Key in Map Action, returning no movement")
@@ -149,8 +149,10 @@ class DQNPolicy_new(DQNPolicy):
         # update the batch with new masks
         if self.allow_abstractions:
             self.abstraction_action_mask(batch)
+            
         
         print("after ----\n", batch)
+        
 
         obs = batch[input]
         obs_next = obs.obs if hasattr(obs, "obs") else obs
