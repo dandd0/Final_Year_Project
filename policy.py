@@ -93,14 +93,14 @@ class DQNPolicy_new(DQNPolicy):
             # otherwise just return the action as it is
             return act
     
-    def check_legal_moves_abstractions(self, batch: Batch, action_keys, abstraction_mask):
+    def check_legal_moves_abstractions(self, obs: Batch, action_keys, abstraction_mask):
         """
         We cannot check the legal moves in the environment due to some limitations with how the wrappers work,
         So we have to check it in the policy itself.
         This is kinda a half-assed way to do it, but whatever
         """
-        current_loc = np.where(batch.obs.obs[0][1,:,:]==1)
-        obs = batch.obs.obs[0][0,:,:]
+        current_loc = np.where(obs.obs[0][1,:,:]==1)
+        obs = obs.obs[0][0,:,:]
 
         # check the abstractions to see if they're valid
         for key in action_keys:
@@ -115,7 +115,7 @@ class DQNPolicy_new(DQNPolicy):
                 new_loc = tuple(current_loc1 + direction)
                 location = obs[new_loc]
                 if int(location) == 1: # wall
-                    abstraction_mask[key-5] = False
+                    abstraction_mask[key] = False
                     wall = True
                     break # if encouter wall, stop the abstraction validity search and set flag to true
                 else:
@@ -125,36 +125,42 @@ class DQNPolicy_new(DQNPolicy):
                 continue # go to next occupied abstraction key without changing the action mask
             else:
                 # if no wall flag, the abstraction is valid.
-                abstraction_mask[key-5] = True
+                abstraction_mask[key] = True
         
         return abstraction_mask
 
-    def abstraction_action_mask(self, batch: Batch):
+    def abstraction_action_mask(self, obs: Batch):
+        # check the give of the abstraction mask (to make sure we don't make it too large)
+        if len(obs.mask[0]) == self.max_action_num:
+            return
+
         # assume the mask is true/false boolean
-        abstraction_mask = np.full((self.max_action_num-5), False) # make an array with all false
+        abstraction_mask = np.full(self.max_action_num, False) # make an array with all false
         keys = self.used_action_keys() # get the used actions keys (i.e. they have abstractions)
 
+        # copy the current mask to the first 5 entries
+        for i in range(len(obs.mask[0])):
+            abstraction_mask[i] = obs.mask[0][i]
+
         # check the legal moves of the abstractions
-        abstraction_mask = self.check_legal_moves_abstractions(batch, keys, abstraction_mask)
+        abstraction_mask = self.check_legal_moves_abstractions(obs, keys, abstraction_mask)
 
         # modify the original mask
-        batch.obs.mask = np.array([np.concatenate([batch.obs.mask[0], abstraction_mask])])
+        obs.mask = np.array([abstraction_mask])
         
     def forward(self, batch: Batch, state: Union[dict, Batch, np.ndarray] = None, model: str = "model", input: str = "obs", **kwargs: Any) -> Batch:
         """
         Mostly the same as Tianshou's DQNPolicy, but with minor modifications to the action masking to support abstractions (that cannot be directly passed in the environment)
         """
         model = getattr(self, model)
+        obs = batch[input]
 
         # update the batch with new masks
         if self.allow_abstractions:
-            self.abstraction_action_mask(batch)
-            
-        
+            self.abstraction_action_mask(obs)
+        """
         print("after ----\n", batch)
-        
-
-        obs = batch[input]
+        """
         obs_next = obs.obs if hasattr(obs, "obs") else obs
         logits, hidden = model(obs_next, state=state, info=batch.info)
         q = self.compute_q_value(logits, getattr(obs, "mask", None))

@@ -15,6 +15,10 @@ def is_sub_arr_np(a1, a2):
     l1, = a1.shape
     s1, = a1.strides
     l2, = a2.shape
+    # make sure array 1 is longer than array 2
+    if l2 > l1:
+        return any_sub, None
+
     a1_win = np.lib.stride_tricks.as_strided(a1, (l1 - l2 + 1, l2), (s1, s1))
     any_sub = np.any(np.all(a1_win == a2, axis=1))
 
