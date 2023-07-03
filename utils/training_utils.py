@@ -1,8 +1,10 @@
 from maze_env import MazeEnv_v0
 from utils.PettingZooEnv_new import PettingZooEnv_new
+from policy import DQNPolicy_new
 import supersuit
 import torch
 import torch.nn as nn
+import pickle
 
 # define some helper functions
 # single agent
@@ -31,10 +33,16 @@ def interleave_training(obs_train):
         obs_train = obs_train != True
 """
 
-def set_eps(policy, agents, eps1, eps2=None, single = False):
+def set_eps(policy, eps1, agents=None, eps2=None, single = True):
+    """
+    Set the exploration/eploitation parameter for the policy
+
+    agents, eps2 and single=False are used for MARL (if implemented)
+    """
     if single:
         policy.set_eps(eps1)
     else:
+        # if MARL is implemented
         policy.policies[agents[0]].set_eps(eps1)
         policy.policies[agents[1]].set_eps(eps2)
 
@@ -63,7 +71,11 @@ class CNN(nn.Module):
         return logits, state
 
 def watch(policy, collector, gym_reset_kwargs):
+    """
+    To render the policy and how it interacts with the environment
+    """
     assert gym_reset_kwargs is not None, "Please input reset kwargs i.e. options"
+
     # set policy to eval mode
     policy.eval()
     collector.reset_env(gym_reset_kwargs=gym_reset_kwargs)
@@ -71,3 +83,26 @@ def watch(policy, collector, gym_reset_kwargs):
     collector.collect(n_episode=1, render=1/120, gym_reset_kwargs=gym_reset_kwargs)
     # reset back to training mode
     policy.train()
+
+def save_model_buffer_ephist_abs(policy, replay_buffer, episode_history, filename, run_type):
+    assert filename is not None, "Please insert a filename"
+    # save the model
+    filename_model = filename + "_model.pt"
+    torch.save(policy.state_dict(), filename_model)
+
+    # save the replay buffer
+    filename_buffer = filename + "_buffer.pkl"
+    with open(filename_buffer, "wb") as f:
+        pickle.dump(replay_buffer, f)
+    
+    # save the successful episode history
+    filename_ep_hist = filename + "_ephist.pkl"
+    with open(filename_ep_hist, "wb") as f:
+        pickle.dump(episode_history, f)
+
+    # save abstractions
+    if run_type == "abstraction":
+        abstractions = policy.abstractions
+        filename_abstractions = filename + "_abstractions.pkl"
+        with open(filename_abstractions, "wb") as f:
+            pickle.dump(abstractions, f)

@@ -1,5 +1,6 @@
 import numpy as np
 from collections import Counter
+from policy import DQNPolicy_new
 
 def longest_common_substring(s1, s2):
    """
@@ -62,7 +63,7 @@ def abstraction_rating(LCS_counter):
     """
     return [len(candidate) * amount for candidate, amount in LCS_counter.items()] 
     
-def get_abstraction(LCS_counter, print_abs = True):
+def get_abstraction(LCS_counter,):
     """
     Find the best abstraction using the ratings
     """
@@ -72,24 +73,35 @@ def get_abstraction(LCS_counter, print_abs = True):
     # check if any abstractions found (or at least greater than 1 action)
     if len(abstraction) <= 1:
         return []
-    
-    if print_abs:
-        print(f"Best abstraction found: {abstraction}")
 
     # convert the string abstraction representation to an array
     return abstraction
 
-def generate_abstractions(episode_history):
+def generate_abstractions(policy: DQNPolicy_new, episode_history):
     """
     The main function to call for generating abstractions
     """
     # find the potential abstractions:
     LCS_counter = find_abstractions(episode_history)
 
-    # return none if nothing found (shouldn't ever happen but to be safe)
+    # return none if nothing found
     if len(LCS_counter.items()) <= 1:
+        print("no common strings found, fix here")
         return []
 
+    # get the abstraction
     abstraction = get_abstraction(LCS_counter)
-    return string_to_arr(abstraction)
+    print(f"Best abstraction found: {abstraction}")
+    abstraction = string_to_arr(abstraction)
+
+    # make sure the abstraction found doesn't already exist
+    for key, value in policy.abstractions.items():
+        # only check if an abstraction exists
+        if isinstance(value, list):
+            # check if abstraction already exists
+            if np.array_equal(abstraction, value[0]):
+                print("Abstraction already exists.")
+                return []
+    
+    return abstraction
 

@@ -113,9 +113,10 @@ def dream(policy: DQNPolicy_new, abstraction: np.ndarray, env: MazeEnv_single, e
         return
     
     # set up the buffer that will be used for abstraction learning
-    abstraction_buffer = ReplayBuffer(100000)
+    abstraction_buffer = ReplayBuffer(100000) # some large number
+    print(f"Resampling environment steps with new abstractions... ({len(new_actions)} episodes with abstractions found.)")
 
-    for actions_dict in new_actions:
+    for count, actions_dict in enumerate(new_actions):
         # get information out
         ep_number = actions_dict["ep_number"]
         actions = actions_dict["actions"]
@@ -126,8 +127,7 @@ def dream(policy: DQNPolicy_new, abstraction: np.ndarray, env: MazeEnv_single, e
 
     # update the policy with new buffer (the entire buffer)
     policy.update(0, abstraction_buffer)
-
-    print(f"Agent has learned the new abstraction: {abstraction}")
+    print(f"\nAgent has learned the new abstraction: {abstraction}")
 
 def find_bad_abstractions(policy: DQNPolicy_new, replay_buffer: VectorReplayBuffer, eps: int):
     """
@@ -137,15 +137,13 @@ def find_bad_abstractions(policy: DQNPolicy_new, replay_buffer: VectorReplayBuff
     if len(policy.used_action_keys()) == 0:
         return
 
-    print("Finding bad abstractions:")
+    print("Finding bad abstractions...")
 
-    # take the latest 5000 steps as the sample
-    # should be around the last 30-100 episodes, assuming each episode in training is around 50-150 steps
+    # take the latest 5000 steps as the sample, which should be around the last 30-100 episodes
+    # # we can set the threshold to be: used in at least 15 episodes (aka 15 times)
     actions = replay_buffer[-5000:].act
     num_abstractions = len(policy.used_action_keys())
-    # (random exploration rate*0.5) * total number ot steps so far (5000) / number of available actions for the agent to use
-    # we multiply the eps by 0.5 because in a maze environment, not all actions will always be available at each time step, so we allow some leniency 
-    threshold = int(eps*0.5 * len(actions) / (4 + num_abstractions)) # the 4 primary directions + abstractions
+    threshold = 15
     print(f"\tMinimum threshold for abstraction removal: {threshold}")
 
     # get the count for the abstraction actions
