@@ -82,6 +82,9 @@ def new_sample_with_abstraction(policy: DQNPolicy_new, env: MazeEnv_single, maze
         # update batch with action and policy
         data.update(act=action)
 
+        # modify the mask (for abstraction buffer appending purposes later)
+        policy.abstraction_action_mask_dream(data.obs)
+
         # remap action and interact with environment
         action_remap = policy.map_action(np.array([action])) # get the remapped action (e.g. abstraction from action number 5)
         obs_next, rew, terminated, truncated, info = env.step(action_remap)

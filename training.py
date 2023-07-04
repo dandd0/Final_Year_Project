@@ -80,6 +80,7 @@ def train_loop(policy: DQNPolicy_new, # the policy itself
     for mazes in range(1, total_mazes):
         steps_within_maze = 0 # for counting the number of steps so far within a new introduction of a maze
         recent_abstraction = False # so we don't constantly check for abstractions
+        recent_abstraction_timer = 0 # a timer for a grace period between an introduction of an abstraction and the policy's ability to remove it
         
         if passed_mazes == True:
             # reset epsilon again for the new maze
@@ -180,11 +181,16 @@ def train_loop(policy: DQNPolicy_new, # the policy itself
                     # --- DREAM ---
                     if len(abstraction) > 0:
                         # if an abstraciton is found, learn it
-                        dream(policy, abstraction, env, episode_history, maze_type)
-                        recent_abstraction = True # only allow 1 abstraction per new maze introduction
-                    else:
+                        abstraction_buffer = dream(policy, abstraction, env, episode_history, maze_type) # the model is updated within here
+                        train_collector.buffer.update(abstraction_buffer) # append new episodes to the end to the buffer (for future updating)
+
+                        recent_abstraction = True # only allow 1 abstraction per new maze introduction (to prevent constant searching/instant deletion)
+                        recent_abstraction_timer = 10 # a 'grace period' between the introduction of a new abtraction and the ability to remove it
+                    elif recent_abstraction_timer == 0:
                         # else find and remove bad abstractions
                         find_bad_abstractions(policy, train_collector.buffer, eps_train)
+                    else:
+                        recent_abstraction_timer -= 1
 
             # reset back to training
             set_eps(policy, eps_train, single=True)
