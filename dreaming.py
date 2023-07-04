@@ -70,7 +70,7 @@ def new_sample_with_abstraction(policy: DQNPolicy_new, env: MazeEnv_single, maze
     """
     Interact with the environment with the new action list and add it to the abstraction buffer
     """
-    data = Batch(obs={}, act={}, rew={}, terminated={}, truncated={}, done={}, obs_next={}, info={})
+    data = Batch(obs={}, act={}, rew={}, terminated={}, truncated={}, done={}, obs_next={}, info={}, policy={})
     # reset the environment (with the correct seed)
     obs, info = env.reset(options={"maze_type":maze_type, "n_mazes":maze_seed, "random":False})
     # initial observations
@@ -128,6 +128,8 @@ def dream(policy: DQNPolicy_new, abstraction: np.ndarray, env: MazeEnv_single, e
     # update the policy with new buffer (the entire buffer)
     policy.update(0, abstraction_buffer)
     print(f"\nAgent has learned the new abstraction: {abstraction}")
+
+    return abstraction_buffer
 
 def find_bad_abstractions(policy: DQNPolicy_new, replay_buffer: VectorReplayBuffer, eps: int):
     """

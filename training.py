@@ -290,7 +290,7 @@ step_per_collect = 200 # number of steps to collect before updating
 ep_per_collect = 1 # number of episodes before updating
 maze_width = 6 # maze width (not incl. walls)
 n_mazes = 0 # the (initial) number of mazes
-total_mazes = 16 # total number of random mazesm ---- for the trivial maze, we use 36 (since it should be 'easier')
+total_mazes = 2 # total number of random mazes ---- for the trivial maze, we use 36 (since it should be 'easier')
 threshold_rew = 0.9 # threshold reward to consider a maze passed
 
 # file name suffix
