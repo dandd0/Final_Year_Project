@@ -79,7 +79,6 @@ def train_loop(policy: DQNPolicy_new, # the policy itself
 
     for mazes in range(1, total_mazes):
         steps_within_maze = 0 # for counting the number of steps so far within a new introduction of a maze
-        recent_abstraction = False # so we don't constantly check for abstractions
         recent_abstraction_timer = 0 # a timer for a grace period between an introduction of an abstraction and the policy's ability to remove it
         
         if passed_mazes == True:
@@ -174,19 +173,18 @@ def train_loop(policy: DQNPolicy_new, # the policy itself
             
             if run_type == "abstraction": # only do the sleep phase if abstractions are allowed
                 # --- SLEEP ---
-                if (steps_within_maze > 100000) and (mazes >= 3) and (recent_abstraction == False):
+                if (steps_within_maze > 100000) and (mazes >= 3):
                     # minimum of 3 mazes before we start looking for abstractions
                     # if the policy is unable to find a solution after 10 evaluations, start finding abstractions
                     abstraction = generate_abstractions(policy, episode_history)
                     # --- DREAM ---
-                    if len(abstraction) > 0:
+                    if (len(abstraction) > 0) and (recent_abstraction_timer == 0):
                         # if an abstraciton is found, learn it
                         abstraction_buffer = dream(policy, abstraction, env, episode_history, maze_type) # the model is updated within here
                         train_collector.buffer.update(abstraction_buffer) # append new episodes to the end to the buffer (for future updating)
 
-                        recent_abstraction = True # only allow 1 abstraction per new maze introduction (to prevent constant searching/instant deletion)
                         recent_abstraction_timer = 10 # a 'grace period' between the introduction of a new abtraction and the ability to remove it
-                    elif recent_abstraction_timer == 0:
+                    elif (len(abstraction) == 0) and (recent_abstraction_timer == 0):
                         # else find and remove bad abstractions
                         find_bad_abstractions(policy, train_collector.buffer, eps_train)
                     else:
@@ -235,7 +233,7 @@ def run_train_test_loop():
     train_collector = ts.data.Collector(
         policy, 
         train_envs, 
-        ts.data.VectorReplayBuffer(buffer_size, train_num),
+        ts.data.ReplayBuffer(buffer_size),
         exploration_noise=True
     )
 
@@ -288,7 +286,7 @@ batch_size = 512 # the update batch size
 gamma = 0.9 # gamma in dqn formula (nstep coefficient)
 n_step = 3 # number of steps to look ahead
 target_update_freq = 100 # number of update calls before updating target network
-train_num = 10 # num of simultaneous training environments (i think with n_episode=1, this doesn't matter but whatever)
+train_num = 1 # num of simultaneous training environments (i think with n_episode=1, this doesn't matter but whatever)
 test_num = 1 # num of simultaneous testing environments 
 buffer_size = 30000 # buffer size
 step_per_epoch = 10000 # number of steps for each epoch
