@@ -173,22 +173,24 @@ def train_loop(policy: DQNPolicy_new, # the policy itself
             
             if run_type == "abstraction": # only do the sleep phase if abstractions are allowed
                 # --- SLEEP ---
-                if (steps_within_maze > 100000) and (mazes >= 3):
+                if (steps_within_maze > 150000) and (mazes >= 3) and (recent_abstraction_timer == 0):
                     # minimum of 3 mazes before we start looking for abstractions
                     # if the policy is unable to find a solution after 10 evaluations, start finding abstractions
                     abstraction = generate_abstractions(policy, episode_history)
                     # --- DREAM ---
-                    if (len(abstraction) > 0) and (recent_abstraction_timer == 0):
+                    if (len(abstraction) > 0):
                         # if an abstraciton is found, learn it
                         abstraction_buffer = dream(policy, abstraction, env, episode_history, maze_type) # the model is updated within here
                         train_collector.buffer.update(abstraction_buffer) # append new episodes to the end to the buffer (for future updating)
 
-                        recent_abstraction_timer = 10 # a 'grace period' between the introduction of a new abtraction and the ability to remove it
-                    elif (len(abstraction) == 0) and (recent_abstraction_timer == 0):
+                        recent_abstraction_timer = 15 # a 'grace period' between the introduction of a new abtraction and the ability to remove it
+                    else:
                         # else find and remove bad abstractions
                         find_bad_abstractions(policy, train_collector.buffer, eps_train)
-                    else:
-                        recent_abstraction_timer -= 1
+                        recent_abstraction_timer = 15
+                else:
+                    recent_abstraction_timer -= 1
+                    recent_abstraction_timer = max(recent_abstraction_timer, 0) # make sure the minimum is 0
 
             # reset back to training
             set_eps(policy, eps_train, single=True)
@@ -294,7 +296,8 @@ step_per_collect = 200 # number of steps to collect before updating
 ep_per_collect = 1 # number of episodes before updating
 maze_width = 6 # maze width (not incl. walls)
 n_mazes = 0 # the (initial) number of mazes
-total_mazes = 2 # total number of random mazes ---- for the trivial maze, we use 36 (since it should be 'easier')
+total_mazes = 16 # total number of mazes ---- for the trivial maze, we use 36 (since it should be 'easier')
+# trivial maze: 36      ramdom maze: 16
 threshold_rew = 0.9 # threshold reward to consider a maze passed
 
 # file name suffix
@@ -328,7 +331,7 @@ run = wandb.init(
         "step_per_epoch":step_per_epoch, "step_per_collect":step_per_collect, "ep_per_collect":ep_per_collect,
         "maze width": maze_width, "n_mazes":n_mazes, "total_mazes":total_mazes,
         "threshold_rew":threshold_rew, "maze_type":maze_type,
-        "non-marl":True, "max_actions":max_actions
+        "non-marl":True, "max_actions":max_actions, "run_type":run_type
     }
 )
 

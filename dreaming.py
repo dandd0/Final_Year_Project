@@ -145,22 +145,24 @@ def find_bad_abstractions(policy: DQNPolicy_new, replay_buffer: VectorReplayBuff
     print("Finding bad abstractions...")
 
     # take the latest 5000 steps as the sample, which should be around the last 30-100 episodes
-    # # we can set the threshold to be: used in at least 15 episodes (aka 15 times)
+    # # we can set the threshold to be: random search * number of steps / ((total number of available moves) * 2 * (len of abstraction))
+    # the *2 is just because the abstraction will not always be availble to be used, so its just a handicap
     actions = replay_buffer[-5000:].act
     num_abstractions = len(policy.used_action_keys())
-    threshold = 15
-    print(f"\tMinimum threshold for abstraction removal: {threshold}")
 
     # get the count for the abstraction actions
     abstraction_actions = actions[actions >= 5]
     action, count = np.unique(abstraction_actions, return_counts=True)
 
     for a, c in zip(action, count):
+        threshold = (eps*5000) / ((5+num_abstractions)*len(a[0])*2)
         print(f"\tAbstraction uses: {a} = {c}")
+        print(f"\t\tMin # for abstraction {a}: {threshold}")
         if c < threshold:
             # remove the abstraction if count is below threshold
             print(f"\Removing abstraction: {a}, {policy.abstractions[a]}")
             policy.remove_abstraction(a)
+            return # end search early, only remove 1 at a time
 
 
 

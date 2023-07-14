@@ -81,6 +81,11 @@ def generate_abstractions(policy: DQNPolicy_new, episode_history):
     """
     The main function to call for generating abstractions
     """
+    # check if the number of abstractions has already reached the limit
+    if len(policy.available_action_keys()) == 0:
+        print("Max actions reached. Finding bad abstractions instead.")
+        return []
+
     # find the potential abstractions:
     LCS_counter = find_abstractions(episode_history)
 

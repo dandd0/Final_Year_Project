@@ -93,6 +93,21 @@ class DQNPolicy_new(DQNPolicy):
             # otherwise just return the action as it is
             return act
     
+    def unnest_abstractions(self, abstraction):
+        """
+        For the cases where the abstractions have other abstractions themselves
+        """
+
+        # make sure the actions given are primitives (i.e. in case an abstraction contains an abstraction)
+        while np.all(abstraction < 5) is not True:
+            idx = np.where(abstraction >= 5)[0] # the first idx
+            if len(idx) == 0:
+                return
+            # put in the abstraction contents
+            abstraction = np.concatenate([abstraction[:idx[0]], self.abstractions[abstraction[idx[0]]][0], abstraction[idx[0]+1:]])
+        return
+
+    
     def check_legal_moves_abstractions(self, obs: Batch, action_keys, abstraction_mask):
         """
         We cannot check the legal moves in the environment due to some limitations with how the wrappers work,
@@ -100,12 +115,17 @@ class DQNPolicy_new(DQNPolicy):
         This is kinda a half-assed way to do it, but whatever
         """
         current_loc = np.where(obs.obs[0][1,:,:]==1)
+        exit_loc = np.array(np.where(obs.obs[0][2,:,:]==1)).reshape(2)
         obs = obs.obs[0][0,:,:]
 
         # check the abstractions to see if they're valid
         for key in action_keys:
             wall = False
             abstraction = self.abstractions[key][0]
+
+            # make sure the actions given are primitives (i.e. in case an abstraction contains an abstraction)
+            self.unnest_abstractions(abstraction)
+
             current_loc1 = np.copy(current_loc).reshape(2)
 
             # iterate through the actions one-by-one to see if if its valid
@@ -118,6 +138,11 @@ class DQNPolicy_new(DQNPolicy):
                     abstraction_mask[key] = False
                     wall = True
                     break # if encouter wall, stop the abstraction validity search and set flag to true
+                elif tuple(current_loc1) == tuple(exit_loc):
+                    # check if it passes through exit (make it like its a wall)
+                    abstraction_mask[key] = False
+                    wall = True
+                    break
                 else:
                     current_loc1 = new_loc # otherwise keep going
 
@@ -136,12 +161,17 @@ class DQNPolicy_new(DQNPolicy):
         This is kinda a half-assed way to do it, but whatever
         """
         current_loc = np.where(obs.obs[1,:,:]==1)
+        exit_loc = np.array(np.where(obs.obs[2,:,:]==1)).reshape(2)
         obs = obs.obs[0,:,:]
 
         # check the abstractions to see if they're valid
         for key in action_keys:
             wall = False
             abstraction = self.abstractions[key][0]
+
+            # make sure the actions given are primitives (i.e. in case an abstraction contains an abstraction)
+            self.unnest_abstractions(abstraction)
+            
             current_loc1 = np.copy(current_loc).reshape(2)
 
             # iterate through the actions one-by-one to see if if its valid
@@ -154,6 +184,10 @@ class DQNPolicy_new(DQNPolicy):
                     abstraction_mask[key] = False
                     wall = True
                     break # if encouter wall, stop the abstraction validity search and set flag to true
+                elif tuple(current_loc1) == tuple(exit_loc):
+                    # check if it passes through exit (make it like its a wall)
+                    abstraction_mask[key] = False
+                    wall = True
                 else:
                     current_loc1 = new_loc # otherwise keep going
 
