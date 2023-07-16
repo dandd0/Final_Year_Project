@@ -64,7 +64,7 @@ class DQNPolicy_new(DQNPolicy):
         else:
             key = keys[0] # the first available key
             self.abstractions[key] = [abstraction] # the abstraction is saved as a list due to issues with the API and wrappers
-            print("Appended abstraction to the agent")
+            print(f"Appended abstraction to the agent. (Key: {key})")
             return key # return the key for the dreaming sequence so we can insert it into the buffer
     
     def remove_abstraction(self, key) -> None:
@@ -84,7 +84,9 @@ class DQNPolicy_new(DQNPolicy):
             # if the number is for an abstraction and its allowed
             if self.abstractions.get(act[0]):
                 # if an abstraction exists, it will return a list of len 1
-                return self.abstractions[act[0]]
+                # unnest abstractions in case an abstraction contains another abstraction
+                abstraction = self.unnest_abstractions(self.abstractions[act[0]][0])
+                return [abstraction]
             else:
                 print("Bad Key in Map Action, returning no movement")
                 # otherwise do no movement as the action (and give warning)
@@ -97,15 +99,16 @@ class DQNPolicy_new(DQNPolicy):
         """
         For the cases where the abstractions have other abstractions themselves
         """
+        abstraction_unnest = np.copy(abstraction)
 
         # make sure the actions given are primitives (i.e. in case an abstraction contains an abstraction)
-        while np.all(abstraction < 5) is not True:
-            idx = np.where(abstraction >= 5)[0] # the first idx
+        while np.all(abstraction_unnest < 5) is not True:
+            idx = np.where(abstraction_unnest >= 5)[0] # the first idx
             if len(idx) == 0:
-                return
+                break
             # put in the abstraction contents
-            abstraction = np.concatenate([abstraction[:idx[0]], self.abstractions[abstraction[idx[0]]][0], abstraction[idx[0]+1:]])
-        return
+            abstraction_unnest = np.concatenate([abstraction_unnest[:idx[0]], self.abstractions[abstraction_unnest[idx[0]]][0], abstraction_unnest[idx[0]+1:]])
+        return abstraction_unnest
 
     
     def check_legal_moves_abstractions(self, obs: Batch, action_keys, abstraction_mask):
@@ -120,11 +123,12 @@ class DQNPolicy_new(DQNPolicy):
 
         # check the abstractions to see if they're valid
         for key in action_keys:
-            wall = False
+            invalid_movement = False
+            at_exit = False
             abstraction = self.abstractions[key][0]
 
             # make sure the actions given are primitives (i.e. in case an abstraction contains an abstraction)
-            self.unnest_abstractions(abstraction)
+            abstraction = self.unnest_abstractions(abstraction)
 
             current_loc1 = np.copy(current_loc).reshape(2)
 
@@ -136,20 +140,24 @@ class DQNPolicy_new(DQNPolicy):
                 location = obs[new_loc]
                 if int(location) == 1: # wall
                     abstraction_mask[key] = False
-                    wall = True
+                    invalid_movement = True
                     break # if encouter wall, stop the abstraction validity search and set flag to true
-                elif tuple(current_loc1) == tuple(exit_loc):
-                    # check if it passes through exit (make it like its a wall)
+                elif new_loc == tuple(exit_loc):
+                    # check if it passes through exit (if the last action is the exit, it is ok)
+                    at_exit = True
+                    current_loc1 = new_loc
+                elif at_exit:
+                    # if it kept going, but at_exit flag was triggered, end the search (it passed through the exit so it's not valid)
                     abstraction_mask[key] = False
-                    wall = True
+                    invalid_movement = True
                     break
                 else:
                     current_loc1 = new_loc # otherwise keep going
 
-            if wall:
+            if invalid_movement:
                 continue # go to next occupied abstraction key without changing the action mask
             else:
-                # if no wall flag, the abstraction is valid.
+                # if no invalid_movement flag, the abstraction is valid.
                 abstraction_mask[key] = True
         
         return abstraction_mask
@@ -166,11 +174,12 @@ class DQNPolicy_new(DQNPolicy):
 
         # check the abstractions to see if they're valid
         for key in action_keys:
-            wall = False
+            invalid_movement = False
+            at_exit = False
             abstraction = self.abstractions[key][0]
 
             # make sure the actions given are primitives (i.e. in case an abstraction contains an abstraction)
-            self.unnest_abstractions(abstraction)
+            abstraction = self.unnest_abstractions(abstraction)
             
             current_loc1 = np.copy(current_loc).reshape(2)
 
@@ -182,19 +191,24 @@ class DQNPolicy_new(DQNPolicy):
                 location = obs[new_loc]
                 if int(location) == 1: # wall
                     abstraction_mask[key] = False
-                    wall = True
+                    invalid_movement = True
                     break # if encouter wall, stop the abstraction validity search and set flag to true
-                elif tuple(current_loc1) == tuple(exit_loc):
-                    # check if it passes through exit (make it like its a wall)
+                elif new_loc == tuple(exit_loc):
+                    # check if it passes through exit (if the last action is the exit, it is ok)
+                    at_exit = True
+                    current_loc1 = new_loc
+                elif at_exit:
+                    # if it kept going, but at_exit flag was triggered, end the search (it passed through the exit so it's not valid)
                     abstraction_mask[key] = False
-                    wall = True
+                    invalid_movement = True
+                    break
                 else:
                     current_loc1 = new_loc # otherwise keep going
 
-            if wall:
-                continue # go to next occupied abstraction key without changing the action mask
+            if invalid_movement:
+                continue # go to next occupied abstraction key without changing the action mask (default false)
             else:
-                # if no wall flag, the abstraction is valid.
+                # if no invalid_movement flag, the abstraction is valid.
                 abstraction_mask[key] = True
         
         return abstraction_mask
@@ -220,7 +234,7 @@ class DQNPolicy_new(DQNPolicy):
     
     def abstraction_action_mask_dream(self, obs: Batch):
         """
-        A slightly modified 
+        A slightly modified version of the abstraction_action_mask function above
         """
         # check the size of the abstraction mask (to make sure we don't make it too large)
         if len(obs.mask) == self.max_action_num:

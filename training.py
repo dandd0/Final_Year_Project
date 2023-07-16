@@ -10,12 +10,12 @@ import numpy as np
 from collections import deque
 import wandb
 
-def log_data_wandb(result, eps_train, episodes_total, steps_total, train=True):
+def log_data_wandb(result, eps_train, episodes_total, steps_total, log_type="train"):
     """
     Pass a dict of data into the logger for WandB
     """
     # assume that at least 1 episode has been completed
-    if train:
+    if log_type=='train':
         # log the training data
         log_data = {"train":{
                 "episode": result["n/ep"],
@@ -25,7 +25,7 @@ def log_data_wandb(result, eps_train, episodes_total, steps_total, train=True):
                 "episodes": episodes_total
             }
         }
-    else:
+    elif log_type=='test':
         # otherwise assume it is testing data
         log_data = {"test":{
                 "obs_reward": np.mean(result["rews"]),
@@ -33,6 +33,20 @@ def log_data_wandb(result, eps_train, episodes_total, steps_total, train=True):
                 "obs_reward_std": np.std(result["rews"]),
             }
         }
+    elif log_type=="abstraction":
+        # to save when abstractions happens
+        # the result will be an int for number of abstractions
+        log_data = {"abstraction":{
+            "num_abstractions": result
+        }}
+    elif log_type=="mazes":
+        # to save when the model progresses to the next maze.
+        # result will be an int for number of mazes
+        log_data = {"maze":{
+            "num_mazes": result
+        }}
+    else:
+        return
     # log the data to WandB
     wandb.log(data=log_data, step=steps_total)
 
@@ -81,6 +95,8 @@ def train_loop(policy: DQNPolicy_new, # the policy itself
         steps_within_maze = 0 # for counting the number of steps so far within a new introduction of a maze
         recent_abstraction_timer = 0 # a timer for a grace period between an introduction of an abstraction and the policy's ability to remove it
         
+        log_data_wandb(mazes, 0, episodes_total, steps_total, log_type="mazes")
+
         if passed_mazes == True:
             # reset epsilon again for the new maze
             eps_train = 0.9
@@ -135,7 +151,7 @@ def train_loop(policy: DQNPolicy_new, # the policy itself
                 eps_train = np.max([eps_train, eps_min])
                 
                 # log training data
-                log_data_wandb(result, eps_train, episodes_total, steps_total, True)
+                log_data_wandb(result, eps_train, episodes_total, steps_total, "train")
             
             # check test results
             passed_before = True
@@ -146,7 +162,7 @@ def train_loop(policy: DQNPolicy_new, # the policy itself
                 passed_mazes = False
 
             # log testing data
-            log_data_wandb(test_result, eps_train, episodes_total, steps_total, False)
+            log_data_wandb(test_result, eps_train, episodes_total, steps_total, "test")
             
             print(f"Evaluation Reward at Epoch {epoch+1}. Obs: {np.round(np.mean(test_result['rews']), 3)}, Maze: {seed}")
             print(f"Test Mazes results: {test_mazes}")
@@ -184,6 +200,9 @@ def train_loop(policy: DQNPolicy_new, # the policy itself
                         train_collector.buffer.update(abstraction_buffer) # append new episodes to the end to the buffer (for future updating)
 
                         recent_abstraction_timer = 15 # a 'grace period' between the introduction of a new abtraction and the ability to remove it
+                        
+                        # log abstraction data
+                        log_data_wandb(len(policy.used_action_keys()), eps_train, episodes_total, steps_total, "abstraction")
                     else:
                         # else find and remove bad abstractions
                         find_bad_abstractions(policy, train_collector.buffer, eps_train)

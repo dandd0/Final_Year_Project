@@ -1,5 +1,6 @@
 import numpy as np
 import torch
+import pickle
 
 from policy import DQNPolicy_new
 from maze_env.MazeEnv_v0 import *
@@ -35,7 +36,7 @@ def replace_new_action(action_history, abstraction_key, indices):
     action history: the successful episode history's action array
     abstraction_key: the key representation of the new abstraction for the agent
     """
-    return np.concatenate([action_history[:indices[0]], np.array([abstraction_key]), action_history[indices[-1]:]])
+    return np.concatenate([action_history[:indices[0]], np.array([abstraction_key]), action_history[indices[1]:]])
 
 def new_episode_actions(episode_history, abstraction, abstraction_key):
     """
@@ -111,6 +112,12 @@ def dream(policy: DQNPolicy_new, abstraction: np.ndarray, env: MazeEnv_single, e
     abstraction_key = policy.add_abstraction(abstraction)
     new_actions = new_episode_actions(episode_history, abstraction, abstraction_key)
 
+    # troubleshooting
+    with open("new_actions.pkl", "wb") as f:
+        pickle.dump(new_actions, f)
+    with open("ep_hist.pkl", "wb") as f:
+        pickle.dump(episode_history, f)
+
     # make sure there are new actions with the abstraction (really shouldnt be possible but its safer to do this)
     if len(new_actions) == 0:
         return
@@ -146,7 +153,7 @@ def find_bad_abstractions(policy: DQNPolicy_new, replay_buffer: VectorReplayBuff
 
     # take the latest 5000 steps as the sample, which should be around the last 30-100 episodes
     # # we can set the threshold to be: random search * number of steps / ((total number of available moves) * 2 * (len of abstraction))
-    # the *2 is just because the abstraction will not always be availble to be used, so its just a handicap
+    
     actions = replay_buffer[-5000:].act
     num_abstractions = len(policy.used_action_keys())
 
@@ -155,7 +162,7 @@ def find_bad_abstractions(policy: DQNPolicy_new, replay_buffer: VectorReplayBuff
     action, count = np.unique(abstraction_actions, return_counts=True)
 
     for a, c in zip(action, count):
-        threshold = (eps*5000) / ((5+num_abstractions)*len(a[0])*2)
+        threshold = (eps*5000) / ((5+num_abstractions)*len(policy.abstractions[a][0]))
         print(f"\tAbstraction uses: {a} = {c}")
         print(f"\t\tMin # for abstraction {a}: {threshold}")
         if c < threshold:
