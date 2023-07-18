@@ -135,7 +135,12 @@ def train_loop(policy: DQNPolicy_new, # the policy itself
 
                 # add the successful episode steps into the episode history
                 if result['rews'] > threshold_rew:
-                    episode_history.append(train_collector.buffer[int(result['idxs']):int(result['idxs'] + result['lens'])])
+                    success_ep = train_collector.buffer[int(result['idxs']):int(result['idxs'] + result['lens'])]
+                    if success_ep.done[-1]:
+                        # so there's a really weird ass bug where sometimes the episode idxs don't actually correspond properly to when the episode ends
+                        # like this only happens once in a while, but frankly i cannot be bothered to find the cause of this
+                        # so ill just only add valid successful episodes by checking if the last entry is a True done flag
+                        episode_history.append(success_ep)
                 
                 # update the parameters after each ep (online model)
                 policy.update(batch_size, train_collector.buffer)
@@ -207,6 +212,9 @@ def train_loop(policy: DQNPolicy_new, # the policy itself
                         # else find and remove bad abstractions
                         find_bad_abstractions(policy, train_collector.buffer, eps_train)
                         recent_abstraction_timer = 15
+                        
+                        # log abstraction data
+                        log_data_wandb(len(policy.used_action_keys()), eps_train, episodes_total, steps_total, "abstraction")
                 else:
                     recent_abstraction_timer -= 1
                     recent_abstraction_timer = max(recent_abstraction_timer, 0) # make sure the minimum is 0
@@ -316,7 +324,7 @@ ep_per_collect = 1 # number of episodes before updating
 maze_width = 6 # maze width (not incl. walls)
 n_mazes = 0 # the (initial) number of mazes
 total_mazes = 16 # total number of mazes ---- for the trivial maze, we use 36 (since it should be 'easier')
-# trivial maze: 36      ramdom maze: 16
+# trivial maze: 36      ramdom maze: 15 (16 is for the range() function)
 threshold_rew = 0.9 # threshold reward to consider a maze passed
 
 # file name suffix
@@ -336,6 +344,8 @@ else:
     print("Max actions must be at least 5. Defaulting to baseline model.")
     max_actions = 5
     run_type = "baseline"
+
+print(f"Running model: {file_suf}, Maze type: {maze_type}, Run type: {run_type}")
 
 # logger initialization
 wandb.login()

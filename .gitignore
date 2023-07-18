@@ -3,3 +3,11 @@ wandb/
 log/
 
 model/
+
+debugging/
+
+moretesting.ipynb
+
+ep_hist.pkl
+
+new_actions.pkl

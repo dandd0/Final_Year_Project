@@ -162,12 +162,13 @@ def find_bad_abstractions(policy: DQNPolicy_new, replay_buffer: VectorReplayBuff
     action, count = np.unique(abstraction_actions, return_counts=True)
 
     for a, c in zip(action, count):
-        threshold = (eps*5000) / ((5+num_abstractions)*len(policy.abstractions[a][0]))
+        abstraction_len = len(policy.unnest_abstractions(policy.abstractions[a][0]))
+        threshold = (eps*5000) / ((5+num_abstractions)*abstraction_len)
         print(f"\tAbstraction uses: {a} = {c}")
         print(f"\t\tMin # for abstraction {a}: {threshold}")
         if c < threshold:
             # remove the abstraction if count is below threshold
-            print(f"\Removing abstraction: {a}, {policy.abstractions[a]}")
+            print(f"\tRemoving abstraction: {a}, {policy.abstractions[a]}")
             policy.remove_abstraction(a)
             return # end search early, only remove 1 at a time
 
