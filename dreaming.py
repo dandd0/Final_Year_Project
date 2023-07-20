@@ -18,7 +18,7 @@ def is_sub_arr_np(a1, a2):
     l2, = a2.shape
     # make sure array 1 is longer than array 2
     if l2 > l1:
-        return any_sub, None
+        return False, None # any_sub, indices
 
     a1_win = np.lib.stride_tricks.as_strided(a1, (l1 - l2 + 1, l2), (s1, s1))
     any_sub = np.any(np.all(a1_win == a2, axis=1))
@@ -164,11 +164,11 @@ def find_bad_abstractions(policy: DQNPolicy_new, replay_buffer: VectorReplayBuff
     for a, c in zip(action, count):
         abstraction_len = len(policy.unnest_abstractions(policy.abstractions[a][0]))
         threshold = (eps*5000) / ((5+num_abstractions)*abstraction_len)
-        print(f"\tAbstraction uses: {a} = {c}")
+        print(f"\tAbstraction uses: {a} = {c}, {policy.abstractions[a][0]}")
         print(f"\t\tMin # for abstraction {a}: {threshold}")
         if c < threshold:
             # remove the abstraction if count is below threshold
-            print(f"\tRemoving abstraction: {a}, {policy.abstractions[a]}")
+            print(f"\tRemoving abstraction: {a}, {policy.abstractions[a][0]}")
             policy.remove_abstraction(a)
             return # end search early, only remove 1 at a time
 
