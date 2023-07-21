@@ -258,7 +258,7 @@ class MazeEnv_single(AECEnv):
         # n_mazes refers to how many of the mazes to randomly choose from
         # the seeds were chosen through generating and human selection based on difficulty.
         # the seeds are ordered from level of difficulty (based on subjective criteria, and within difficulty ordered by length)
-        maze_seeds = [24,26,17,30,22,18,3,8,38,48,0,32,11,1,25,35]
+        maze_seeds = [24,26,17,30,22,18,3,8,38,48,0,32,11,1,25]
 
         if random:
             # randomly select on the given seeds

@@ -194,8 +194,8 @@ def train_loop(policy: DQNPolicy_new, # the policy itself
             
             if run_type == "abstraction": # only do the sleep phase if abstractions are allowed
                 # --- SLEEP ---
-                if (steps_within_maze > 150000) and (mazes >= 3) and (recent_abstraction_timer == 0):
-                    # minimum of 3 mazes before we start looking for abstractions
+                if (epoch > abstraction_grace_period) and (mazes >= min_maze_abstraction) and (recent_abstraction_timer == 0):
+                    # minimum of 3 mazes (in random) and 5 (in trivial) before we start looking for abstractions
                     # if the policy is unable to find a solution after 10 evaluations, start finding abstractions
                     abstraction = generate_abstractions(policy, episode_history)
                     # --- DREAM ---
@@ -204,14 +204,14 @@ def train_loop(policy: DQNPolicy_new, # the policy itself
                         abstraction_buffer = dream(policy, abstraction, env, episode_history, maze_type) # the model is updated within here
                         train_collector.buffer.update(abstraction_buffer) # append new episodes to the end to the buffer (for future updating)
 
-                        recent_abstraction_timer = 15 # a 'grace period' between the introduction of a new abtraction and the ability to remove it
+                        recent_abstraction_timer = abstraction_grace_period # a 'grace period' between the introduction of a new abtraction and the ability to remove it
                         
                         # log abstraction data
                         log_data_wandb(len(policy.used_action_keys()), eps_train, episodes_total, steps_total, "abstraction")
                     else:
                         # else find and remove bad abstractions
                         find_bad_abstractions(policy, train_collector.buffer, eps_train)
-                        recent_abstraction_timer = 15
+                        recent_abstraction_timer = abstraction_grace_period
                         
                         # log abstraction data
                         log_data_wandb(len(policy.used_action_keys()), eps_train, episodes_total, steps_total, "abstraction")
@@ -323,8 +323,6 @@ step_per_collect = 200 # number of steps to collect before updating
 ep_per_collect = 1 # number of episodes before updating
 maze_width = 6 # maze width (not incl. walls)
 n_mazes = 0 # the (initial) number of mazes
-total_mazes = 16 # total number of mazes ---- for the trivial maze, we use 36 (since it should be 'easier')
-# trivial maze: 36      ramdom maze: 15 (16 is for the range() function)
 threshold_rew = 0.9 # threshold reward to consider a maze passed
 
 # file name suffix
@@ -332,7 +330,16 @@ file_suf = input("File suffix (e.g. Date + run number): ") # the file name suffi
 
 # maze type
 maze_type = input("Maze type: ") # random, trivial
-assert maze_type in ["random", "trivial"], "Only 'random' and 'trivial' maze supported."
+assert maze_type in ["random", "structured", "trivial"], "Only 'random', 'structured, and 'trivial' maze supported."
+if maze_type in ["random", "structured"]:
+    total_mazes = 16 # total number of mazes
+    min_maze_abstraction = 3
+    abstraction_grace_period = 15 # 15 epochs before abstraction and every abstraction thereafter
+elif maze_type in ["trivial"]:
+    total_mazes = 31 # 31 is used because the empty mazes are 'easier' in a sense (no detailed nav needed)
+    min_maze_abstraction = 5 # for more variations in the maze to be present
+    abstraction_grace_period = 10 # shorter grace period because the maze learns the mazes very fast
+# trivial maze: 30      random maze: 15 (actual number is 1 less than stated due to starting at 1 (for printing) and the range() function)
 
 # max number of actions and abstractions
 max_actions = int(input("Maximum number of actions (5 for Baseline, 5> for Abstraction): ")) # the maximum number of actions allowed for the policy (default should be at least 5)
