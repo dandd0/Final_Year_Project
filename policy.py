@@ -71,6 +71,14 @@ class DQNPolicy_new(DQNPolicy):
         """
         Remove the specified abstraction from the respective key.
         """
+        # first, check if any other abstraction depends on the currently removed abstraction
+        for abs_key in self.used_action_keys():
+            if abs_key != key:
+                if np.any(self.abstractions[abs_key][0] == key):
+                    # if so, unnest it and make it its own abstraction with no abstraction dependencies
+                    unnest_abs = self.unnest_abstractions(self.abstractions[abs_key][0])
+                    self.abstractions[abs_key] = [unnest_abs]
+
         if self.abstractions.get(key):
             self.abstractions[key] = 0
         else:
@@ -137,7 +145,13 @@ class DQNPolicy_new(DQNPolicy):
                 direction = self._action_to_direction[action]
                 # find new location
                 new_loc = tuple(current_loc1 + direction)
-                location = obs[new_loc]
+                try: 
+                    location = obs[new_loc]
+                except:
+                    # if failed, most likely because our of bounds fail this shit
+                    abstraction_mask[key] = False
+                    invalid_movement = True
+                    break
                 if int(location) == 1: # wall
                     abstraction_mask[key] = False
                     invalid_movement = True
@@ -274,4 +288,3 @@ class DQNPolicy_new(DQNPolicy):
             self.max_action_num = q.shape[1]
         act = to_numpy(q.max(dim=1)[1])
         return Batch(logits=logits, act=act, state=hidden)
-    

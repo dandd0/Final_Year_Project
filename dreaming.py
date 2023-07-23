@@ -130,7 +130,10 @@ def dream(policy: DQNPolicy_new, abstraction: np.ndarray, env: MazeEnv_single, e
         # get information out
         ep_number = actions_dict["ep_number"]
         actions = actions_dict["actions"]
-        maze_seed = episode_history[ep_number]['info']['nth_maze'][0]
+        if maze_type == "trivial":
+            maze_seed = episode_history[ep_number]['info']['maze_seed'][0] # only the case for trivial
+        else:
+            maze_seed = episode_history[ep_number]['info']['nth_maze'][0]
 
         # will update the abstraction buffer by reference (for each respective episode)
         new_sample_with_abstraction(policy, env, maze_type, actions, maze_seed, abstraction_buffer)
