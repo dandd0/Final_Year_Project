@@ -130,10 +130,11 @@ def dream(policy: DQNPolicy_new, abstraction: np.ndarray, env: MazeEnv_single, e
         # get information out
         ep_number = actions_dict["ep_number"]
         actions = actions_dict["actions"]
-        if maze_type == "trivial":
-            maze_seed = episode_history[ep_number]['info']['maze_seed'][0] # only the case for trivial
+        if maze_type == "random":
+            maze_seed = episode_history[ep_number]['info']['nth_maze'][0] # only the case for random
         else:
-            maze_seed = episode_history[ep_number]['info']['nth_maze'][0]
+            maze_seed = episode_history[ep_number]['info']['maze_seed'][0] # for both trivial and structured
+            
 
         # will update the abstraction buffer by reference (for each respective episode)
         new_sample_with_abstraction(policy, env, maze_type, actions, maze_seed, abstraction_buffer)
@@ -144,7 +145,7 @@ def dream(policy: DQNPolicy_new, abstraction: np.ndarray, env: MazeEnv_single, e
 
     return abstraction_buffer
 
-def find_bad_abstractions(policy: DQNPolicy_new, replay_buffer: VectorReplayBuffer, eps: int):
+def find_bad_abstractions(policy: DQNPolicy_new, episode_history: deque, eps: int):
     """
     To find and remove abstractions that are used less than random exploration.
     """
@@ -154,10 +155,15 @@ def find_bad_abstractions(policy: DQNPolicy_new, replay_buffer: VectorReplayBuff
 
     print("Finding bad abstractions...")
 
-    # take the latest 5000 steps as the sample, which should be around the last 30-100 episodes
-    # # we can set the threshold to be: random search * number of steps / ((total number of available moves) * 2 * (len of abstraction))
-    
-    actions = replay_buffer[-5000:].act
+    # take the episode history and use the actions list as our data
+    # # we can set the threshold to be: random search factor * number of steps / ((total number of available moves) * (len of abstraction))
+
+    actions = []
+    for i in range(len(episode_history)):
+        for j in range(len(episode_history[i].act)):
+            actions.append(episode_history[i].act[j])
+    actions = np.array(actions)
+
     num_abstractions = len(policy.used_action_keys())
 
     # get the count for the abstraction actions
@@ -166,7 +172,7 @@ def find_bad_abstractions(policy: DQNPolicy_new, replay_buffer: VectorReplayBuff
 
     for a, c in zip(action, count):
         abstraction_len = len(policy.unnest_abstractions(policy.abstractions[a][0]))
-        threshold = (eps*5000) / ((5+num_abstractions)*abstraction_len)
+        threshold = (eps*len(actions)) / ((5+num_abstractions)*abstraction_len)
         print(f"\tAbstraction uses: {a} = {c}, {policy.abstractions[a][0]}")
         print(f"\t\tMin # for abstraction {a}: {threshold}")
         if c < threshold:

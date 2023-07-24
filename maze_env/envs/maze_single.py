@@ -10,6 +10,7 @@ from pettingzoo import AECEnv
 from pettingzoo.utils import agent_selector, OrderEnforcingWrapper, AssertOutOfBoundsWrapper
 
 from maze_env.envs.mazelib import Maze
+from maze_env.envs.structured_maze import structured_maze_grids
 from maze_env.envs.generate.BacktrackingGenerator import BacktrackingGenerator
 from maze_env.envs.solve.Collision import Collision
 from maze_env.envs.solve.ShortestPath import ShortestPath
@@ -254,6 +255,20 @@ class MazeEnv_single(AECEnv):
         self.seed = seed # the seed of the map
         # the above 2 has 0 index because there can be multiple solutions of equal minimum length, but we only need one so whatever
 
+    def _generate_maze_structured(self, seed=None):
+        maze = structured_maze_grids(seed)
+
+        self.maze = maze # the maze object itself
+        self.grid = maze.grid # the grid representation of the maze
+        self.agent_loc = maze.start # the agent's starting location is the entrance
+        self.exit = maze.end # the exit location
+        self.maxlen = 10*(2*(self.size**2) - 1) # max exploration length before truncation (2.5* the total number of free grids in the maze)
+        self.minlen = len(maze.solutions[0]) + 1 # the best possible path length for the agent to take ( +1 to reach the exit)
+        self.solution = maze.solutions[0] # the solution list (for visualization)
+        self.start = maze.start # the starting position 
+        self.seed = seed # the seed of the map
+        # the above 2 has 0 index because there can be multiple solutions of equal minimum length, but we only need one so whatever
+
     def select_maze(self, n_mazes, random=True):
         # n_mazes refers to how many of the mazes to randomly choose from
         # the seeds were chosen through generating and human selection based on difficulty.
@@ -278,12 +293,29 @@ class MazeEnv_single(AECEnv):
     
     def select_maze_trivial(self, n_mazes, random=True):
         if random:
-            maze_seed = np.random.randint(n_mazes+1)
-            self._generate_maze_trivial(maze_seed)
+            prob = np.repeat(1/n_mazes, n_mazes)
+            prob[-1] *= 2 # double the prob of the newest maze, so its more likely to appear
+            prob /= np.sum(prob) # normalize it so sum of all values add to 1
+            nth_maze = np.random.choice(np.arange(1, n_mazes+1), p=prob)
+            self.nth_maze = nth_maze
+            maze_seed = nth_maze
         else:
             maze_seed = n_mazes
 
         self._generate_maze_trivial(maze_seed)
+    
+    def select_maze_structured(self, n_mazes, random=True):
+        if random:
+            prob = np.repeat(1/n_mazes, n_mazes)
+            prob[-1] *= 2 # double the prob of the newest maze, so its more likely to appear
+            prob /= np.sum(prob) # normalize it so sum of all values add to 1
+            nth_maze = np.random.choice(np.arange(1, n_mazes+1), p=prob)
+            self.nth_maze = nth_maze
+            maze_seed = nth_maze
+        else:
+            maze_seed = n_mazes
+
+        self._generate_maze_structured(maze_seed)
 
     def reset(self, seed=None, options=None):
         # set up the maze
@@ -310,6 +342,16 @@ class MazeEnv_single(AECEnv):
                         else:
                             # if randomness not specified, assume random
                             self.select_maze(options['n_mazes'])
+                # check if its strucrtued mazes
+                elif options['maze_type'] == "structured":
+                    # structured mazes selection
+                    if 'n_mazes' in options:
+                        assert options["n_mazes"] > 0, "Number of normal mazes should be greater than 0 (between 1 to 15)"
+                        if 'random' in options:
+                            self.select_maze_structured(options['n_mazes'], options['random'])
+                        else:
+                            # assume randomness
+                            self.select_maze_structured(options['n_mazes'])
                 # otherwise some default
                 else:
                     self.select_maze(1)

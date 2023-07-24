@@ -210,7 +210,7 @@ def train_loop(policy: DQNPolicy_new, # the policy itself
                         log_data_wandb(len(policy.used_action_keys()), eps_train, episodes_total, steps_total, "abstraction")
                     else:
                         # else find and remove bad abstractions
-                        find_bad_abstractions(policy, train_collector.buffer, eps_train)
+                        find_bad_abstractions(policy, episode_history, eps_train)
                         recent_abstraction_timer = abstraction_grace_period
                         
                         # log abstraction data
