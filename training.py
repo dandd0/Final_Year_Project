@@ -310,7 +310,7 @@ eps_test = 0.0 # exploration rate for testing
 eps_decay = 0.999 # the exploration rate decay
 eps_min = 0.15 # the minimum exploration rate
 lr = 5e-4 # the learning rate
-epochs  = 150 # max epochs per new maze introduction
+epochs = 150 # max epochs per new maze introduction
 batch_size = 512 # the update batch size
 gamma = 0.9 # gamma in dqn formula (nstep coefficient)
 n_step = 3 # number of steps to look ahead
@@ -331,9 +331,13 @@ file_suf = input("File suffix (e.g. Date + run number): ") # the file name suffi
 # maze type
 maze_type = input("Maze type: ") # random, trivial
 assert maze_type in ["random", "structured", "trivial"], "Only 'random', 'structured, and 'trivial' maze supported."
-if maze_type in ["random", "structured"]:
+if maze_type in ["random"]:
     total_mazes = 16 # total number of mazes
     min_maze_abstraction = 3
+    abstraction_grace_period = 15 # 15 epochs before abstraction and every abstraction thereafter
+elif maze_type in ["structured"]:
+    total_mazes = 16 # total number of mazes
+    min_maze_abstraction = 5 # the first 3 are to introduce the maze patterns (it makes it easier to learn (?))
     abstraction_grace_period = 15 # 15 epochs before abstraction and every abstraction thereafter
 elif maze_type in ["trivial"]:
     total_mazes = 31 # 31 is used because the empty mazes are 'easier' in a sense (no detailed nav needed)
@@ -343,16 +347,15 @@ elif maze_type in ["trivial"]:
 
 # max number of actions and abstractions
 max_actions = int(input("Maximum number of actions (5 for Baseline, 5> for Abstraction): ")) # the maximum number of actions allowed for the policy (default should be at least 5)
-if max_actions > 5:
+assert max_actions >= 5, "Max actions must be at least 5"
+
+allow_abstraction = bool(int(input("Allow abstractions? (0: False, 1: True): ")))
+if allow_abstraction == True:
     run_type = "abstraction"
-elif max_actions == 5:
-    run_type = "baseline"
 else:
-    print("Max actions must be at least 5. Defaulting to baseline model.")
-    max_actions = 5
     run_type = "baseline"
 
-print(f"Running model: {file_suf}, Maze type: {maze_type}, Run type: {run_type}")
+print(f"Running model: {file_suf}, Maze type: {maze_type}, Max Actions: {max_actions}, Run type: {run_type}")
 
 # logger initialization
 wandb.login()

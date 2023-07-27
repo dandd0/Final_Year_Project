@@ -11,3 +11,16 @@ moretesting.ipynb
 ep_hist.pkl
 
 new_actions.pkl
+
+__pycache__/
+
+maze_env/__pycache__/
+
+maze_env/envs/__pycache__/
+
+maze_env/envs/generate/__pycache__/
+
+maze_env/envs/solve/__pycache__/
+
+utils/__pycache__/
+
