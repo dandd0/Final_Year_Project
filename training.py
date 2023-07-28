@@ -258,6 +258,11 @@ def run_train_test_loop():
 
     policy = agent_observer
 
+    if preload_abstraction:
+        for abstraction in predefined_abstractions:
+            policy.add_abstraction(abstraction)
+            print(f"\tAbstraction added: {abstraction}")
+
     # define the training collector (the calc q and step functions)
     train_collector = ts.data.Collector(
         policy, 
@@ -354,6 +359,19 @@ if allow_abstraction == True:
     run_type = "abstraction"
 else:
     run_type = "baseline"
+
+# if i want to preload abstractions (from the start)
+preload_abstraction = bool(int(input("Define abstractions? (0: False, 1: True): ")))
+if preload_abstraction:
+    num_preload_abstraction = int(input("Number of predefined abstractions: "))
+    assert num_preload_abstraction <= (max_actions - 5), "Max number of abstractions cannot accomodate predefined abstractions."
+    predefined_abstractions = []
+
+    for i in range(num_preload_abstraction):
+        predef_abstract = input("Predefined abstraction (As Python list): ")
+        predef_abstract = predef_abstract[1:-1].split(',')
+        predef_abstract = [int(i) for i in predef_abstract]
+        predefined_abstractions.append(np.array(predef_abstract))
 
 print(f"Running model: {file_suf}, Maze type: {maze_type}, Max Actions: {max_actions}, Run type: {run_type}")
 
