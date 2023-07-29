@@ -289,6 +289,39 @@ def structured_maze_grids(seed):
                                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]], dtype=np.int8)
         maze.start=(11,3)
         maze.end=(3,11)
+    elif seed == 100:
+        # L shape structure
+        maze.grid = np.array([  [1, 1, 1, 1, 1, 1, 1],
+                                [1, 0, 1, 1, 1, 1, 1],
+                                [1, 0, 1, 1, 1, 1, 1],
+                                [1, 0, 1, 1, 1, 1, 1],
+                                [1, 0, 1, 1, 1, 1, 1],
+                                [1, 0, 0, 0, 0, 0, 1],
+                                [1, 1, 1, 1, 1, 1, 1]], dtype=np.int8)
+        maze.start = (1,1)
+        maze.end = (5,5)
+    elif seed == 101:
+        # reverse L shape structure
+        maze.grid = np.array([  [1, 1, 1, 1, 1, 1, 1],
+                                [1, 0, 1, 1, 1, 1, 1],
+                                [1, 0, 1, 1, 1, 1, 1],
+                                [1, 0, 1, 1, 1, 1, 1],
+                                [1, 0, 1, 1, 1, 1, 1],
+                                [1, 0, 0, 0, 0, 0, 1],
+                                [1, 1, 1, 1, 1, 1, 1]], dtype=np.int8)
+        maze.start = (5,5)
+        maze.end = (1,1)
+    elif seed == 102:
+        # L shape structure
+        maze.grid = np.array([  [1, 1, 1, 1, 1, 1, 1],
+                                [1, 1, 1, 0, 0, 0, 1],
+                                [1, 1, 1, 0, 1, 1, 1],
+                                [1, 0, 0, 0, 1, 1, 1],
+                                [1, 0, 1, 1, 1, 1, 1],
+                                [1, 0, 1, 1, 1, 1, 1],
+                                [1, 1, 1, 1, 1, 1, 1]], dtype=np.int8)
+        maze.start = (5,1)
+        maze.end = (1,5)
     else:
         print("Invalid maze seed, pls check")
         maze.grid = np.array([  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],

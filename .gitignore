@@ -24,3 +24,6 @@ maze_env/envs/solve/__pycache__/
 
 utils/__pycache__/
 
+results/
+
+visualization.ipynb
