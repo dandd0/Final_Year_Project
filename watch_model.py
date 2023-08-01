@@ -64,8 +64,10 @@ if run_type == "abstraction":
     with open(full_file_name+"_abstractions.pkl", "rb") as f:
         abstractions = pickle.load(f)
 
+# load the model
 policy.load_state_dict(torch.load(full_file_name+"_model.pt"))
 
+# load the abstractions
 if run_type == "preabstract":
     policy.add_abstraction(np.array([2,2,2,2,3,3,3,3]))
     print(f"\t{np.array([2,2,2,2,3,3,3,3])}")
@@ -86,7 +88,7 @@ human_collector = ts.data.Collector(
     exploration_noise=True
 )
 
-# set policy to eval mode
+# watch the model
 policy.set_eps(0)
 policy.eval()
 for seed in range(1, total_mazes):
