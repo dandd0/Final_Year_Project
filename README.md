@@ -8,4 +8,8 @@ https://wandb.ai/dandd0/Final_Year_Project
 
 The runs can be watched by running:
 `python watch_model.py`  
-Follow the instructions given by the terminal to watch.
+and follow the instructions given by the terminal to watch.
+
+If you would like to train your own model, run the following:
+`python training.py`
+and follow the instructions given by the terminal.
