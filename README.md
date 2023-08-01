@@ -4,7 +4,7 @@ For abstraction-based Reinforcement Learning in a maze environment. Heavily base
 Jergéus, E., & Oinonen, L. K. (2022). Learning Abstractions via Reinforcement Learning [Master's Thesis, Chalmers University of Technology and University of Gothenburg]. Chalmers Open Digital Repository. 
 
 The runs can be found at:
-https://wandb.ai/dandd0/Final_Year_Project
+[https://wandb.ai/dandd0/Final_Year_Project_Results](https://wandb.ai/dandd0/Final_Year_Project_Results)
 
 The runs can be watched by running:
 `python watch_model.py`  
