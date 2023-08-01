@@ -6,4 +6,6 @@ Jergéus, E., & Oinonen, L. K. (2022). Learning Abstractions via Reinforcement L
 The runs can be found at:
 https://wandb.ai/dandd0/Final_Year_Project
 
-Demo TBD
+The runs can be watched by running:
+`python watch_model.py`  
+Follow the instructions given by the terminal to watch.
