@@ -11,5 +11,5 @@ The runs can be watched by running:
 and follow the instructions given by the terminal to watch.
 
 If you would like to train your own model, run the following:
-`python training.py`
+`python training.py`  
 and follow the instructions given by the terminal.
