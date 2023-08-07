@@ -1,11 +1,9 @@
 import numpy as np
-import torch
-import pickle
 
 from policy import DQNPolicy_new
 from maze_env.MazeEnv_v0 import *
 from collections import deque
-from tianshou.data import VectorReplayBuffer, ReplayBuffer, Batch
+from tianshou.data import ReplayBuffer, Batch
 
 def is_sub_arr_np(a1, a2):
     """

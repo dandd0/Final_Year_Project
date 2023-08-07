@@ -4,7 +4,6 @@ import pygame
 import pygame.freetype
 
 import numpy as np
-import matplotlib.pyplot as plt
 
 from pettingzoo import AECEnv
 from pettingzoo.utils import agent_selector, OrderEnforcingWrapper, AssertOutOfBoundsWrapper
