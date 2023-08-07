@@ -1,6 +1,11 @@
-# THIS IS ALMOST THE SAME AS TIANSHOU'S BUILT IN PETTINGZOOENV WRAPPER, WITH MINOR MODIFICATIONS
-# Instead of accessing the action mask in observation['action_mask']
-# it will access it in info['action_mask']
+"""
+THIS IS ALMOST THE SAME AS TIANSHOU'S BUILT IN PETTINGZOOENV WRAPPER, WITH MINOR MODIFICATIONS
+Instead of accessing the action mask in observation['action_mask']
+it will access it in info['action_mask']
+some shit with supersuit and action masks breaks it because it requires the obs to be gym.Discrete or gym.Box
+but with action masks, it becomes a gym.Dict, which apparently isn't allowed??? wack
+"""
+
 
 import warnings
 from abc import ABC
@@ -35,6 +40,7 @@ class PettingZooEnv_new(PettingZooEnv):
 
         observation, reward, terminated, truncated, info = self.env.last(self)
 
+        # convert action mask from 0 and 1 to bool
         if isinstance(observation, dict) and 'action_mask' in observation:
             observation_dict = {
                 'agent_id': self.env.agent_selection,
@@ -62,9 +68,14 @@ class PettingZooEnv_new(PettingZooEnv):
                     'obs': observation,
                 }
 
+        # move it from the info (in env) to the obs (policy)
         return observation_dict, {"maze_seed":info["maze_seed"], "nth_maze":info["nth_maze"]}
     
     def step(self, action: Any) -> Tuple[Dict, List[int], bool, bool, Dict]:
+        """
+        same thing as above but for step()
+        """
+
         self.env.step(action)
 
         observation, rew, term, trunc, info = self.env.last()

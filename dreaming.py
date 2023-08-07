@@ -112,12 +112,6 @@ def dream(policy: DQNPolicy_new, abstraction: np.ndarray, env: MazeEnv_single, e
     abstraction_key = policy.add_abstraction(abstraction)
     new_actions = new_episode_actions(episode_history, abstraction, abstraction_key)
 
-    # troubleshooting
-    with open("new_actions.pkl", "wb") as f:
-        pickle.dump(new_actions, f)
-    with open("ep_hist.pkl", "wb") as f:
-        pickle.dump(episode_history, f)
-
     # make sure there are new actions with the abstraction (really shouldnt be possible but its safer to do this)
     if len(new_actions) == 0:
         return

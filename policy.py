@@ -79,6 +79,7 @@ class DQNPolicy_new(DQNPolicy):
                     unnest_abs = self.unnest_abstractions(self.abstractions[abs_key][0])
                     self.abstractions[abs_key] = [unnest_abs]
 
+        # remove the abstractions
         if self.abstractions.get(key):
             self.abstractions[key] = 0
         else:
@@ -94,6 +95,8 @@ class DQNPolicy_new(DQNPolicy):
                 # if an abstraction exists, it will return a list of len 1
                 # unnest abstractions in case an abstraction contains another abstraction
                 abstraction = self.unnest_abstractions(self.abstractions[act[0]][0])
+
+                # abstraction is given in a list due to issues with tianshou/pettingzoo not accepting arrays of actions
                 return [abstraction]
             else:
                 print("Bad Key in Map Action, returning no movement")
@@ -181,6 +184,8 @@ class DQNPolicy_new(DQNPolicy):
         We cannot check the legal moves in the environment due to some limitations with how the wrappers work,
         So we have to check it in the policy itself.
         This is kinda a half-assed way to do it, but whatever
+        Dream version because apparently the obs batch is nested differently????
+        idk why, this is terrible lmao
         """
         current_loc = np.where(obs.obs[1,:,:]==1)
         exit_loc = np.array(np.where(obs.obs[2,:,:]==1)).reshape(2)

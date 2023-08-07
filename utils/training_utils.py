@@ -6,7 +6,8 @@ import torch
 import torch.nn as nn
 import pickle
 
-# define some helper functions
+# define some helper functions for training and stuff
+
 # single agent
 def preprocess_maze_env(render_mode=None, size=6):
     env = MazeEnv_v0.env_single(render_mode=render_mode, size=size)
@@ -14,28 +15,9 @@ def preprocess_maze_env(render_mode=None, size=6):
     env = PettingZooEnv_new(env)
     return env
 
-"""
-def preprocess_maze_env_multi(render_mode=None, size=maze_width):
-    env = MazeEnv_v0.env(render_mode=render_mode, size=size)
-    env = supersuit.multiagent_wrappers.pad_observations_v0(env)
-    env = PettingZooEnv_new(env)
-    return env
-"""
-"""
-def interleave_training(obs_train):
-    if obs_train:
-        policy.policies[agents[0]].set_eps(eps_train)
-        policy.policies[agents[1]].set_eps(0)
-        obs_train = obs_train != True
-    else:
-        policy.policies[agents[0]].set_eps(0)
-        policy.policies[agents[1]].set_eps(eps_train)
-        obs_train = obs_train != True
-"""
-
 def set_eps(policy, eps1, agents=None, eps2=None, single = True):
     """
-    Set the exploration/eploitation parameter for the policy
+    Set the exploration/exploitation parameter for the policy
 
     agents, eps2 and single=False are used for MARL (if implemented)
     """
@@ -50,8 +32,9 @@ def set_eps(policy, eps1, agents=None, eps2=None, single = True):
 class CNN(nn.Module):
     def __init__(self, maze_width = 6, max_actions = 5):
         super().__init__()
-        
+        # size of cnn window after convolutions, change if required (if changing padding/stride/window)
         lin_size = ((((maze_width*2+1)-3+1)-3+1)-3+1)
+
         self.model = nn.Sequential(
             # assume maze size of 6x6 (13x13 with walls)
             nn.Conv2d(3, 16, 3), nn.ReLU(inplace=True),  # (13-3)+1 = 11, 
@@ -66,7 +49,6 @@ class CNN(nn.Module):
         if not isinstance(obs, torch.Tensor):
             obs = torch.tensor(obs, dtype=torch.float)
         self.batch = obs.shape[0]
-        #logits = self.model(obs.view(batch, -1))
         logits = self.model(obs)
         return logits, state
 
@@ -74,7 +56,7 @@ def watch(policy, collector, gym_reset_kwargs):
     """
     To render the policy and how it interacts with the environment
     """
-    assert gym_reset_kwargs is not None, "Please input reset kwargs i.e. options"
+    assert gym_reset_kwargs is not None, "Please input reset gym_reset_kwargs i.e. options"
 
     # set policy to eval mode
     policy.eval()
@@ -85,6 +67,10 @@ def watch(policy, collector, gym_reset_kwargs):
     policy.train()
 
 def save_model_buffer_ephist_abs(policy, replay_buffer, episode_history, filename, run_type):
+    """
+    Save the model and files after trinaing is completed
+    """
+    
     assert filename is not None, "Please insert a filename"
     # save the model
     filename_model = filename + "_model.pt"
